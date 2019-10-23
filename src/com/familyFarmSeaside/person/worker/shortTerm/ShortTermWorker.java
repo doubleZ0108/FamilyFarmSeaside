@@ -12,7 +12,15 @@ import java.util.Map;
  * @create: 2019/10/19
  **/
 public abstract class ShortTermWorker extends Worker {
-  public void build(Map<Scene,Integer> thingsToBuild){
-    //使用 command
+  public void buildSomeThingNormal(){}
+
+  public static void main(String[] args){
+    ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
+    ShortTermWorker shortTermWorker_2 = new HouseBuilder();
+    ShortTermWorker shortTermWorker_3 = new WarehouseBuilder();
+
+    shortTermWorker_1.buildSomeThingNormal();
+    shortTermWorker_2.buildSomeThingNormal();
+    shortTermWorker_3.buildSomeThingNormal();
   }
 }

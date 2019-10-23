@@ -17,6 +17,11 @@ import java.util.Map;
  **/
 public abstract class Scene {
   private double cost; //造价
+  private String location;//位置
+
+  public void setLocation(String location){
+    this.location = location;
+  }
 
   public Scene(){}
   public Scene(double x){
