@@ -7,4 +7,18 @@ package com.familyFarmSeaside.person.worker.longTerm.cultivator;
  * @create: 2019/10/19
  **/
 public class AnimalCultivator extends Cultivator {
+    @Override
+    public void addCreature() {
+
+    }
+
+    @Override
+    public void raiseCreature() {
+
+    }
+
+    @Override
+    public void killCreature() {
+
+    }
 }
