@@ -11,5 +11,9 @@ import java.util.List;
  * @create: 2019/10/19
  **/
 public class Dormitory extends Residence {
+  public Dormitory(){
+    super(20000);
+  }
+
   List<LongTermWorker> longTermWorkers;
 }

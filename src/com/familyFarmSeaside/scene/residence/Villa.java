@@ -7,4 +7,7 @@ package com.familyFarmSeaside.scene.residence;
  * @create: 2019/10/19
  **/
 public class Villa extends Residence {
+    public Villa(){
+        super(50000);
+    }
 }

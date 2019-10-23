@@ -9,4 +9,8 @@ import com.familyFarmSeaside.scene.Scene;
  * @create: 2019/10/19
  **/
 public abstract class Residence extends Scene {
+    public Residence(){}
+    public Residence(double x){
+        super(x);
+    }
 }
