@@ -14,6 +14,14 @@ public class Dormitory extends Residence {
   public Dormitory(){
     super(20000);
   }
+  public int getDormNumber(){
+    return dormNumber;
+  }
+  public List<LongTermWorker> getLongTermWorkers(){
+    return longTermWorkers;
+  }
 
-  List<LongTermWorker> longTermWorkers;
+
+  private int dormNumber;
+  private List<LongTermWorker> longTermWorkers;
 }

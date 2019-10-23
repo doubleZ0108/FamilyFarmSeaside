@@ -9,29 +9,30 @@ import com.familyFarmSeaside.person.worker.Worker;
  * @create: 2019/10/19
  **/
 public abstract class LongTermWorker extends Worker {
-  private WokerType wokerType;
-
-  public int getDormNumber() {
-    return dormNumber;
-  }
-
-  public void setDormNumber(int dormNumber) {
-    this.dormNumber = dormNumber;
-  }
-
-  private int dormNumber;
-
-
   public static enum WokerType{
     AnimalCul, CropCul, Buyer, DormAdmi, Guard, Repaire, ResourceAdmi
   };
 
+  private WokerType wokerType;
+  private int dormNumber;
+  private int workerID;
+
+  public int getDormNumber() {
+    return dormNumber;
+  }
+  public void setDormNumber(int dormNumber) {
+    this.dormNumber = dormNumber;
+  }
+  public int getWorkerID() { return workerID; }
   public WokerType getWokerType() {
     return wokerType;
   }
 
+  public void getUp(){
+    System.out.println("第"+workerID+"号员工起床了");
+  }
   public void goToSleep(){
-    System.out.println("I am going to #" + dormNumber);
+    System.out.println("第"+workerID+"号员工睡觉了");
   }
 
 
