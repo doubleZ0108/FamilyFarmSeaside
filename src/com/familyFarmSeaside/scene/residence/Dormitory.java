@@ -21,6 +21,10 @@ public class Dormitory extends Residence {
     return longTermWorkers;
   }
 
+  @Override
+  public String getDescription() {
+    return "这是一栋宿舍";
+  }
 
   private int dormNumber;
   private List<LongTermWorker> longTermWorkers;

@@ -13,4 +13,6 @@ public abstract class Residence extends Scene {
     public Residence(double x){
         super(x);
     }
+
+    public abstract String getDescription();
 }

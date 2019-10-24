@@ -90,39 +90,38 @@ public class FarmOwner extends Person {
 
   }
 
-  public static void main(String[] args){
-    FarmOwner farmOwner = new FarmOwner();
-    System.out.println("------------ Try command pattern ---------------");
-    CommandWrapper guardLogCommandWrapper = ()->{
-      farmOwner.executeCommand(new GuardLogCommand(farmOwner));
-    };
-    CommandWrapper repairmanCommandWrapper = ()->{
-      farmOwner.executeCommand(new RepairemanLogCommand(farmOwner));
-    };
-    CommandWrapper undoCommandWrapper = ()->{
-      farmOwner.executeCommand(new UndoCommand(farmOwner));
-    };
-    Repairman repairman = new Repairman(repairmanCommandWrapper,undoCommandWrapper);
-    Guard guard = new Guard(guardLogCommandWrapper,undoCommandWrapper);
-    try {
-      System.out.println("Let repairman and guard do some log. The logfile is:");
-      repairman.doSomeLog();
-      Thread.sleep(1000);
-      guard.doSomeLog();
-      Thread.sleep(1000);
-      repairman.doSomeLog();
-      System.out.print(farmOwner.getLogFile());
-      // Now is undo function
-      farmOwner.undoCommand();
-      System.out.println("Undo one command. The logfile is:");
-      System.out.print(farmOwner.getLogFile());
-      farmOwner.undoCommand();
-      System.out.println("Undo one more command. The logfile is:");
-      System.out.println(farmOwner.getLogFile());
-    }catch (InterruptedException e){
-      System.out.println(e);
-    }
-
+  public static void main(String[] args) {
+//    FarmOwner farmOwner = new FarmOwner();
+//    System.out.println("------------ Try command pattern ---------------");
+//    CommandWrapper guardLogCommandWrapper = ()->{
+//      farmOwner.executeCommand(new GuardLogCommand(farmOwner));
+//    };
+//    CommandWrapper repairmanCommandWrapper = ()->{
+//      farmOwner.executeCommand(new RepairemanLogCommand(farmOwner));
+//    };
+//    CommandWrapper undoCommandWrapper = ()->{
+//      farmOwner.executeCommand(new UndoCommand(farmOwner));
+//    };
+//    Repairman repairman = new Repairman(repairmanCommandWrapper,undoCommandWrapper);
+//    Guard guard = new Guard(guardLogCommandWrapper,undoCommandWrapper);
+//    try {
+//      System.out.println("Let repairman and guard do some log. The logfile is:");
+//      repairman.doSomeLog();
+//      Thread.sleep(1000);
+//      guard.doSomeLog();
+//      Thread.sleep(1000);
+//      repairman.doSomeLog();
+//      System.out.print(farmOwner.getLogFile());
+//      // Now is undo function
+//      farmOwner.undoCommand();
+//      System.out.println("Undo one command. The logfile is:");
+//      System.out.print(farmOwner.getLogFile());
+//      farmOwner.undoCommand();
+//      System.out.println("Undo one more command. The logfile is:");
+//      System.out.println(farmOwner.getLogFile());
+//    }catch (InterruptedException e){
+//      System.out.println(e);
+//    }
+//
   }
-
 }

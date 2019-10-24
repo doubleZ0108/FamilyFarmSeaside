@@ -2,9 +2,9 @@ package com.familyFarmSeaside.scene;
 
 import com.familyFarmSeaside.scene.residence.Dormitory;
 import com.familyFarmSeaside.scene.residence.Residence;
-import com.familyFarmSeaside.scene.residence.decorator.Bed;
-import com.familyFarmSeaside.scene.residence.decorator.Chair;
-import com.familyFarmSeaside.scene.residence.decorator.Desk;
+import com.familyFarmSeaside.scene.residence.decorator.InfraredAlarm;
+import com.familyFarmSeaside.scene.residence.decorator.CentralAirCondition;
+import com.familyFarmSeaside.scene.residence.decorator.Monitor;
 
 import java.util.List;
 import java.util.Map;
@@ -41,13 +41,14 @@ public abstract class Scene {
     //测试decorator设计模式
     Residence dorm = new Dormitory();
     System.out.println(dorm.getCost());
-    dorm = new Bed(dorm);
+    dorm = new InfraredAlarm(dorm);
     System.out.println(dorm.getCost());
-    dorm = new Desk(dorm);
+    dorm = new Monitor(dorm);
     System.out.println(dorm.getCost());
-    dorm = new Desk(dorm);
+    dorm = new Monitor(dorm);
     System.out.println(dorm.getCost());
-    dorm = new Chair(dorm);
+    dorm = new CentralAirCondition(dorm);
+    System.out.println(dorm.getDescription());
     System.out.println(dorm.getCost());
   }
 

@@ -12,6 +12,11 @@ public class ReceptionCenter extends Residence {
         return ReceptionCenterNumber;
     }
 
+    @Override
+    public String getDescription() {
+        return "这是一栋接待中心";
+    }
+
     private int ReceptionCenterNumber;
     private List<Visitor> Visitors;
 }
