@@ -1,9 +1,8 @@
 package com.familyFarmSeaside.scene.residence.facade;
 
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
-import com.familyFarmSeaside.scene.residence.Dormitory;
+import com.familyFarmSeaside.scene.residence.dormitory.Dormitory;
 import com.familyFarmSeaside.scene.residence.ReceptionCenter;
-import com.familyFarmSeaside.scene.residence.Villa;
 
 import java.util.List;
 

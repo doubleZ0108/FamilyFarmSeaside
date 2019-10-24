@@ -2,13 +2,7 @@ package com.familyFarmSeaside.person.worker.longTerm;
 
 
 import com.familyFarmSeaside.person.owner.command.CommandWrapper;
-import com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
-import com.familyFarmSeaside.person.owner.command.concreteCommand.ResourceLogCommand;
-import com.familyFarmSeaside.person.owner.command.concreteCommand.UndoCommand;
-import com.familyFarmSeaside.scene.residence.Dormitory;
 import com.familyFarmSeaside.scene.residence.facade.ResidenceTask;
-
-import java.util.List;
 
 /**
  * @program: FamilyFarmSeaside

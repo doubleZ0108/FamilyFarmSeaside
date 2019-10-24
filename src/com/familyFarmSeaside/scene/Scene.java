@@ -1,6 +1,6 @@
 package com.familyFarmSeaside.scene;
 
-import com.familyFarmSeaside.scene.residence.Dormitory;
+import com.familyFarmSeaside.scene.residence.dormitory.Dormitory;
 import com.familyFarmSeaside.scene.residence.Residence;
 import com.familyFarmSeaside.scene.residence.decorator.InfraredAlarm;
 import com.familyFarmSeaside.scene.residence.decorator.CentralAirCondition;
