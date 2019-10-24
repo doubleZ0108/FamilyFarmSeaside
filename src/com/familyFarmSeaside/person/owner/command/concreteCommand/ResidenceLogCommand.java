@@ -11,8 +11,8 @@ import java.util.Date;
  * @author: Zijian Zhang
  * @create: 2019/10/23
  **/
-public class GuardLogCommand extends Command {
-  public GuardLogCommand(FarmOwner farmOwner) {
+public class ResidenceLogCommand extends Command {
+  public ResidenceLogCommand(FarmOwner farmOwner) {
     super(farmOwner);
   }
 
@@ -21,7 +21,7 @@ public class GuardLogCommand extends Command {
     backUp();
     String old = previousLog;
     Date now = new Date();
-    old = old + "[LOG]I am a Guard. My duty is to protect our farm from invasion. Now is "+ now.getHours() + ":" + now.getMinutes()+":"+now.getSeconds() + "\n";
+    old = old + "[LOG]I am a residence administrator. My duty is to manage the dormitory. Now is "+ now.getHours() + ":" + now.getMinutes()+":"+now.getSeconds() + "\n";
     farmOwner.setLogFile(old);
     return true;
   }
