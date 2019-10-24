@@ -1,4 +1,7 @@
-package com.familyFarmSeaside.person.worker.longTerm;
+package com.familyFarmSeaside.person.worker.longTerm.buyer;
+
+import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
+import com.familyFarmSeaside.person.worker.longTerm.ResourceAdministrator;
 
 import java.util.List;
 import java.util.Map;

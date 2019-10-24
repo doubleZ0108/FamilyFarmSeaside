@@ -9,14 +9,11 @@ import com.familyFarmSeaside.person.owner.command.concreteCommand.RepairemanLogC
 import com.familyFarmSeaside.person.owner.command.concreteCommand.UndoCommand;
 import com.familyFarmSeaside.person.visitor.Customer;
 import com.familyFarmSeaside.person.visitor.Traveller;
-import com.familyFarmSeaside.person.worker.Worker;
-import com.familyFarmSeaside.person.worker.longTerm.Guard;
+import com.familyFarmSeaside.person.worker.longTerm.guard.Guard;
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
-import com.familyFarmSeaside.person.worker.longTerm.Repairman;
+import com.familyFarmSeaside.person.worker.longTerm.repairman.Repairman;
 import com.familyFarmSeaside.scene.Scene;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
