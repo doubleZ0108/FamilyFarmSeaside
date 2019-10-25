@@ -94,7 +94,7 @@ public class FarmOwner extends Person {
 
   public static void main(String[] args) {
     FarmOwner farmOwner = new FarmOwner();
-    System.out.println("------------ Try command pattern ---------------");
+    System.out.println("---------------测试命令模式-----------------");
     CommandWrapper residenceLogCommandWrapper = ()->{
       farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
     };
@@ -124,7 +124,7 @@ public class FarmOwner extends Person {
     }catch (InterruptedException e){
       System.out.println(e.toString());
     }
-    System.out.println("--------------------------------------------");
+    System.out.println("---------------------------------------------");
 
   }
 }

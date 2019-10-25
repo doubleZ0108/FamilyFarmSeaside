@@ -20,5 +20,7 @@ public class FlyweightMethodTest {
          **/
         System.out.println("------------测试享元模式------------");
         Dormitory dormitory = new Dormitory();
+        System.out.println("---------------------------------");
+
     }
 }

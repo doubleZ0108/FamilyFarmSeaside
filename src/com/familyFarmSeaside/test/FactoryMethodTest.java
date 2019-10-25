@@ -19,5 +19,7 @@ public class FactoryMethodTest {
         Repairman repairman = (Repairman) new RepairmanFactory().newWorker();
         Buyer buyer = (Buyer) new BuyerFactory().newWorker();
         Guard guard = (Guard) new GuardFactory().newWorker();
+        System.out.println("---------------------------------");
+
     }
 }

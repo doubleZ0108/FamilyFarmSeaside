@@ -64,5 +64,7 @@ public class FacadeTest {
         residenceAdministrator.sweep();
         residenceAdministrator.takeTrash();
         residenceAdministrator.lightOff();
+
+        System.out.println("---------------------------------");
     }
 }

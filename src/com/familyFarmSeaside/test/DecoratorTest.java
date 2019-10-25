@@ -34,5 +34,7 @@ public class DecoratorTest {
         villa = new Monitor(villa);
         System.out.print(villa.getDescription());
         System.out.println("，其价格为" + villa.getCost() + '\n');
+        System.out.println("---------------------------------");
+
     }
 }
