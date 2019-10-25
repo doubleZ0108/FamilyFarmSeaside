@@ -1,14 +1,14 @@
-package com.familyFarmSeaside.scene.residence.furniture;
+package com.familyFarmSeaside.scene.residence.dormitory.furniture;
 
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: The class for bed
+ * @description: The class for chair
  * @author: saturn
  * @create: 2019/10/24
  **/
-public class Bed extends Furniture {
+public class Chair extends Furniture {
     @Override
     public void usedBy(LongTermWorker longTermWorker) {
 

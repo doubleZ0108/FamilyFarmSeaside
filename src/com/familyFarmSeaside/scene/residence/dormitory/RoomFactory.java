@@ -8,7 +8,7 @@ package com.familyFarmSeaside.scene.residence.dormitory;
  **/
 public class RoomFactory {
     public Room createRoom(int i){
-        System.out.println("Room of number " + i + " created");
+        System.out.println("\nRoom of number " + i + " created");
         return new Room(i);
     }
 }

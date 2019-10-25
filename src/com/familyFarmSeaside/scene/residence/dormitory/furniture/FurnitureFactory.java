@@ -1,4 +1,4 @@
-package com.familyFarmSeaside.scene.residence.furniture;
+package com.familyFarmSeaside.scene.residence.dormitory.furniture;
 
 import java.util.HashMap;
 
@@ -24,7 +24,7 @@ public class FurnitureFactory {
          *
          * @param kind : The kind of furniture to be returned.
          *
-         * @return : com.familyFarmSeaside.scene.residence.furniture.Furniture
+         * @return : com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = furniturePool.get(kind);
         if(furniture == null){
@@ -44,7 +44,7 @@ public class FurnitureFactory {
          *
          * @param kind : The kind of the furniture to be created.
          *
-         * @return : com.familyFarmSeaside.scene.residence.furniture.Furniture
+         * @return : com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = null;
         switch (kind){

@@ -1,6 +1,6 @@
 package com.familyFarmSeaside.scene.residence.dormitory;
 
-import com.familyFarmSeaside.scene.residence.furniture.*;
+import com.familyFarmSeaside.scene.residence.dormitory.furniture.*;
 
 /**
  * @program: FamilyFarmSeaside

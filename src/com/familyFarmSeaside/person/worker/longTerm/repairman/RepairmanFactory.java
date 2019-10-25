@@ -13,6 +13,7 @@ public class RepairmanFactory extends LongTermWorkerFactory {
 
     @Override
     protected LongTermWorker createWorker() {
+        System.out.println("New Repairman instance created.");
         return new Repairman();
     }
 }

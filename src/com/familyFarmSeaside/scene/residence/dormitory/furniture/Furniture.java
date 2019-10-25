@@ -1,4 +1,4 @@
-package com.familyFarmSeaside.scene.residence.furniture;
+package com.familyFarmSeaside.scene.residence.dormitory.furniture;
 
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
 

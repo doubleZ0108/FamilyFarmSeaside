@@ -13,6 +13,7 @@ public class GuardFactory extends LongTermWorkerFactory {
 
     @Override
     protected LongTermWorker createWorker() {
+        System.out.println("New Guard instance created");
         return new Guard();
     }
 }

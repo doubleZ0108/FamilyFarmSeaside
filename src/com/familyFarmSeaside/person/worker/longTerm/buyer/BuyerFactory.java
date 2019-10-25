@@ -12,6 +12,7 @@ import com.familyFarmSeaside.person.worker.longTerm.LongTermWorkerFactory;
 public class BuyerFactory extends LongTermWorkerFactory {
     @Override
     protected LongTermWorker createWorker() {
+        System.out.println("New Buyer instance created");
         return new Buyer();
     }
 }
