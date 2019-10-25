@@ -1,11 +1,8 @@
 package com.familyFarmSeaside.person.worker.longTerm;
 
 
-import com.familyFarmSeaside.scene.residence.Dormitory;
-import com.familyFarmSeaside.scene.residence.Residence;
+import com.familyFarmSeaside.person.owner.command.CommandWrapper;
 import com.familyFarmSeaside.scene.residence.facade.ResidenceTask;
-
-import java.util.List;
 
 /**
  * @program: FamilyFarmSeaside
@@ -20,6 +17,13 @@ public class ResidenceAdministrator extends LongTermWorker {
   private ResidenceTask residenceTask;
   public ResidenceAdministrator(){};
   public ResidenceAdministrator(ResidenceTask rt){ residenceTask = rt; }
+  private CommandWrapper logCommand;
+  public ResidenceAdministrator(CommandWrapper residenceLogCommand){
+    this.logCommand = residenceLogCommand;
+  }
+  public void doSomeLog(){
+    logCommand.execute();
+  }
   public void setResidenceTask(ResidenceTask rt){
     residenceTask = rt;
   }

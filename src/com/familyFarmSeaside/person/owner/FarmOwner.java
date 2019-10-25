@@ -4,11 +4,13 @@ import com.familyFarmSeaside.person.Person;
 import com.familyFarmSeaside.person.owner.command.Command;
 import com.familyFarmSeaside.person.owner.command.CommandHistory;
 import com.familyFarmSeaside.person.owner.command.CommandWrapper;
-import com.familyFarmSeaside.person.owner.command.concreteCommand.GuardLogCommand;
-import com.familyFarmSeaside.person.owner.command.concreteCommand.RepairemanLogCommand;
+import com.familyFarmSeaside.person.owner.command.concreteCommand.ResourceLogCommand;
+import com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
 import com.familyFarmSeaside.person.owner.command.concreteCommand.UndoCommand;
 import com.familyFarmSeaside.person.visitor.Customer;
 import com.familyFarmSeaside.person.visitor.Traveller;
+import com.familyFarmSeaside.person.worker.longTerm.ResidenceAdministrator;
+import com.familyFarmSeaside.person.worker.longTerm.ResourceAdministrator;
 import com.familyFarmSeaside.person.worker.longTerm.guard.Guard;
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
 import com.familyFarmSeaside.person.worker.longTerm.repairman.Repairman;
@@ -24,13 +26,13 @@ import java.util.Map;
  * @create: 2019/10/19
  **/
 public class FarmOwner extends Person {
-  private String logFile = new String();
+  private String logFile = "";
   private CommandHistory commandHistory = new CommandHistory();
   private Map<LongTermWorker.WokerType, Double> salaryTable;
 //  private List<LongTermWorker> longTermWorkers = new ArrayList<>();
   private Map<LongTermWorker.WokerType, List<LongTermWorker>> longTermWorkers ;
 
-  public void executeCommand(Command command){
+  private void executeCommand(Command command){
     if(command.execute()) {
       commandHistory.addCommand(command);
     }
@@ -91,37 +93,38 @@ public class FarmOwner extends Person {
   }
 
   public static void main(String[] args) {
-//    FarmOwner farmOwner = new FarmOwner();
-//    System.out.println("------------ Try command pattern ---------------");
-//    CommandWrapper guardLogCommandWrapper = ()->{
-//      farmOwner.executeCommand(new GuardLogCommand(farmOwner));
-//    };
-//    CommandWrapper repairmanCommandWrapper = ()->{
-//      farmOwner.executeCommand(new RepairemanLogCommand(farmOwner));
-//    };
-//    CommandWrapper undoCommandWrapper = ()->{
-//      farmOwner.executeCommand(new UndoCommand(farmOwner));
-//    };
-//    Repairman repairman = new Repairman(repairmanCommandWrapper,undoCommandWrapper);
-//    Guard guard = new Guard(guardLogCommandWrapper,undoCommandWrapper);
-//    try {
-//      System.out.println("Let repairman and guard do some log. The logfile is:");
-//      repairman.doSomeLog();
-//      Thread.sleep(1000);
-//      guard.doSomeLog();
-//      Thread.sleep(1000);
-//      repairman.doSomeLog();
-//      System.out.print(farmOwner.getLogFile());
-//      // Now is undo function
-//      farmOwner.undoCommand();
-//      System.out.println("Undo one command. The logfile is:");
-//      System.out.print(farmOwner.getLogFile());
-//      farmOwner.undoCommand();
-//      System.out.println("Undo one more command. The logfile is:");
-//      System.out.println(farmOwner.getLogFile());
-//    }catch (InterruptedException e){
-//      System.out.println(e);
-//    }
-//
+    FarmOwner farmOwner = new FarmOwner();
+    System.out.println("------------ Try command pattern ---------------");
+    CommandWrapper residenceLogCommandWrapper = ()->{
+      farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
+    };
+    CommandWrapper resourceCommandWrapper = ()->{
+      farmOwner.executeCommand(new ResourceLogCommand(farmOwner));
+    };
+    CommandWrapper undoCommandWrapper = ()->{
+      farmOwner.executeCommand(new UndoCommand(farmOwner));
+    };
+    ResidenceAdministrator residenceAdministrator = new ResidenceAdministrator(residenceLogCommandWrapper);
+    ResourceAdministrator resourceAdministrator = new ResourceAdministrator(resourceCommandWrapper,undoCommandWrapper);
+    try {
+      System.out.println("Let repairman and guard do some log. The logfile is:");
+      residenceAdministrator.doSomeLog();
+      Thread.sleep(1000);
+      resourceAdministrator.doSomeLog();
+      Thread.sleep(1000);
+      residenceAdministrator.doSomeLog();
+      System.out.print(farmOwner.getLogFile());
+      // Now is undo function
+      resourceAdministrator.undoLog();
+      System.out.println("Undo one command. The logfile is:");
+      System.out.print(farmOwner.getLogFile());
+      farmOwner.undoCommand();
+      System.out.println("Undo one more command. The logfile is:");
+      System.out.println(farmOwner.getLogFile());
+    }catch (InterruptedException e){
+      System.out.println(e.toString());
+    }
+    System.out.println("--------------------------------------------");
+
   }
 }

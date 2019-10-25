@@ -15,6 +15,7 @@ public abstract class LongTermWorker extends Worker {
 
   private WokerType wokerType;
   private int dormNumber;
+  private int roomNo;
   private int workerID;
 
   public int getDormNumber() {

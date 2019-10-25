@@ -1,7 +1,7 @@
 package com.familyFarmSeaside.person.worker.shortTerm.builder.impl;
 
 import com.familyFarmSeaside.person.worker.shortTerm.builder.Builder;
-import com.familyFarmSeaside.scene.residence.Dormitory;
+import com.familyFarmSeaside.scene.residence.dormitory.Dormitory;
 import com.familyFarmSeaside.scene.residence.ReceptionCenter;
 import com.familyFarmSeaside.scene.residence.Residence;
 import com.familyFarmSeaside.scene.residence.Villa;
