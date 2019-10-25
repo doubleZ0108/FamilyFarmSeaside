@@ -7,6 +7,7 @@ public class InfraredAlarm extends ResidenceDecorator {
 
     public InfraredAlarm(Residence r){
         super(r);
+        System.out.println("添加一个红外报警器");
     }
 
     @Override
@@ -16,6 +17,6 @@ public class InfraredAlarm extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "\n加了一个红外报警器";
+        return residence.getDescription() + "，加了一个红外报警器";
     }
 }

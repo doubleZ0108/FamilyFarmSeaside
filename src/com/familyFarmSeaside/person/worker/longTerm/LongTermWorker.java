@@ -25,6 +25,7 @@ public abstract class LongTermWorker extends Worker {
     this.dormNumber = dormNumber;
   }
   public int getWorkerID() { return workerID; }
+  public void setWorkerID(int id){workerID = id;}
   public WokerType getWokerType() {
     return wokerType;
   }

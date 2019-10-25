@@ -36,21 +36,6 @@ public abstract class Scene {
     cost = d;
   }
 
-  public static void main(String[] args){
-
-    //测试decorator设计模式
-    Residence dorm = new Dormitory();
-    System.out.println(dorm.getCost());
-    dorm = new InfraredAlarm(dorm);
-    System.out.println(dorm.getCost());
-    dorm = new Monitor(dorm);
-    System.out.println(dorm.getCost());
-    dorm = new Monitor(dorm);
-    System.out.println(dorm.getCost());
-    dorm = new CentralAirCondition(dorm);
-    System.out.println(dorm.getDescription());
-    System.out.println(dorm.getCost());
-  }
 
   Map<?, List<?>> container;
   // <放的东西的类型可用 enum ，该类东西的列表 >

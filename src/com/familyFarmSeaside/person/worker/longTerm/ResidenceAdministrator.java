@@ -16,13 +16,14 @@ public class ResidenceAdministrator extends LongTermWorker {
 //  以上两个属性被去掉了。我在residence包里新增了一个包叫facade，里面有个类叫ResidenceTask，表示每个管理员负责的区域。
   private ResidenceTask residenceTask;
   public ResidenceAdministrator(){};
-  public ResidenceAdministrator(ResidenceTask rt){ residenceTask = rt; }
   private CommandWrapper logCommand;
   public ResidenceAdministrator(CommandWrapper residenceLogCommand){
     this.logCommand = residenceLogCommand;
   }
   public void doSomeLog(){
-    logCommand.execute();
+    if(logCommand != null) {
+      logCommand.execute();
+    }
   }
   public void setResidenceTask(ResidenceTask rt){
     residenceTask = rt;

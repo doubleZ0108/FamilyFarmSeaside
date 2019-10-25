@@ -48,6 +48,6 @@ public class ResidenceTask {
             System.out.println("正在运走第" + receptionCenter.getReceptionCenterNumber() + "号接待中心的垃圾...");
         }
         for(Villa villa : villas)
-            System.out.println("正在运走豪宅的垃圾...");
+            System.out.println("正在运走第" + villa.getVillaNumber() + "号豪宅的垃圾...");
     }
 }

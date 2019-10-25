@@ -5,6 +5,7 @@ import com.familyFarmSeaside.scene.residence.Residence;
 public class Monitor extends ResidenceDecorator{
     public Monitor(Residence r){
         super(r);
+        System.out.println("添加一个监视器");
     }
 
     @Override
@@ -14,6 +15,6 @@ public class Monitor extends ResidenceDecorator{
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "\n加了一个监视器";
+        return residence.getDescription() + "，加了一个监视器";
     }
 }

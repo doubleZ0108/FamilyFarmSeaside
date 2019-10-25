@@ -5,6 +5,7 @@ import com.familyFarmSeaside.scene.residence.Residence;
 public class CentralAirCondition extends ResidenceDecorator {
     public CentralAirCondition(Residence r){
         super(r);
+        System.out.println("添加一个中央空调");
     }
 
     @Override
@@ -14,6 +15,6 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "\n加了一个中央空调";
+        return residence.getDescription() + "，加了一个中央空调";
     }
 }
