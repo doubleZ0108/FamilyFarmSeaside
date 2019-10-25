@@ -1,8 +1,8 @@
 /**
  * @program: FamilyFarmSeaside
- * @description: test for git
+ * @description: sdhif
  * @author: Di
  * @create: 2019/10/25
  **/
-public class budiTest {
+public class Test2 {
 }
