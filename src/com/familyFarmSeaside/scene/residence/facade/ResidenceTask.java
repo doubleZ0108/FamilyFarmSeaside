@@ -8,10 +8,14 @@ import com.familyFarmSeaside.scene.residence.Villa;
 import java.util.List;
 
 public class ResidenceTask {
-    List<Dormitory> dormitories;
-    List<ReceptionCenter> receptionCenters;
-    boolean villaResponsibility; //是否负责豪宅的管理
-
+    private List<Dormitory> dormitories;
+    private List<ReceptionCenter> receptionCenters;
+    private List<Villa> villas;
+    public ResidenceTask(List<Dormitory> ld, List<ReceptionCenter> lr, List<Villa> lv){
+        dormitories = ld;
+        receptionCenters = lr;
+        villas = lv;
+    }
     public void wakeUp(){
         for(Dormitory dormitory : dormitories){
             System.out.println("正在叫醒第" + dormitory.getDormNumber() +"号宿舍...");
@@ -43,7 +47,7 @@ public class ResidenceTask {
         for(ReceptionCenter receptionCenter : receptionCenters){
             System.out.println("正在运走第" + receptionCenter.getReceptionCenterNumber() + "号接待中心的垃圾...");
         }
-        if(villaResponsibility)
+        for(Villa villa : villas)
             System.out.println("正在运走豪宅的垃圾...");
     }
 }
