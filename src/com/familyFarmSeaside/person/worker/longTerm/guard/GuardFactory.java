@@ -9,10 +9,9 @@ import com.familyFarmSeaside.person.worker.longTerm.LongTermWorkerFactory;
  * @author: saturn
  * @create: 2019/10/24
  **/
-public class GuardFactory extends LongTermWorkerFactory {
-
+public class GuardFactory implements LongTermWorkerFactory {
     @Override
-    protected LongTermWorker createWorker() {
+    public LongTermWorker newWorker() {
         System.out.println("New Guard instance created");
         return new Guard();
     }

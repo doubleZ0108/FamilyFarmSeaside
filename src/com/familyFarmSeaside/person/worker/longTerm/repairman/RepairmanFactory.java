@@ -2,6 +2,7 @@ package com.familyFarmSeaside.person.worker.longTerm.repairman;
 
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
 import com.familyFarmSeaside.person.worker.longTerm.LongTermWorkerFactory;
+import com.familyFarmSeaside.person.worker.longTerm.guard.Guard;
 
 /**
  * @program: FamilyFarmSeaside
@@ -9,11 +10,11 @@ import com.familyFarmSeaside.person.worker.longTerm.LongTermWorkerFactory;
  * @author: saturn
  * @create: 2019/10/24
  **/
-public class RepairmanFactory extends LongTermWorkerFactory {
+public class RepairmanFactory implements LongTermWorkerFactory {
 
     @Override
-    protected LongTermWorker createWorker() {
-        System.out.println("New Repairman instance created.");
+    public LongTermWorker newWorker() {
+        System.out.println("New Guard instance created");
         return new Repairman();
     }
 }

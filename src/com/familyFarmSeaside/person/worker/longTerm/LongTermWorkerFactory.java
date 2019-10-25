@@ -6,16 +6,6 @@ package com.familyFarmSeaside.person.worker.longTerm;
  * @author: saturn
  * @create: 2019/10/24
  **/
-abstract public class LongTermWorkerFactory {
-    public LongTermWorker newWorker(){
-        /**
-         * @description: return a long term worker instance according to concrete factory
-         *
-         *
-         * @return : com.familyFarmSeaside.person.Person
-         **/
-        return createWorker();
-    }
-
-    abstract protected LongTermWorker createWorker();
+public interface LongTermWorkerFactory {
+    LongTermWorker newWorker();
 }
