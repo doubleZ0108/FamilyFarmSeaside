@@ -14,28 +14,4 @@ public class Chicken extends Poultry {
         detailedSpecies = "CHICKEN";
     }
 
-  @Override
-  public void eat() {
-
-  }
-
-  @Override
-  public void sleep() {
-
-  }
-
-  @Override
-  public void mating() {
-
-  }
-
-  @Override
-  public void breed() {
-
-  }
-
-  @Override
-  public void fly() {
-
-  }
 }
