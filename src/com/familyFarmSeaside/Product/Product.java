@@ -8,6 +8,6 @@ package com.familyFarmSeaside.Product;
  **/
 public class Product {
 
-    //有关买卖的部分
+    //???????
 
 }
