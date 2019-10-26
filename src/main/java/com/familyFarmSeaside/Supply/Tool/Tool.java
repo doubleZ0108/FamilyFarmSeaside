@@ -1,5 +1,5 @@
 package main.java.com.familyFarmSeaside.Supply.Tool;
-import  Supply.Supply;
+import main.java.com.familyFarmSeaside.Supply.Supply;
 
 /**
  * @program: Farm
@@ -7,7 +7,7 @@ import  Supply.Supply;
  * @author: Yimo Liu
  * @create: 2019/10/24
  **/
-public class Tool extends Supply{
+public class Tool extends Supply {
     private static int id_count=100000;
     protected int id;
     protected float durality;

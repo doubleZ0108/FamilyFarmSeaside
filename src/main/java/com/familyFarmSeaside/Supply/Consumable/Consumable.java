@@ -1,6 +1,6 @@
 package main.java.com.familyFarmSeaside.Supply.Consumable;
 import java.util.Date;
-import Supply.Supply;
+import main.java.com.familyFarmSeaside.Supply.Supply;
 
 /**
  * @program: DesignPatterns
@@ -8,7 +8,7 @@ import Supply.Supply;
  * @author: Yifan Ye
  * @create: 2019/10/22
  **/
-public class Consumable extends  Supply
+public class Consumable extends Supply
 {
     protected boolean poisoned;
     protected float storage; //grams
