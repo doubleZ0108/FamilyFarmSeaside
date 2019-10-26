@@ -24,6 +24,14 @@ import java.util.Map;
  * @create: 2019/10/19
  **/
 public class FarmOwner extends Person {
+  private static FarmOwner farmOwner;
+  private FarmOwner(){}
+  public static FarmOwner getInstance(){
+    if(farmOwner == null){
+      farmOwner = new FarmOwner();
+    }
+    return farmOwner;
+  }
   private String logFile = "";
   private CommandHistory commandHistory = new CommandHistory();
   private Map<LongTermWorker.WokerType, Double> salaryTable;
@@ -91,7 +99,7 @@ public class FarmOwner extends Person {
   }
 
   public static void main(String[] args) {
-    FarmOwner farmOwner = new FarmOwner();
+    FarmOwner farmOwner = FarmOwner.getInstance();
     System.out.println("---------------测试命令模式-----------------");
     CommandWrapper residenceLogCommandWrapper = ()->{
       farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));

@@ -13,4 +13,29 @@ public class Dog extends Mammals {
         super();
         detailedSpecies = "DOG";
     }
+
+  @Override
+  public void eat() {
+
+  }
+
+  @Override
+  public void sleep() {
+
+  }
+
+  @Override
+  public void mating() {
+
+  }
+
+  @Override
+  public void breed() {
+
+  }
+
+  @Override
+  protected void run() {
+
+  }
 }

@@ -1,7 +1,6 @@
 package main.java.com.familyFarmSeaside.scene.residence.dormitory;
 
 import main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.*;
-import main.java.familyFarmSeaside.scene.residence.dormitory.furniture.*;
 
 /**
  * @program: FamilyFarmSeaside
