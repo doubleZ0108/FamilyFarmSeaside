@@ -1,6 +1,5 @@
 package com.familyFarmSeaside.Animal.DetailSpecies;
 
-import com.familyFarmSeaside.Animal.Animal;
 import com.familyFarmSeaside.Animal.Clone;
 import com.familyFarmSeaside.Animal.Species.Mammals;
 

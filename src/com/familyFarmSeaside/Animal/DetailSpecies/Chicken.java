@@ -25,4 +25,6 @@ public class Chicken extends Poultry implements Clone {
     public Chicken clone(){
         return new Chicken(this);
     }
+
+
 }

@@ -33,4 +33,6 @@ public abstract class Animal extends Product {
     public void grow(){
         this.lifestage = LifeStage.ADULT;
     }
+
+    public String getDetailedSpecies() { return this.detailedSpecies; }
 }
