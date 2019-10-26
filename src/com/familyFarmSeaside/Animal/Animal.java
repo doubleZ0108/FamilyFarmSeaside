@@ -10,14 +10,13 @@ import com.familyFarmSeaside.Product.Product;
  **/
 public abstract class Animal extends Product {
     static protected enum SpeciesName {MAMMALS,POULTRY,FISH};  //哺乳类 禽类 鱼类
-    protected SpeciesName species;          //种类
-    protected String detailedSpecies;  //具体类别
+    static protected enum Sex {MALE, FEMAIL};                  //雄性 雌性
+    static protected enum LifeStage {BABY, ADULT};             //幼年体 成熟体
 
-    static protected enum Sex {MALE, FEMAIL};
-    protected Sex sex;
-
-    static protected enum LifeStage {BABY, ADULT};  //幼年体 成熟体
-    protected LifeStage lifestage;      //生命阶段
+    protected SpeciesName species;                             //种类
+    protected String detailedSpecies;                          //具体类别
+    protected Sex sex;                                         //性别
+    protected LifeStage lifestage;                             //生命阶段
 
     protected int age;      //年龄
     protected int hungerValue;  //饥饿值(0~100) 0 -> 非常饿       【undo redo pattern】
