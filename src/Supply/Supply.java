@@ -1,4 +1,4 @@
-package Classes;
+package Supply;
 import java.util.Date;
 
 /**
@@ -12,12 +12,12 @@ public class Supply {
     protected Date date_of_production;
     protected  int validity;//months
 
-    Supply()
+    public Supply()
     {
         System.out.println("No Para Supply");
     }
 
-    Supply(String s, Date d, int v)
+    public Supply(String s, Date d, int v)
     {
         name = s;
         date_of_production = d;

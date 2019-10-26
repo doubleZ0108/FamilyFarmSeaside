@@ -1,4 +1,5 @@
-package Classes;
+package Supply.Tool;
+import  Supply.Supply;
 
 /**
  * @program: Farm

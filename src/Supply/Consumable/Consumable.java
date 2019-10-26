@@ -1,5 +1,6 @@
-package Classes;
+package Supply.Consumable;
 import java.util.Date;
+import Supply.Supply;
 
 /**
  * @program: DesignPatterns
