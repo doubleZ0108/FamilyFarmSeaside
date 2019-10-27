@@ -77,7 +77,9 @@ public class ClassPathXmlApplicationContext {
               }
             }
           }else if(eventType==XMLEvent.END_ELEMENT){
-            ioc.put(id,object);
+            if(reader.getName().toString().equals("bean")){
+              ioc.put(id,object);
+            }
           }
         }
       }
@@ -92,7 +94,9 @@ public class ClassPathXmlApplicationContext {
 
     public static void main(String[] args){
       ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
-      Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse");
+      Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_1");
+      warehouse.displayIOCInfo();
+      warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_2");
       warehouse.displayIOCInfo();
     }
 }
