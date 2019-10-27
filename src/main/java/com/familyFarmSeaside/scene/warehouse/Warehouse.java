@@ -13,6 +13,10 @@ public class Warehouse extends Scene {
   private int floorNumber;
   private String name;
 
+  // 这个无参构造函数一定保留，对于 IOC 不可或缺
+  public Warehouse(){}
+
+
   @Override
   public void setCost(double cost) {
     this.cost = cost;
