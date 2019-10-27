@@ -1,0 +1,5 @@
+<bean id="warehouse" class="main.java.com.familyFarmSeaside.scene.warehouse.Warehouse">
+  <property name="cost" value="12345.6"/>
+  <property name="name" value="嘉定一号仓库"/>
+  <property name="floorNumber" value="5"/>
+</bean>

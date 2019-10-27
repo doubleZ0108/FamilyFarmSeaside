@@ -20,6 +20,7 @@ public abstract class Person {
   }
 
   public void minusMoney(double value){
+
   }
 
   public static void main(String[] args){

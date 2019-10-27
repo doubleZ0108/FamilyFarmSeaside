@@ -12,7 +12,7 @@ import main.java.com.familyFarmSeaside.scene.warehouse.Warehouse;
  **/
 public class WarehouseBuilder extends ShortTermWorker {
   private WareHouseBuilderImpl builder = new WareHouseBuilderImpl();
-  Warehouse warehouse;
+  private Warehouse warehouse;
 
   @Override
   public void buildSomeThingNormal(){
