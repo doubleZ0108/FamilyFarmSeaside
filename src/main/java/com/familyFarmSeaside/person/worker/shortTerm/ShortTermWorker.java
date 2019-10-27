@@ -1,8 +1,7 @@
 package main.java.com.familyFarmSeaside.person.worker.shortTerm;
 
 import main.java.com.familyFarmSeaside.person.worker.Worker;
-
-import java.util.Map;
+import main.java.com.familyFarmSeaside.person.worker.shortTerm.aop.NormalConstruction;
 
 /**
  * @program: FamilyFarmSeaside
@@ -10,8 +9,8 @@ import java.util.Map;
  * @author: CodeGroup
  * @create: 2019/10/19
  **/
-public abstract class ShortTermWorker extends Worker {
-  public void buildSomeThingNormal(){}
+public abstract class ShortTermWorker extends Worker implements NormalConstruction {
+//  public void buildSomeThingNormal(){}
 
   public static void main(String[] args){
     ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();

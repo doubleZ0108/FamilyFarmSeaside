@@ -1,5 +1,6 @@
 package main.java.com.familyFarmSeaside.person.worker.shortTerm;
 
+import main.java.com.familyFarmSeaside.person.worker.shortTerm.aop.NormalConstruction;
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.builder.Director;
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.builder.impl.WareHouseBuilderImpl;
 import main.java.com.familyFarmSeaside.scene.warehouse.Warehouse;
@@ -10,9 +11,9 @@ import main.java.com.familyFarmSeaside.scene.warehouse.Warehouse;
  * @author: Zijian Zhang
  * @create: 2019/10/23
  **/
-public class WarehouseBuilder extends ShortTermWorker {
+public class WarehouseBuilder extends ShortTermWorker implements NormalConstruction {
   private WareHouseBuilderImpl builder = new WareHouseBuilderImpl();
-  Warehouse warehouse;
+  private Warehouse warehouse;
 
   @Override
   public void buildSomeThingNormal(){

@@ -6,15 +6,17 @@ package main.java.com.familyFarmSeaside.Watchdog;
  * @author: doubleZ
  * @create: 2019/10/24
  **/
-public class Watchdog {
+public abstract class Watchdog {
 
     private String name;
     private int hungerValue;
     private int healthValue;
+    public abstract void eat();
 
 
     public void bark(){
 
     }
+
 
 }
