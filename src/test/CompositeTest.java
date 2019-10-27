@@ -8,7 +8,7 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Succulent
  * @author: stern
  * @create: 2019/10/27
  **/
-public class CompositionTest {
+public class CompositeTest {
     public static void main(String[] args) {
         System.out.println("Making root SucculentBonsai...");
         SucculentCluster root = new SucculentCluster("root");
