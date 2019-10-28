@@ -46,14 +46,19 @@ public class Dog extends Mammals {
         return this.hungerValue;
     }
 
-  @Override
+  //@Override
   public void eat() {
+        System.out.println("I am a dog!");
+        System.out.println("I'm going to eat!");
+        System.out.println("Food delicious! wangwangwang!");
 
   }
 
-  @Override
+  //@Override
   public void sleep() {
-
+      System.out.println("I am a dog!");
+      System.out.println("I'm going to sleep!");
+      System.out.println("Good dream! wangwangwang!");
   }
 
   @Override
