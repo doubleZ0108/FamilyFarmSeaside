@@ -1,5 +1,9 @@
 package main.java.com.familyFarmSeaside.Supply.Consumable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import main.java.com.familyFarmSeaside.Supply.Observer.Observer;
 import main.java.com.familyFarmSeaside.Supply.Supply;
 
 /**
@@ -10,14 +14,14 @@ import main.java.com.familyFarmSeaside.Supply.Supply;
  **/
 public class Consumable extends Supply
 {
-    protected boolean poisoned;
-    protected float storage; //grams
+    private boolean poisoned;
+    private float storage; //grams
+    private List<Observer> observers = new ArrayList<Observer>();
 
     public Consumable()
     {
         System.out.println("No Para Consumable");
     }
-
 
     public Consumable(String n, Date d, int v, boolean p, float s)
     {
@@ -40,11 +44,25 @@ public class Consumable extends Supply
         else
         {
             storage -= s;
+            for(Observer ob : observers)
+            {
+                ob.response(storage);
+            }
         }
     }
 
     public float getStorage()
     {
         return storage;
+    }
+
+    public void addObserver(Observer observer)
+    {
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer)
+    {
+        observers.remove(observer);
     }
 }
