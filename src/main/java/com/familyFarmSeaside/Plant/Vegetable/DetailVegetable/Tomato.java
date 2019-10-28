@@ -9,5 +9,8 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  * @create: 2019/10/25
  **/
 public class Tomato extends Vegetable {
-
+    @Override
+    public String toString() {
+        return "Vegetable->Tomato";
+    }
 }

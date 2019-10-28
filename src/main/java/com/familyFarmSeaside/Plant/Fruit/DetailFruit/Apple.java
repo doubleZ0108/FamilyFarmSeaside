@@ -9,5 +9,8 @@ import main.java.com.familyFarmSeaside.Plant.Fruit.Fruit;
  * @create: 2019/10/25
  **/
 public class Apple extends Fruit {
-
+    @Override
+    public String toString() {
+        return "Fruit->Apple";
+    }
 }
