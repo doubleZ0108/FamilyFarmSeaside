@@ -13,13 +13,13 @@ public class Consumable extends Supply
     protected boolean poisoned;
     protected float storage; //grams
 
-    Consumable()
+    public Consumable()
     {
         System.out.println("No Para Consumable");
     }
 
 
-    Consumable(String n, Date d, int v, boolean p, float s)
+    public Consumable(String n, Date d, int v, boolean p, float s)
     {
         super(n, d, v);
         poisoned = p;
