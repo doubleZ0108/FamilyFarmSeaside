@@ -6,7 +6,9 @@ import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.Tract;
 
 public class FlyweightTest {
     public static void main(String[] args){
+        System.out.println("——————————————————测试Flyweight模式————————————————————");
         //新建一个farmland
+        System.out.println("创建一个farmland");
         Farmland farmland = new Farmland();
 
         //设置两片普通土地，三片黑土地
