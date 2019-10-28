@@ -12,7 +12,7 @@ import java.util.Date;
  * @create: 2019/10/23
  **/
 public class WareHouseBuilderImpl implements Builder {
-  Warehouse warehouse;
+  private Warehouse warehouse;
   @Override
   public void reset() {
     System.out.println("The warehouse builder is reset!");
@@ -32,9 +32,10 @@ public class WareHouseBuilderImpl implements Builder {
   @Override
   public void setBuildingPlan(String plan) {
     System.out.println("Builder: You choose the type of " + plan);
-    switch (plan){
-      case "Warehouse": warehouse = new Warehouse();break;
-      default: System.out.println("The type you choose is not currently supported!");break;
+    if ("Warehouse".equals(plan)) {
+      warehouse = new Warehouse();
+    } else {
+      System.out.println("The type you choose is not currently supported!");
     }
   }
 
