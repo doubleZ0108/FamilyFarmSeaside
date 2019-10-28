@@ -11,11 +11,21 @@ import java.util.Set;
  **/
 public class AndExpression implements Expression
 {
-    private Set<String> set = new HashSet<String>();
+    private Expression person = null;
+    private Expression supply = null;
 
+    public AndExpression(){}
+
+    public AndExpression(Expression person, Expression supply)
+    {
+        this.person = person;
+        this.supply = supply;
+    }
 
     @Override
-    public boolean interpret(String info) {
-        return false;
+    public boolean interpret(String info)
+    {
+        String s[] = info.split("使用");
+        return person.interpret(s[0])&&supply.interpret(s[1]);
     }
 }

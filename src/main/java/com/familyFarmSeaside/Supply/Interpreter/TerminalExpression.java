@@ -13,11 +13,11 @@ public class TerminalExpression implements  Expression
 {
     private Set<String> set = new HashSet<String>();
 
-    public TerminalExpression(String[] data)
+    public TerminalExpression(Set<String> ps)
     {
-        for(int i = 0; i < data.length; i++)
+        for(String s : ps)
         {
-            set.add(data[i]);
+            set.add(s);
         }
     }
 
