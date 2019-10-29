@@ -6,7 +6,8 @@ import main.java.com.familyFarmSeaside.Plant.Mediator.PersonMediator;
 /**
  * @program: FamilyFarmSeaside
  * @description: Flower class （Colleague），植物分为异花授粉与自花受粉
- *                       自花授粉无需人工帮助，异花授粉需人工帮助
+ *                       自花授粉无需人工帮助，异花授粉需人工帮助，在目前拥有的植物中
+ *                       苹果、樱桃为异花授粉植物，土豆、马铃薯为自花授粉植物
  * @author: Xuefei Lv
  * @create: 2019/10/29
  **/
