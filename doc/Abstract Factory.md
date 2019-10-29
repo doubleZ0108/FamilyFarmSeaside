@@ -33,7 +33,7 @@
 
 #### 3.3.1.2 类图
 
-![Abstract Factory](Diagram/Abstract Factory/Abstract Factory.jpeg)
+![Abstract Factory](Diagram/Abstract Factory/Abstract_Factory.jpeg)
 
 
 
