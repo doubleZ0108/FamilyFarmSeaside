@@ -33,16 +33,16 @@ public abstract class ProductFactory {
         vegetables_warehouse = store_vegetables_warehouse;
     }
 
-    public void productFruit(){
-        fruits_warehouse.add(createFruit());
-    }
-
     public Vector<Fruit> getFruits_warehouse() {
         return fruits_warehouse;
     }
 
     public Vector<Vegetable> getVegetables_warehouse() {
         return vegetables_warehouse;
+    }
+
+    public void productFruit(){
+        fruits_warehouse.add(createFruit());
     }
 
     public void productVegetable(){
