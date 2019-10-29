@@ -9,5 +9,10 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
  * @create: 2019/10/24
  **/
 abstract public class Furniture {
-    public abstract void usedBy(LongTermWorker longTermWorker);
+    protected boolean isSharable;
+
+    public abstract void move();
+    public boolean isSharable(){
+        return isSharable;
+    }
 }

@@ -93,10 +93,10 @@ public class ClassPathXmlApplicationContext {
     }
 
     public static void main(String[] args){
-      System.out.println("Loading config XML from src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
+      System.out.println("Loading config XML from src/main/java/com/com.familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
       System.out.println("Every object defined in the file will be instantiated. They are listed as bellow");
       System.out.println();
-      ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
+      ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/com.familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
       Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_1");
       warehouse.displayIOCInfo();
       System.out.println();

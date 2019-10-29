@@ -9,8 +9,16 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
  * @create: 2019/10/24
  **/
 public class Desk extends Furniture {
-    @Override
-    public void usedBy(LongTermWorker longTermWorker) {
 
+    public Desk(){
+        isSharable = true;
+        System.out.println("New Desk object created");
     }
+
+    @Override
+    public void move() {
+        isSharable = false;
+        System.out.println("Desk is moved!");
+    }
+
 }

@@ -37,4 +37,27 @@ public class Room {
         chair = (Chair)furnitureFactory.getFurnitureByKind(FurnitureKind.Chair);
         desk = (Desk)furnitureFactory.getFurnitureByKind(FurnitureKind.Desk);
     }
+
+    public void moveFurniture(FurnitureKind kind){
+        switch (kind){
+            case Bed:
+                if(bed.isSharable()) {
+                    bed = new Bed();
+                }
+                bed.move();
+                break;
+            case Desk:
+                if(desk.isSharable()) {
+                    desk = new Desk();
+                }
+                desk.move();
+                break;
+            case Chair:
+                if(chair.isSharable()) {
+                    chair = new Chair();
+                }
+                chair.move();
+                break;
+        }
+    }
 }

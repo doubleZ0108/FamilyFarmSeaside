@@ -24,13 +24,12 @@ public class FurnitureFactory {
          *
          * @param kind : The kind of furniture to be returned.
          *
-         * @return : main.java.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
+         * @return : main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = furniturePool.get(kind);
         if(furniture == null){
             furniture = createFurniture(kind);
             furniturePool.put(kind, furniture);
-            System.out.println("New " + kind.toString() + " object created");
         }
         else {
             System.out.println(kind.toString() + " object shared");
@@ -38,13 +37,13 @@ public class FurnitureFactory {
         return furniture;
     }
 
-    private Furniture createFurniture(FurnitureKind kind){
+    public Furniture createFurniture(FurnitureKind kind){
         /**
          * @description: Create the furniture instance according to the kind provided.
          *
          * @param kind : The kind of the furniture to be created.
          *
-         * @return : main.java.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
+         * @return : main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = null;
         switch (kind){
