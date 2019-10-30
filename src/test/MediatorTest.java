@@ -1,13 +1,10 @@
 package test;
 
-import main.java.com.familyFarmSeaside.Plant.Flower.FemaleFlower.FemaleFlower;
 import main.java.com.familyFarmSeaside.Plant.Flower.Flower;
-import main.java.com.familyFarmSeaside.Plant.Flower.MaleFlower.MaleFlower;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
-import main.java.com.familyFarmSeaside.Plant.Mediator.Mediator;
-import main.java.com.familyFarmSeaside.Plant.Mediator.PersonMediator;
+import main.java.com.familyFarmSeaside.Supply.Mediator.Mediator;
+import main.java.com.familyFarmSeaside.Supply.Mediator.PersonMediator;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
