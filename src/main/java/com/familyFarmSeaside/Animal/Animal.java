@@ -52,6 +52,28 @@ public abstract class Animal extends Product {
         animalInfo.put("hungerValue",String.valueOf(getHungerValue()));
         return animalInfo;
     }
+    public void setAnimalInfo(HashMap<String,String> animalInfo){
+        for (String key: animalInfo.keySet()){
+            switch (key){
+                case "sex":{
+                    if (animalInfo.get(key).equals("MALE"))
+                    {this.sex=Sex.MALE;}
+                    else {this.sex=Sex.FEMALE;}
+                    break;
+                }
+                case "lifeStage":{
+                    if(animalInfo.get(key).equals("BABY")){
+                        this.lifestage=LifeStage.BABY;
+                    }
+                    else {this.lifestage=LifeStage.ADULT;}
+                    break;
+                }
+                default:{
+                    break;
+                }
+            }
+        }
+    }
 
     abstract public void eat();
     abstract public void sleep();

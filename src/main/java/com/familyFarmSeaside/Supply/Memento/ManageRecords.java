@@ -28,5 +28,7 @@ public class ManageRecords {
         }
     }
 
+    public  List<TransationRecords> getTransationRecordsList(){return transationRecordsList;}
+
 
 }

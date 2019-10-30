@@ -38,6 +38,23 @@ public abstract class Plant extends Product {
         plantInfo.put("nutritionValue", String.valueOf(getNutritionValue()));
         return plantInfo;
     }
+
+    public void setPlantInfo(HashMap<String,String> plantInfo){
+        for (String key: plantInfo.keySet()){
+            switch (key){
+                case "lifeStage":{
+                    if(plantInfo.get(key).equals("GROWTH")){
+                        this.lifestage=LifeStage.GROWTH;
+                    }
+                    else {this.lifestage=LifeStage.MATURE;}
+                    break;
+                }
+                default:{
+                    break;
+                }
+            }
+        }
+    }
     public  void grow1(){this.lifestage=LifeStage.BREEDING;}
     public  void grow2(){this.lifestage=LifeStage.MATURE;}
 }

@@ -4,6 +4,8 @@ import main.java.com.familyFarmSeaside.Product.ProductList;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @program: FamilyFarmSeaside
@@ -23,11 +25,15 @@ public class TransationRecords {
     int transactionAmount;
     SellOrBuy sellOrBuy;
     int money;
-    ProductList productList;
+    HashMap<String , List<HashMap<String,String >>> productInfo = new HashMap<>();
 
-    public ProductList getProductList(){return productList;}
+    public int getTransactionAmount(){return transactionAmount;}
+    public int getMoney(){return  money;}
+    public  SellOrBuy getSellOrBuy(){return sellOrBuy;}
+    public  HashMap<String , List<HashMap<String,String >>>getProductInfo()
+        {return this.productInfo;}
 
-    public TransationRecords(String product, SellOrBuy sellOrBuy, int number, int unitPrice, int money, ProductList productList){
+    public TransationRecords(String product, SellOrBuy sellOrBuy, int number, int unitPrice, int money, HashMap<String , List<HashMap<String,String >>> productInfo){
         this.date = new Date();
         this.product=product;
         this.sellOrBuy=sellOrBuy;
@@ -35,7 +41,7 @@ public class TransationRecords {
         this.unitPrice = unitPrice;
         this.transactionAmount = unitPrice*number;
         this.money = money;
-        this.productList = productList;
+        this.productInfo = productInfo;
     }
 
     public void printRecordsInfo(){

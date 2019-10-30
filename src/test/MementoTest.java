@@ -37,7 +37,8 @@ public class MementoTest {
         System.out.println("**                 3 --- 查看订单列表             **");
         System.out.println("**                 4 --- 查看产品信息             **");
         System.out.println("**                 5 --- 使目前生物生长          **");
-        System.out.println("**                 6 --- 退出测试                   **");
+        System.out.println("**                 6 --- 恢复历史状态              **");
+        System.out.println("**                 7 --- 退出测试                    **");
         System.out.println("--------------------------------------------");
         while (true) {
             Scanner sc = new Scanner(System.in);
@@ -76,6 +77,15 @@ public class MementoTest {
                     break;
                 }
                 case 6:{
+                    Scanner sc1 = new Scanner(System.in);
+                    mementoTest.viewTransationRecords();
+                    System.out.println("请输入要恢复到的订单编号：");
+                    int number = sc1.nextInt();
+                    mementoTest.restoreHistoryState(number);
+                    System.out.println("恢复成功！\n");
+                    break;
+                }
+                case 7:{
                     return;
                 }
                 default:{
@@ -139,5 +149,9 @@ public class MementoTest {
             potato.grow1();
             potato.grow2();
         }
+    }
+
+    public  void  restoreHistoryState(int number){
+        traders.restoreRecords(manageRecords, number);
     }
 }

@@ -16,7 +16,7 @@ import java.util.Random;
  * @author: doubleZ
  * @create: 2019/10/25
  **/
-public class Apple extends Fruit {
+public class Apple extends Fruit implements Cloneable{
     protected List<Flower> femaleFlowerList = new ArrayList<>();
     protected List<Flower> maleFlowerList = new ArrayList<>();
 
