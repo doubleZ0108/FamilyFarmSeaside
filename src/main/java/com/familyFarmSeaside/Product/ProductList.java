@@ -20,6 +20,7 @@ import java.util.List;
  **/
 
 public class ProductList {
+
     public List<Chicken> chickenList=new ArrayList<>();
     public List<Dog>dogList=new ArrayList<>();
     public List<Perch>perchList=new ArrayList<>();
