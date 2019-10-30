@@ -5,6 +5,8 @@ import java.util.List;
 
 import main.java.com.familyFarmSeaside.Supply.Observer.Observer;
 import main.java.com.familyFarmSeaside.Supply.Supply;
+import main.java.com.familyFarmSeaside.Supply.Element;
+import main.java.com.familyFarmSeaside.Supply.Visitor.SupplyVisitor;
 
 /**
  * @program: DesignPatterns
@@ -12,11 +14,16 @@ import main.java.com.familyFarmSeaside.Supply.Supply;
  * @author: Yifan Ye
  * @create: 2019/10/22
  **/
-public class Consumable extends Supply
+public class Consumable extends Supply implements Element
 {
     private boolean poisoned;
     private float storage; //grams
     private List<Observer> observers = new ArrayList<Observer>();
+
+    @Override
+    public void accept(SupplyVisitor visitor) {
+        visitor.visitConsumable(this);
+    }
 
     public Consumable()
     {
