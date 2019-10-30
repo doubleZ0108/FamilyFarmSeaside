@@ -1,6 +1,4 @@
-package main.java.com.familyFarmSeaside.Transaction;
-
-import main.java.com.familyFarmSeaside.Product.ProductList;
+package main.java.com.familyFarmSeaside.person.worker.longTerm.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;

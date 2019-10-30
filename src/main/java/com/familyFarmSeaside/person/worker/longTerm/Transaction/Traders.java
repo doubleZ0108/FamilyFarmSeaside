@@ -1,4 +1,4 @@
-package main.java.com.familyFarmSeaside.Transaction;
+package main.java.com.familyFarmSeaside.person.worker.longTerm.Transaction;
 
 import main.java.com.familyFarmSeaside.Animal.Animal;
 import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Chicken;
@@ -9,12 +9,8 @@ import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
 import main.java.com.familyFarmSeaside.Plant.Plant;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Tomato;
-import main.java.com.familyFarmSeaside.Product.Product;
 import main.java.com.familyFarmSeaside.Product.ProductList;
 import main.java.com.familyFarmSeaside.person.owner.FarmOwner;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @program: FamilyFarmSeaside
