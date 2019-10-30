@@ -14,36 +14,8 @@ public class Dog extends Mammals {
     public Dog() {
         super();
         detailedSpecies = "DOG";
-    }
-
-    @Override
-    public SpeciesName getSpecies() {
-        return this.species;
-    }
-
-    @Override
-    public String getDetailedSpecies() {
-        return this.detailedSpecies;
-    }
-
-    @Override
-    public Sex getSex() {
-        return this.sex;
-    }
-
-    @Override
-    public LifeStage getLifestage() {
-        return this.lifestage;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
-
-    @Override
-    public int getHungerValue() {
-        return this.hungerValue;
+        sellValue = 200;
+        buyValue = 100;
     }
 
   //@Override

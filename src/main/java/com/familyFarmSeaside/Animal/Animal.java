@@ -2,6 +2,9 @@ package main.java.com.familyFarmSeaside.Animal;
 
 import main.java.com.familyFarmSeaside.Product.Product;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -13,7 +16,7 @@ import java.util.Random;
 public abstract class Animal extends Product {
     static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //哺乳类 禽类 鱼类
     static protected enum Sex {MALE, FEMALE}                                   //雄性 雌性
-    static protected enum LifeStage {BABY, ADULT}                            //幼年体 成熟体
+    static public enum LifeStage {BABY, ADULT}                            //幼年体 成熟体
 
     protected SpeciesName species;                                                    //种类
     protected String detailedSpecies;                                                   //具体类别
@@ -35,12 +38,20 @@ public abstract class Animal extends Product {
         }
     }
 
-    abstract  public SpeciesName getSpecies();
-    abstract  public String getDetailedSpecies();
-    abstract  public  Sex getSex();
-    abstract  public LifeStage getLifestage();
-    abstract  public  int getAge();
-    abstract  public  int getHungerValue();
+    public SpeciesName getSpecies(){return species;}
+    public String getDetailedSpecies(){return detailedSpecies;}
+    public  Sex getSex(){return sex;}
+    public LifeStage getLifestage(){return lifestage;}
+    public  int getAge(){return age;}
+    public  int getHungerValue(){return  hungerValue;}
+    public HashMap<String,String> getAnimalInfo(){
+        HashMap<String,String> animalInfo = new HashMap<>();
+        animalInfo.put("sex", getSex().toString());
+        animalInfo.put("lifeStage", getLifestage().toString());
+        animalInfo.put("value", String.valueOf(getSellValue()));
+        animalInfo.put("hungerValue",String.valueOf(getHungerValue()));
+        return animalInfo;
+    }
 
     abstract public void eat();
     abstract public void sleep();

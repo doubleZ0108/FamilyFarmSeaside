@@ -14,36 +14,8 @@ public class Chicken extends Poultry implements Cloneable{
     public Chicken() {
         super();
         detailedSpecies = "CHICKEN";
-    }
-
-    @Override
-    public SpeciesName getSpecies() {
-        return this.species;
-    }
-
-    @Override
-    public String getDetailedSpecies() {
-        return this.detailedSpecies;
-    }
-
-    @Override
-    public Sex getSex() {
-        return this.sex;
-    }
-
-    @Override
-    public LifeStage getLifestage() {
-        return this.lifestage;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
-
-    @Override
-    public int getHungerValue() {
-        return this.hungerValue;
+        sellValue = 100;
+        buyValue = 50;
     }
 
     @Override

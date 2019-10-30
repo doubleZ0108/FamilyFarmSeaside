@@ -12,16 +12,16 @@ public abstract class Person {
   protected String name;
   protected enum sex {MALE, FEMAIL};
   protected int age;
-  protected double money;
+  protected double money = 1000;
   private UUID id;
 
   public void addMoney(double value){
     money += value;
   }
 
-  public void minusMoney(double value){
+  public void minusMoney(double value){ money -= value;}
 
-  }
+  public double getMoney(){return money;}
 
   public static void main(String[] args){
     System.out.println("hello");

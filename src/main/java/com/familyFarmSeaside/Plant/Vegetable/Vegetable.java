@@ -11,7 +11,6 @@ import main.java.com.familyFarmSeaside.Plant.Plant;
 public class Vegetable extends Plant {
     public Vegetable() {
         super();
-        species = SpeciesName.VEGETABLE;
+        this.species = SpeciesName.VEGETABLE;
     }
-
 }

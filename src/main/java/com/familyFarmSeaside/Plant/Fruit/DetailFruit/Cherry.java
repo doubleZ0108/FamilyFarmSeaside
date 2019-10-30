@@ -19,6 +19,12 @@ public class Cherry extends Fruit {
     protected List<Flower> femaleFlowerList = new ArrayList<>();
     protected List<Flower> maleFlowerList = new ArrayList<>();
 
+    public Cherry(){
+        this.detailedSpecies= "CHERRY";
+        sellValue = 150;
+        buyValue = 75;
+    }
+
     @Override
     public String toString() {
         return "Fruit->Cherry";
