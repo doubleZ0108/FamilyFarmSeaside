@@ -9,22 +9,19 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
  * @create: 2019/10/24
  **/
 abstract public class Furniture {
-    protected boolean isSharable;
+    protected boolean sharable;  //标记是否可共享
+    protected int referenceCount;  //记录被引用的次数
 
-    public abstract void move();
+    public abstract void move();   //家具类移动的虚函数
     public boolean isSharable(){
-        return isSharable;
+        return sharable;
+    }  //返回共享标志
+    public int getReferenceCount(){return referenceCount;}  //返回引用计数
+    public void minusReferenceCount(){ //共享的对象有副本产生时引用计数减1
+        referenceCount--;
     }
-
-    public void setSharable(boolean sharable) {
-        isSharable = sharable;
-    }
-
-    public Furniture(){
-
-    }
-
-    public Furniture(boolean isSharable) {
-        this.isSharable = isSharable;
+    public Furniture getReference(){  //返回家具引用
+        referenceCount++;
+        return this;
     }
 }

@@ -10,23 +10,17 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
  **/
 public class Bed extends Furniture {
 
+    //构造函数
     public Bed(){
-        isSharable = true;
+        sharable = true;
+        referenceCount = 0;
         System.out.println("New Bed object created");
     }
 
+    //重写家具构造函数
     @Override
     public void move() {
-        isSharable = false;
+        sharable = false;
         System.out.println("Bed is moved!");
-    }
-
-    public Bed(boolean isSharable) {
-        super(isSharable);
-    }
-
-    @Override
-    public String toString() {
-        return "class Bed extends Furniture";
     }
 }

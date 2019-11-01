@@ -42,34 +42,28 @@ public class Room {
         switch (kind){
             case Bed:
                 if(bed.isSharable()) {
+                    bed.minusReferenceCount();
                     bed = new Bed();
+                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 bed.move();
                 break;
             case Desk:
                 if(desk.isSharable()) {
+                    desk.minusReferenceCount();
                     desk = new Desk();
+                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 desk.move();
                 break;
             case Chair:
                 if(chair.isSharable()) {
+                    chair.minusReferenceCount();
                     chair = new Chair();
+                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 chair.move();
                 break;
         }
-    }
-
-    public Room(Desk desk, Bed bed, Chair chair, int roomId) {
-        this.desk = desk;
-        this.bed = bed;
-        this.chair = chair;
-        this.roomId = roomId;
-    }
-
-    @Override
-    public String toString() {
-        return "class Room";
     }
 }

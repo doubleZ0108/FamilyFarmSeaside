@@ -11,9 +11,4 @@ public class RoomFactory {
         System.out.println("\nRoom of number " + i + " created");
         return new Room(i);
     }
-
-    @Override
-    public String toString() {
-        return "class RoomFactory";
-    }
 }

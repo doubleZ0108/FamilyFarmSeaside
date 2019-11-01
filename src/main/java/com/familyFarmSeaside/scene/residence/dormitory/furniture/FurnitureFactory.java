@@ -9,8 +9,8 @@ import java.util.HashMap;
  * @create: 2019/10/24
  **/
 public class FurnitureFactory {
-    private HashMap<FurnitureKind, Furniture> furniturePool;
-    private static FurnitureFactory furnitureFactory = new FurnitureFactory();
+    private HashMap<FurnitureKind, Furniture> furniturePool;  //存放家具对象的池
+    private static FurnitureFactory furnitureFactory = new FurnitureFactory();  //家具工厂
 
     public FurnitureFactory(){furniturePool = new HashMap<>();}
 
@@ -32,9 +32,9 @@ public class FurnitureFactory {
             furniturePool.put(kind, furniture);
         }
         else {
-            System.out.println(kind.toString() + " object shared");
+            System.out.println(kind.toString() + " object shared, reference count + 1 = " + furniture.getReferenceCount() + 1);
         }
-        return furniture;
+        return furniture.getReference();
     }
 
     public Furniture createFurniture(FurnitureKind kind){
@@ -58,10 +58,5 @@ public class FurnitureFactory {
                 break;
         }
         return furniture;
-    }
-
-    @Override
-    public String toString() {
-        return "class FurnitureFactory";
     }
 }
