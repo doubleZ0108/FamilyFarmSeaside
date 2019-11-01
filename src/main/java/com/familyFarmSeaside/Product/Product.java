@@ -26,6 +26,7 @@ public abstract class Product {
         this.buyValue = buyValue;
     }
 
+
     public void setSellValue(int sellValue) {
         this.sellValue = sellValue;
     }
