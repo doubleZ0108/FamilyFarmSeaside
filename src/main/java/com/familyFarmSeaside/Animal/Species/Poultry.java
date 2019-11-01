@@ -15,4 +15,13 @@ public abstract class Poultry extends Animal implements Cloneable{
     }
 
     abstract public void fly();
+
+    public Poultry(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Poultry extends Animal implements Cloneable";
+    }
 }

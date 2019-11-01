@@ -15,15 +15,15 @@ import java.util.Random;
  **/
 public abstract class Animal extends Product {
     static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //哺乳类 禽类 鱼类
-    static protected enum Sex {MALE, FEMALE}                                   //雄性 雌性
-    static public enum LifeStage {BABY, ADULT}                            //幼年体 成熟体
+    static protected enum Sex {MALE, FEMALE}                  //雄性 雌性
+    static public enum LifeStage {BABY, ADULT}                //幼年体 成熟体
 
-    protected SpeciesName species;                                                    //种类
-    protected String detailedSpecies;                                                   //具体类别
-    protected Sex sex;                                                                         //性别
-    protected LifeStage lifestage;                                                        //生命阶段
-    protected int age;      								                                   //年龄
-    protected int hungerValue;  							                               //饥饿值(0~100) 0 -> 非常饿       【undo redo pattern】
+    protected SpeciesName species;                            //种类
+    protected String detailedSpecies;                         //具体类别
+    protected Sex sex;                                        //性别
+    protected LifeStage lifestage;                            //生命阶段
+    protected int age;      								  //年龄
+    protected int hungerValue;  							  //饥饿值(0~100) 0 -> 非常饿     【undo redo pattern】
 
     public Animal() {
         this.lifestage = LifeStage.BABY;
@@ -36,6 +36,16 @@ public abstract class Animal extends Product {
         else {
             this.sex=Sex.FEMALE;
         }
+    }
+
+    public Animal(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue);
+        this.species = species;
+        this.detailedSpecies = detailedSpecies;
+        this.sex = sex;
+        this.lifestage = lifestage;
+        this.age = age;
+        this.hungerValue = hungerValue;
     }
 
     public SpeciesName getSpecies(){return species;}
@@ -81,5 +91,34 @@ public abstract class Animal extends Product {
     abstract public Animal breed();   //繁殖
     public void grow(){
         this.lifestage = LifeStage.ADULT;
+    }
+
+    public void setSpecies(SpeciesName species) {
+        this.species = species;
+    }
+
+    public void setDetailedSpecies(String detailedSpecies) {
+        this.detailedSpecies = detailedSpecies;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+
+    public void setLifestage(LifeStage lifestage) {
+        this.lifestage = lifestage;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHungerValue(int hungerValue) {
+        this.hungerValue = hungerValue;
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Animal extends Product";
     }
 }

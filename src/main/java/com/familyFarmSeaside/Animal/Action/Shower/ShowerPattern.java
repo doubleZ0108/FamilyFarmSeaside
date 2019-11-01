@@ -49,4 +49,9 @@ public class ShowerPattern extends Shower {
         }
         System.out.println();
     }
+
+    @Override
+    public String toString() {
+        return "class ShowerPattern extends Shower";
+    }
 }

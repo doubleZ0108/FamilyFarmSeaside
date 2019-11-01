@@ -20,6 +20,9 @@ public class Adapter implements Watchdog{
         return this.name;
     }
 
+    public Adapter(){
+    }
+
     public Adapter(Dog adaptee){
         this.adaptee=adaptee;
     }

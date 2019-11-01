@@ -18,7 +18,11 @@ public class Dog extends Mammals {
         buyValue = 100;
     }
 
-  //@Override
+    public Dog(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
+    }
+
+    @Override
   public void eat() {
         System.out.println("I am a dog!");
         System.out.println("I'm going to eat!");
@@ -26,7 +30,7 @@ public class Dog extends Mammals {
 
   }
 
-  //@Override
+  @Override
   public void sleep() {
       System.out.println("I am a dog!");
       System.out.println("I'm going to sleep!");
@@ -79,4 +83,8 @@ public class Dog extends Mammals {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "class Dog extends Mammals";
+    }
 }

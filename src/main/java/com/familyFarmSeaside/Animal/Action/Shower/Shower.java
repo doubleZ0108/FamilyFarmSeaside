@@ -34,4 +34,17 @@ public abstract class Shower extends Action {
     public abstract void addAnimalName(String name);
     public abstract void removeAnimalName(String name);
     public abstract void showAnimalName();
+
+    public Set<String> getNameListOfAnimal() {
+        return nameListOfAnimal;
+    }
+
+    public void setNameListOfAnimal(Set<String> nameListOfAnimal) {
+        this.nameListOfAnimal = nameListOfAnimal;
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Shower extends Action";
+    }
 }

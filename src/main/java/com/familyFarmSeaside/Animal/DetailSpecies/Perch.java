@@ -19,7 +19,11 @@ public class Perch extends Fish implements Cloneable{
         buyValue = 35;
     }
 
-   @Override
+    public Perch(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
+    }
+
+    @Override
    public void eat() {
 
    }
@@ -72,5 +76,10 @@ public class Perch extends Fish implements Cloneable{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "class Perch extends Fish implements Cloneable";
     }
 }
