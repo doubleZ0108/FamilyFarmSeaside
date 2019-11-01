@@ -1,6 +1,7 @@
 package main.java.com.familyFarmSeaside.person.visitor;
 
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @program: FamilyFarmSeaside
@@ -10,4 +11,18 @@ import java.util.Map;
  **/
 public class Customer extends Visitor {
   Map<?,Integer> thingsToBuy;//要买的东西
+
+  public Customer(Map<?, Integer> thingsToBuy) {
+    this.thingsToBuy = thingsToBuy;
+  }
+
+  public Customer(String name, int age, double money, UUID id, Map<?, Integer> thingsToBuy) {
+    super(name, age, money, id);
+    this.thingsToBuy = thingsToBuy;
+  }
+
+  @Override
+  public String toString() {
+    return "class Customer extends Visitor";
+  }
 }

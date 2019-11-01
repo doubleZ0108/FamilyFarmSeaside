@@ -27,4 +27,16 @@ public class QualityAssuranceTeam implements InvocationHandler {
     System.out.println("[QA] Project is over. QA Team is verifying all kinds of issues");
     return null;
   }
+
+  public QualityAssuranceTeam(){
+  }
+
+  public QualityAssuranceTeam(NormalConstruction shortTermWorker) {
+    this.shortTermWorker = shortTermWorker;
+  }
+
+  @Override
+  public String toString() {
+    return "class QualityAssuranceTeam implements InvocationHandler";
+  }
 }

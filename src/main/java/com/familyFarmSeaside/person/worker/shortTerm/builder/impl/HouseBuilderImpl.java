@@ -16,6 +16,7 @@ import java.util.Date;
  **/
 public class HouseBuilderImpl implements Builder {
   private Residence residence;
+
   @Override
   public void reset() {
     System.out.println("The residence builder is reset!");
@@ -51,5 +52,25 @@ public class HouseBuilderImpl implements Builder {
 
   public Residence getResult() {
     return residence;
+  }
+
+  public HouseBuilderImpl(){
+  }
+
+  public HouseBuilderImpl(Residence residence) {
+    this.residence = residence;
+  }
+
+  public Residence getResidence() {
+    return residence;
+  }
+
+  public void setResidence(Residence residence) {
+    this.residence = residence;
+  }
+
+  @Override
+  public String toString() {
+    return "class HouseBuilderImpl implements Builder";
   }
 }

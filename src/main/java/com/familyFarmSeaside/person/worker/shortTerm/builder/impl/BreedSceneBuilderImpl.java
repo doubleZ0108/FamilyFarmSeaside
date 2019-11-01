@@ -53,4 +53,24 @@ public class BreedSceneBuilderImpl implements Builder {
   public BreedScene getResult() {
     return breedScene;
   }
+
+  public BreedSceneBuilderImpl(){
+  }
+
+  public BreedSceneBuilderImpl(BreedScene breedScene) {
+    this.breedScene = breedScene;
+  }
+
+  public BreedScene getBreedScene() {
+    return breedScene;
+  }
+
+  public void setBreedScene(BreedScene breedScene) {
+    this.breedScene = breedScene;
+  }
+
+  @Override
+  public String toString() {
+    return "class BreedSceneBuilderImpl implements Builder";
+  }
 }

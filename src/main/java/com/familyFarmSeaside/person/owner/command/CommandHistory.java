@@ -11,13 +11,20 @@ import java.util.List;
  **/
 public class CommandHistory {
   private List<Command> commands = new ArrayList<>();
+
   public void addCommand(Command command){
     commands.add(command);
   }
+
   public Command popCommand(){
     if(!commands.isEmpty()){
       return commands.remove(commands.size()-1);
     }
     return null;
+  }
+
+  @Override
+  public String toString() {
+    return "class CommandHistory";
   }
 }

@@ -23,7 +23,46 @@ public abstract class Person {
 
   public double getMoney(){return money;}
 
-  public static void main(String[] args){
-    System.out.println("hello");
+  public Person(){
+  }
+
+  public Person(String name, int age, double money, UUID id) {
+    this.name = name;
+    this.age = age;
+    this.money = money;
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public void setMoney(double money) {
+    this.money = money;
+  }
+
+  public UUID getId() {
+    return id;
+  }
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+  @Override
+  public String toString() {
+    return "abstract class Person";
   }
 }
