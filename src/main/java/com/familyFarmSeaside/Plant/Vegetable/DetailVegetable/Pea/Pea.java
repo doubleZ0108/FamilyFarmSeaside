@@ -11,8 +11,7 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  **/
 public abstract class Pea extends Vegetable {
     public Pea(Color color) {
-        super();
-        detailedSpecies = "PEA";
+        super("PEA");
         this.color=color;
     }
     protected Color color;

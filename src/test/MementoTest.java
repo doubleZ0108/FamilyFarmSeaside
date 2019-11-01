@@ -5,6 +5,7 @@ import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Dog;
 import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Perch;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
+import main.java.com.familyFarmSeaside.Plant.State.HarvestableState;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Tomato;
 import main.java.com.familyFarmSeaside.Product.ProductList;
@@ -134,20 +135,16 @@ public class MementoTest {
             perch.grow();
         }
         for (Apple apple: productList.appleList){
-            apple.grow1();
-            apple.grow2();
+            apple.setPlantState(new HarvestableState());
         }
         for (Cherry cherry: productList.cherryList){
-            cherry.grow1();
-            cherry.grow2();
+            cherry.setPlantState(new HarvestableState());
         }
         for (Tomato tomato: productList.tomatoList){
-            tomato.grow1();
-            tomato.grow2();
+            tomato.setPlantState(new HarvestableState());
         }
         for (Potato potato: productList.potatoList){
-            potato.grow1();
-            potato.grow2();
+            potato.setPlantState(new HarvestableState());
         }
     }
 

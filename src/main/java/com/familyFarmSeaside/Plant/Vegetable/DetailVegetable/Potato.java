@@ -11,7 +11,7 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
 public class Potato extends Vegetable {
 
     public Potato(){
-        this.detailedSpecies= "POTATO";
+        super("POTATO");
         sellValue = 50;
         buyValue = 25;
     }

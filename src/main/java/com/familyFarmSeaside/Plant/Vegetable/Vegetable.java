@@ -9,8 +9,7 @@ import main.java.com.familyFarmSeaside.Plant.Plant;
  * @create: 2019/10/24
  **/
 public class Vegetable extends Plant {
-    public Vegetable() {
-        super();
-        this.species = SpeciesName.VEGETABLE;
+    public Vegetable(String type) {
+        super(type);
     }
 }

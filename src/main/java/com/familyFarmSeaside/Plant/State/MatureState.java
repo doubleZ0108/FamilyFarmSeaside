@@ -18,6 +18,7 @@ public class MatureState implements PlantState {
 
     /**
      * get the name of the state
+     *
      * @return the name of the state
      */
     @Override
@@ -27,11 +28,12 @@ public class MatureState implements PlantState {
 
     /**
      * change the state of the plant
+     *
      * @param p the specific plant
      */
     @Override
     public void moveToNext(Plant p) {
         System.out.println("the mature" + p.getPlantType() + "is now harvestable.");
-        p.setPlantState(new HarvestableState);
+        p.setPlantState(new HarvestableState());
     }
 }

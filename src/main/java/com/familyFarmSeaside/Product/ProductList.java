@@ -86,7 +86,7 @@ public class ProductList {
                 System.out.println("ID："+i+" ");
                 for (String key2: productHashMap.keySet()){
                     String value2 = productHashMap.get(key2);
-                    if(key2.equals("lifeStage")&&(value2.equals("MATURE")||value2.equals("ADULT")))
+                    if((key2.equals("lifeStage")&&value2.equals("ADULT"))||(key2.equals("plantState")&&value2.equals("Harvestable")))
                     {number++;}
                     System.out.println(key2 + "： " + value2+" ");
                 }
