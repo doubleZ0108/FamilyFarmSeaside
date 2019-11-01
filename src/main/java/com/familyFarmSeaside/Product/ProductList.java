@@ -97,6 +97,9 @@ public class ProductList {
         }
     }
 
+    public ProductList(){
+    }
+
     public ProductList(List<Chicken> chickenList, List<Dog> dogList, List<Perch> perchList, List<Apple> appleList, List<Cherry> cherryList, List<Potato> potatoList, List<Tomato> tomatoList) {
         this.chickenList = chickenList;
         this.dogList = dogList;

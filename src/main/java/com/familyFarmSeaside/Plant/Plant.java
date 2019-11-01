@@ -31,6 +31,9 @@ public abstract class Plant extends Product {
      */
     private String plantType;
 
+    public Plant(){
+    }
+
     /**
      * Constructor
      * @param type plant's type
