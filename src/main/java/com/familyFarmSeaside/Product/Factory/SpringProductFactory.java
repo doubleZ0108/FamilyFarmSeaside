@@ -40,6 +40,6 @@ public class SpringProductFactory extends ProductFactory {
 
     @Override
     public String toString() {
-        return "ProductFactory->SpringProductFactory";
+        return "class SpringProductFactory extends ProductFactory";
     }
 }

@@ -40,6 +40,6 @@ public class SummerProductFactory extends ProductFactory {
 
     @Override
     public String toString() {
-        return "ProductFactory->SummerProductFactory";
+        return "class SummerProductFactory extends ProductFactory";
     }
 }

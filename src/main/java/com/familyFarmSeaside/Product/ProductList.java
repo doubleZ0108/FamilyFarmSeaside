@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: all product
+ * @description: This is a list for all products.
  * @author: Xuefei Lv
  * @create: 2019/10/29
  **/
@@ -95,5 +95,76 @@ public class ProductList {
             System.out.println("theNumberCanBeSold："+number);
             System.out.println("\n");
         }
+    }
+
+    public ProductList(List<Chicken> chickenList, List<Dog> dogList, List<Perch> perchList, List<Apple> appleList, List<Cherry> cherryList, List<Potato> potatoList, List<Tomato> tomatoList) {
+        this.chickenList = chickenList;
+        this.dogList = dogList;
+        this.perchList = perchList;
+        this.appleList = appleList;
+        this.cherryList = cherryList;
+        this.potatoList = potatoList;
+        this.tomatoList = tomatoList;
+    }
+
+    public List<Chicken> getChickenList() {
+        return chickenList;
+    }
+
+    public void setChickenList(List<Chicken> chickenList) {
+        this.chickenList = chickenList;
+    }
+
+    public List<Dog> getDogList() {
+        return dogList;
+    }
+
+    public void setDogList(List<Dog> dogList) {
+        this.dogList = dogList;
+    }
+
+    public List<Perch> getPerchList() {
+        return perchList;
+    }
+
+    public void setPerchList(List<Perch> perchList) {
+        this.perchList = perchList;
+    }
+
+    public List<Apple> getAppleList() {
+        return appleList;
+    }
+
+    public void setAppleList(List<Apple> appleList) {
+        this.appleList = appleList;
+    }
+
+    public List<Cherry> getCherryList() {
+        return cherryList;
+    }
+
+    public void setCherryList(List<Cherry> cherryList) {
+        this.cherryList = cherryList;
+    }
+
+    public List<Potato> getPotatoList() {
+        return potatoList;
+    }
+
+    public void setPotatoList(List<Potato> potatoList) {
+        this.potatoList = potatoList;
+    }
+
+    public List<Tomato> getTomatoList() {
+        return tomatoList;
+    }
+
+    public void setTomatoList(List<Tomato> tomatoList) {
+        this.tomatoList = tomatoList;
+    }
+
+    @Override
+    public String toString() {
+        return "class ProductList";
     }
 }

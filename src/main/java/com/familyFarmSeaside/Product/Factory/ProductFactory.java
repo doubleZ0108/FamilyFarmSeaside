@@ -85,4 +85,9 @@ public abstract class ProductFactory {
     public String getVegetable_species() {
         return vegetable_species;
     }
+
+    @Override
+    public String toString() {
+        return "abstract class ProductFactory";
+    }
 }
