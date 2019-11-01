@@ -30,8 +30,12 @@ public class FarmOwner extends Person {
 
   public static FarmOwner getInstance(){
     if(farmOwner == null){
+      System.out.println("这是第一次创建 FarmOwner，使用 new ");
       farmOwner = new FarmOwner();
+    }else {
+      System.out.println("已经创建过对象，直接返回");
     }
+
     return farmOwner;
   }
 
