@@ -53,4 +53,17 @@ public class ToolProxy implements ToolSubject{
     {
         System.out.println("Doing postReturn functions");
     }
+
+    public Tool getToolInstance() {
+        return toolInstance;
+    }
+
+    public void setToolInstance(Tool toolInstance) {
+        this.toolInstance = toolInstance;
+    }
+
+    @Override
+    public String toString() {
+        return "class ToolProxy implements ToolSubject";
+    }
 }

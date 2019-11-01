@@ -28,4 +28,17 @@ public class FeedObserver implements Observer
             System.out.println("存量为" + f + "小于危险存量");
         }
     }
+
+    public float getDead_line() {
+        return dead_line;
+    }
+
+    public void setDead_line(float dead_line) {
+        this.dead_line = dead_line;
+    }
+
+    @Override
+    public String toString() {
+        return "class FeedObserver implements Observer";
+    }
 }

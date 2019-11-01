@@ -350,4 +350,25 @@ public class Traders {
             farmOwner.addMoney(transationRecords.getTransactionAmount());
         }
     }
+
+    public FarmOwner getFarmOwner() {
+        return farmOwner;
+    }
+
+    public void setProductList(ProductList productList) {
+        this.productList = productList;
+    }
+
+    public TransationRecords getEmptyRecords() {
+        return emptyRecords;
+    }
+
+    public void setEmptyRecords(TransationRecords emptyRecords) {
+        this.emptyRecords = emptyRecords;
+    }
+
+    @Override
+    public String toString() {
+        return "class Traders";
+    }
 }

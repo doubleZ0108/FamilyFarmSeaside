@@ -68,4 +68,37 @@ public class Tool extends Supply implements ToolSubject, Element {
     public int getToolId(){
         return this.id;
     }
+
+    public static int getId_count() {
+        return id_count;
+    }
+
+    public static void setId_count(int id_count) {
+        Tool.id_count = id_count;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setContext(ToolContext context) {
+        this.context = context;
+    }
+
+    public boolean isOccupied() {
+        return isOccupied;
+    }
+
+    public void setOccupied(boolean occupied) {
+        isOccupied = occupied;
+    }
+
+    @Override
+    public String toString() {
+        return "class Tool extends Supply implements ToolSubject, Element";
+    }
 }

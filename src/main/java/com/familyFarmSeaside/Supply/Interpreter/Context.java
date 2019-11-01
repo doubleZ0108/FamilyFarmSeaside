@@ -68,4 +68,57 @@ public class Context
             System.out.println(info + "是不允许的");
         }
     }
+
+    public Set<String> getLow_grade_person() {
+        return low_grade_person;
+    }
+
+    public void setLow_grade_person(Set<String> low_grade_person) {
+        this.low_grade_person = low_grade_person;
+    }
+
+    public Set<String> getLow_grade_supplies() {
+        return low_grade_supplies;
+    }
+
+    public void setLow_grade_supplies(Set<String> low_grade_supplies) {
+        this.low_grade_supplies = low_grade_supplies;
+    }
+
+    public Expression getLow_grade_use() {
+        return low_grade_use;
+    }
+
+    public void setLow_grade_use(Expression low_grade_use) {
+        this.low_grade_use = low_grade_use;
+    }
+
+    public Set<String> getHigh_grade_person() {
+        return high_grade_person;
+    }
+
+    public void setHigh_grade_person(Set<String> high_grade_person) {
+        this.high_grade_person = high_grade_person;
+    }
+
+    public Set<String> getHigh_grade_supplies() {
+        return high_grade_supplies;
+    }
+
+    public void setHigh_grade_supplies(Set<String> high_grade_supplies) {
+        this.high_grade_supplies = high_grade_supplies;
+    }
+
+    public Expression getHigh_grade_use() {
+        return high_grade_use;
+    }
+
+    public void setHigh_grade_use(Expression high_grade_use) {
+        this.high_grade_use = high_grade_use;
+    }
+
+    @Override
+    public String toString() {
+        return "class Context";
+    }
 }

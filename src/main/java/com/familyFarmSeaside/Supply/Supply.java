@@ -37,4 +37,29 @@ public class Supply {
         millisec += validity * 30 * 86400;
         return new Date(millisec);
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getDate_of_production() {
+        return date_of_production;
+    }
+
+    public void setDate_of_production(Date date_of_production) {
+        this.date_of_production = date_of_production;
+    }
+
+    public int getValidity() {
+        return validity;
+    }
+
+    public void setValidity(int validity) {
+        this.validity = validity;
+    }
+
+    @Override
+    public String toString() {
+        return "class Supply";
+    }
 }

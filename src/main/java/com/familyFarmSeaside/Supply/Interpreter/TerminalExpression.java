@@ -30,4 +30,17 @@ public class TerminalExpression implements  Expression
         }
         return false;
     }
+
+    public Set<String> getSet() {
+        return set;
+    }
+
+    public void setSet(Set<String> set) {
+        this.set = set;
+    }
+
+    @Override
+    public String toString() {
+        return "class TerminalExpression implements  Expression";
+    }
 }

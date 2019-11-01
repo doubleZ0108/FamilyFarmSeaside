@@ -39,4 +39,17 @@ public class SupplyAggregate implements Aggregate
     {
         return new SupplyStorageIterator(supplies);
     }
+
+    public List<Supply> getSupplies() {
+        return supplies;
+    }
+
+    public void setSupplies(List<Supply> supplies) {
+        this.supplies = supplies;
+    }
+
+    @Override
+    public String toString() {
+        return "class SupplyAggregate implements Aggregate";
+    }
 }

@@ -72,4 +72,29 @@ public class Consumable extends Supply implements Element
     {
         observers.remove(observer);
     }
+
+    public boolean isPoisoned() {
+        return poisoned;
+    }
+
+    public void setPoisoned(boolean poisoned) {
+        this.poisoned = poisoned;
+    }
+
+    public void setStorage(float storage) {
+        this.storage = storage;
+    }
+
+    public List<Observer> getObservers() {
+        return observers;
+    }
+
+    public void setObservers(List<Observer> observers) {
+        this.observers = observers;
+    }
+
+    @Override
+    public String toString() {
+        return "class Consumable extends Supply implements Element";
+    }
 }

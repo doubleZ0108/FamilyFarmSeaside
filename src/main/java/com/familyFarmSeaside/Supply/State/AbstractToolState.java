@@ -10,6 +10,7 @@ public class AbstractToolState {
     protected ToolContext env;  //环境
     protected String stateName; //状态名
     protected float durability; //耐久
+
     void checkState() {
         System.out.println("Now, check the state!");
         System.out.println("The current state is "+this.stateName);
@@ -39,6 +40,7 @@ public class AbstractToolState {
             this.env.setState(new FactoryNew(this.env,this.durability));
         }
     }
+
     public void alterDurability(float x) {
         System.out.println("The current durability is "+this.durability);
         System.out.println("Now we alter it by "+x);
@@ -56,8 +58,34 @@ public class AbstractToolState {
         System.out.println("The final durability is "+this.durability);
         checkState();
     }
+
     public String getStateName(){
         return this.stateName;
+    }
+
+    public ToolContext getEnv() {
+        return env;
+    }
+
+    public void setEnv(ToolContext env) {
+        this.env = env;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
+    }
+
+    public float getDurability() {
+        return durability;
+    }
+
+    public void setDurability(float durability) {
+        this.durability = durability;
+    }
+
+    @Override
+    public String toString() {
+        return "class AbstractToolState";
     }
 }
 
@@ -77,6 +105,11 @@ class FactoryNew extends AbstractToolState
         stateName="Factory new";
         this.durability=dura;
     }
+
+    @Override
+    public String toString() {
+        return "class FactoryNew extends AbstractToolState";
+    }
 }
 
 class MinimalWear extends AbstractToolState
@@ -92,6 +125,11 @@ class MinimalWear extends AbstractToolState
         env=para_env;
         stateName="Minimal wear";
         this.durability=dura;
+    }
+
+    @Override
+    public String toString() {
+        return "class MinimalWear extends AbstractToolState";
     }
 }
 
@@ -109,6 +147,11 @@ class FieldTested extends AbstractToolState
         stateName="Field Tested";
         this.durability=dura;
     }
+
+    @Override
+    public String toString() {
+        return "class FieldTested extends AbstractToolState";
+    }
 }
 
 class WellWorn extends AbstractToolState
@@ -125,6 +168,11 @@ class WellWorn extends AbstractToolState
         stateName="Well Worn";
         this.durability=dura;
     }
+
+    @Override
+    public String toString() {
+        return "class WellWorn extends AbstractToolState";
+    }
 }
 
 class BattleScarred extends AbstractToolState
@@ -140,5 +188,10 @@ class BattleScarred extends AbstractToolState
         env=para_env;
         stateName="Battle Scarred";
         this.durability=dura;
+    }
+
+    @Override
+    public String toString() {
+        return "class BattleScarred extends AbstractToolState";
     }
 }

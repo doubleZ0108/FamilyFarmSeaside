@@ -30,5 +30,12 @@ public class ManageRecords {
 
     public  List<TransationRecords> getTransationRecordsList(){return transationRecordsList;}
 
+    public void setTransationRecordsList(List<TransationRecords> transationRecordsList) {
+        this.transationRecordsList = transationRecordsList;
+    }
 
+    @Override
+    public String toString() {
+        return "class ManageRecords";
+    }
 }

@@ -28,4 +28,25 @@ public class AndExpression implements Expression
         String s[] = info.split("使用");
         return person.interpret(s[0])&&supply.interpret(s[1]);
     }
+
+    public Expression getPerson() {
+        return person;
+    }
+
+    public void setPerson(Expression person) {
+        this.person = person;
+    }
+
+    public Expression getSupply() {
+        return supply;
+    }
+
+    public void setSupply(Expression supply) {
+        this.supply = supply;
+    }
+
+    @Override
+    public String toString() {
+        return "class AndExpression implements Expression";
+    }
 }

@@ -65,4 +65,33 @@ public class SupplyStorageIterator implements Iterator
     {
         return supplies.get(--index);
     }
+
+    public List<Supply> getSupplies() {
+        return supplies;
+    }
+
+    public void setSupplies(List<Supply> supplies) {
+        this.supplies = supplies;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public float getDead_line() {
+        return dead_line;
+    }
+
+    public void setDead_line(float dead_line) {
+        this.dead_line = dead_line;
+    }
+
+    @Override
+    public String toString() {
+        return "class SupplyStorageIterator implements Iterator";
+    }
 }

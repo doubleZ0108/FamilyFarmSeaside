@@ -44,4 +44,16 @@ public class PersonMediator implements Mediator{
         }
     }
 
+    public List<Flower> getFlowers() {
+        return flowers;
+    }
+
+    public void setFlowers(List<Flower> flowers) {
+        this.flowers = flowers;
+    }
+
+    @Override
+    public String toString() {
+        return "class PersonMediator implements Mediator";
+    }
 }

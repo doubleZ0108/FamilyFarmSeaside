@@ -24,4 +24,9 @@ public class ToolContext {
     {
         state.alterDurability(val);
     }
+
+    @Override
+    public String toString() {
+        return "class ToolContext";
+    }
 }

@@ -56,4 +56,56 @@ public class TransationRecords {
         System.out.println("剩余财产："+this.money);
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getProduct() {
+        return product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    public int getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(int unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setTransactionAmount(int transactionAmount) {
+        this.transactionAmount = transactionAmount;
+    }
+
+    public void setSellOrBuy(SellOrBuy sellOrBuy) {
+        this.sellOrBuy = sellOrBuy;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public void setProductInfo(HashMap<String, List<HashMap<String, String>>> productInfo) {
+        this.productInfo = productInfo;
+    }
+
+    @Override
+    public String toString() {
+        return "class TransationRecords";
+    }
 }
