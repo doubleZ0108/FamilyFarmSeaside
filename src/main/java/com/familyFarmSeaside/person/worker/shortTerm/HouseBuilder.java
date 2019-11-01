@@ -23,6 +23,8 @@ public class HouseBuilder extends ShortTermWorker {
     residence = builder.getResult();
   }
 
+  public HouseBuilder(){}
+
   public HouseBuilder(HouseBuilderImpl builder, Residence residence) {
     this.builder = builder;
     this.residence = residence;

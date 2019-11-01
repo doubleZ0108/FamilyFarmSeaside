@@ -23,6 +23,8 @@ public class BreedSceneBuilder extends ShortTermWorker implements NormalConstruc
     breedScene = builder.getResult();
   }
 
+  public BreedSceneBuilder(){}
+
   public BreedSceneBuilder(BreedSceneBuilderImpl builder, BreedScene breedScene) {
     this.builder = builder;
     this.breedScene = breedScene;
