@@ -62,4 +62,22 @@ public class Dormitory extends Residence {
   private int dormNumber;
   private List<Room> rooms;
   private List<LongTermWorker> longTermWorkers;
+
+  public Dormitory(int dormNumber, List<Room> rooms, List<LongTermWorker> longTermWorkers) {
+    this.dormNumber = dormNumber;
+    this.rooms = rooms;
+    this.longTermWorkers = longTermWorkers;
+  }
+
+  public Dormitory(double x, int dormNumber, List<Room> rooms, List<LongTermWorker> longTermWorkers) {
+    super(x);
+    this.dormNumber = dormNumber;
+    this.rooms = rooms;
+    this.longTermWorkers = longTermWorkers;
+  }
+
+  @Override
+  public String toString() {
+    return "class Dormitory extends Residence";
+  }
 }

@@ -60,4 +60,16 @@ public class Room {
                 break;
         }
     }
+
+    public Room(Desk desk, Bed bed, Chair chair, int roomId) {
+        this.desk = desk;
+        this.bed = bed;
+        this.chair = chair;
+        this.roomId = roomId;
+    }
+
+    @Override
+    public String toString() {
+        return "class Room";
+    }
 }

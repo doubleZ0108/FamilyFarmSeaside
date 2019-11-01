@@ -15,9 +15,18 @@ public class Chair extends Furniture {
         System.out.println("New Chair object created");
     }
 
+    public Chair(boolean isSharable) {
+        super(isSharable);
+    }
+
     @Override
     public void move() {
         isSharable = false;
         System.out.println("Chair is moved!");
+    }
+
+    @Override
+    public String toString() {
+        return "class Chair extends Furniture";
     }
 }

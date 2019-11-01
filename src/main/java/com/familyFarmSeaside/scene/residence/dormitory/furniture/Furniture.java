@@ -15,4 +15,16 @@ abstract public class Furniture {
     public boolean isSharable(){
         return isSharable;
     }
+
+    public void setSharable(boolean sharable) {
+        isSharable = sharable;
+    }
+
+    public Furniture(){
+
+    }
+
+    public Furniture(boolean isSharable) {
+        this.isSharable = isSharable;
+    }
 }

@@ -15,10 +15,18 @@ public class Desk extends Furniture {
         System.out.println("New Desk object created");
     }
 
+    public Desk(boolean isSharable) {
+        super(isSharable);
+    }
+
     @Override
     public void move() {
         isSharable = false;
         System.out.println("Desk is moved!");
     }
 
+    @Override
+    public String toString() {
+        return "class Desk extends Furniture";
+    }
 }

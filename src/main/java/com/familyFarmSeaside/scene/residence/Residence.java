@@ -15,4 +15,9 @@ public abstract class Residence extends Scene {
     }
 
     public abstract String getDescription();
+
+    @Override
+    public String toString() {
+        return "abstract class Residence extends Scene";
+    }
 }

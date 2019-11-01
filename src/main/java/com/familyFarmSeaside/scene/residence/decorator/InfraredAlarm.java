@@ -19,4 +19,9 @@ public class InfraredAlarm extends ResidenceDecorator {
     public String getDescription() {
         return residence.getDescription() + "，加了一个红外报警器";
     }
+
+    @Override
+    public String toString() {
+        return "class InfraredAlarm extends ResidenceDecorator";
+    }
 }

@@ -18,4 +18,9 @@ public class WasteTract extends Tract{
             canvas[loc_y*sideLength + sideLength - 1][i] = '#';
         canvas[loc_y*sideLength + (sideLength - 1)/2][loc_x*sideLength + (sideLength - 1)/2] = '?';
     }
+
+    @Override
+    public String toString() {
+        return "class WasteTract extends Tract";
+    }
 }

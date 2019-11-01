@@ -43,4 +43,42 @@ public class Warehouse extends Scene {
     System.out.println("floorNumber: " + floorNumber);
     System.out.println("name: " + name);
   }
+
+  public Warehouse(double cost, int floorNumber, String name) {
+    this.cost = cost;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  public Warehouse(double cost, double cost1, int floorNumber, String name) {
+    super(cost);
+    this.cost = cost1;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  public Warehouse(double cost, String location, double cost1, int floorNumber, String name) {
+    super(cost, location);
+    this.cost = cost1;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  @Override
+  public double getCost() {
+    return cost;
+  }
+
+  public int getFloorNumber() {
+    return floorNumber;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  @Override
+  public String toString() {
+    return "class Warehouse extends Scene";
+  }
 }

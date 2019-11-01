@@ -59,4 +59,9 @@ public class FurnitureFactory {
         }
         return furniture;
     }
+
+    @Override
+    public String toString() {
+        return "class FurnitureFactory";
+    }
 }

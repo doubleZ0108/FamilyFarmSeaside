@@ -25,4 +25,9 @@ public class BlackTract extends Tract{
         canvas[loc_y*sideLength + (sideLength - 1)/2][loc_x*sideLength + (sideLength - 1)/2 + 2] = 'K';
         canvas[loc_y*sideLength + (sideLength - 1)/2][loc_x*sideLength + (sideLength - 1)/2 + 3] = ' ';
     }
+
+    @Override
+    public String toString() {
+        return "class BlackTract extends Tract";
+    }
 }

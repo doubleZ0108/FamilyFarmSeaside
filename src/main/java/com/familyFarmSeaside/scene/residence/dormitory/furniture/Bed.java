@@ -20,4 +20,13 @@ public class Bed extends Furniture {
         isSharable = false;
         System.out.println("Bed is moved!");
     }
+
+    public Bed(boolean isSharable) {
+        super(isSharable);
+    }
+
+    @Override
+    public String toString() {
+        return "class Bed extends Furniture";
+    }
 }
