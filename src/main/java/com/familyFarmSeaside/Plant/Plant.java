@@ -1,9 +1,11 @@
 package main.java.com.familyFarmSeaside.Plant;
 
 import main.java.com.familyFarmSeaside.Plant.ReproductiveOrgan.Flower;
-import main.java.com.familyFarmSeaside.Plant.State.GrowingState;
-import main.java.com.familyFarmSeaside.Plant.State.PlantState;
+import main.java.com.familyFarmSeaside.Plant.State.*;
 import main.java.com.familyFarmSeaside.Product.Product;
+
+import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * @program: FamilyFarmSeaside
@@ -46,6 +48,10 @@ public abstract class Plant extends Product {
         return plantType;
     }
 
+    public  int getNutritionValue(){
+        return nutritionValue;
+    }
+
     /**
      * see that state the plant is
      */
@@ -73,7 +79,7 @@ public abstract class Plant extends Product {
      * harvest the plant
      * abstract
      */
-    abstract public void harvested();
+    //abstract public void harvested();
 
     /**
      * get plant's state
@@ -85,7 +91,7 @@ public abstract class Plant extends Product {
 
     /**
      * set plant's life stage
-     * @param ls plant's new life stage
+     *  ls plant's new life stage
      */
     public void setPlantState(PlantState ps) {
         this.plantState = ps;
@@ -122,4 +128,37 @@ public abstract class Plant extends Product {
     public boolean isDead() {
         return (this.getPlantState() == "Dead");
     }
+
+    public HashMap<String,String > getPlantInfo(){
+        HashMap<String,String> plantInfo = new HashMap<>();
+        plantInfo.put("plantState", getPlantState());
+        plantInfo.put("value", String.valueOf(getSellValue()));
+        plantInfo.put("nutritionValue", String.valueOf(getNutritionValue()));
+        return plantInfo;
+    }
+
+    public void setPlantInfo(HashMap<String,String> plantInfo){
+        for (String key: plantInfo.keySet()){
+            switch (key){
+                case "plantState":{
+                    if(plantInfo.get(key).equals("Growing")){
+                        this.plantState=new GrowingState();
+                    }
+                    else if(plantInfo.get(key).equals("MatureState")){
+                        this.plantState=new MatureState();
+                    }
+                    else if(plantInfo.get(key).equals("HarvestableState")){
+                        this.plantState=new HarvestableState();
+                    }
+                    else {this.plantState=new DeadState();}
+
+                    break;
+                }
+                default:{
+                    break;
+                }
+            }
+        }
+    }
+
 }

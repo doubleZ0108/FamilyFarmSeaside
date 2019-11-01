@@ -7,6 +7,7 @@ import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Perch;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
 import main.java.com.familyFarmSeaside.Plant.Plant;
+import main.java.com.familyFarmSeaside.Plant.State.HarvestableState;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Tomato;
 import main.java.com.familyFarmSeaside.Product.ProductList;
@@ -180,7 +181,7 @@ public class Traders {
         } else if (species.equals("APPLE")) {
             int numberBeSold = 0;
             for (int i = 0; i < productList.appleList.size(); i++) {
-                if (productList.appleList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.appleList.get(i).getPlantState().equals("Harvestable")) {
                     numberBeSold++;
                 }
             }
@@ -191,7 +192,7 @@ public class Traders {
             int hasSoldNumber = 0;
             for (int i = 0; i < productList.appleList.size(); i++) {
                 int value = new Apple().getSellValue();
-                if (productList.appleList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.appleList.get(i).getPlantState().equals("Harvestable")) {
                     hasSoldNumber++;
                     productList.appleList.remove(i);
                     this.farmOwner.addMoney(value);
@@ -204,7 +205,7 @@ public class Traders {
         } else if (species.equals("CHERRY")) {
             int numberBeSold = 0;
             for (int i = 0; i < productList.cherryList.size(); i++) {
-                if (productList.cherryList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.cherryList.get(i).getPlantState().equals("Harvestable")) {
                     numberBeSold++;
                 }
             }
@@ -215,7 +216,7 @@ public class Traders {
             int hasSoldNumber = 0;
             for (int i = 0; i < productList.cherryList.size(); i++) {
                 int value = new Cherry().getSellValue();
-                if (productList.cherryList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.cherryList.get(i).getPlantState().equals("Harvestable")) {
                     hasSoldNumber++;
                     productList.cherryList.remove(i);
                     this.farmOwner.addMoney(value);
@@ -228,7 +229,7 @@ public class Traders {
         } else if (species.equals("POTATO")) {
             int numberBeSold = 0;
             for (int i = 0; i < productList.potatoList.size(); i++) {
-                if (productList.potatoList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.potatoList.get(i).getPlantState().equals("Harvestable")) {
                     numberBeSold++;
                 }
             }
@@ -239,7 +240,7 @@ public class Traders {
             int hasSoldNumber = 0;
             for (int i = 0; i < productList.potatoList.size(); i++) {
                 int value = new Potato().getSellValue();
-                if (productList.potatoList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.potatoList.get(i).getPlantState().equals("Harvestable")) {
                     hasSoldNumber++;
                     productList.potatoList.remove(i);
                     this.farmOwner.addMoney(value);
@@ -252,7 +253,7 @@ public class Traders {
         } else if (species.equals("TOMATO")) {
             int numberBeSold = 0;
             for (int i = 0; i < productList.tomatoList.size(); i++) {
-                if (productList.tomatoList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.tomatoList.get(i).getPlantState().equals("Harvestable")) {
                     numberBeSold++;
                 }
             }
@@ -263,7 +264,7 @@ public class Traders {
             int hasSoldNumber = 0;
             for (int i = 0; i < productList.tomatoList.size(); i++) {
                 int value = new Tomato().getSellValue();
-                if (productList.tomatoList.get(i).getLifestage() == Plant.LifeStage.MATURE) {
+                if (productList.tomatoList.get(i).getPlantState().equals("Harvestable")) {
                     hasSoldNumber++;
                     productList.tomatoList.remove(i);
                     this.farmOwner.addMoney(value);
