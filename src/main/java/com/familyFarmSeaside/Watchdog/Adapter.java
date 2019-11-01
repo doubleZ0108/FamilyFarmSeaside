@@ -32,6 +32,11 @@ public class Adapter implements Watchdog{
         this.adaptee.sleep();
     }
 
+    @Override
+    public void bark() {
+        System.out.println("Watchdog: bark...");
+    }
+
     public Dog getAdaptee() {
         return adaptee;
     }

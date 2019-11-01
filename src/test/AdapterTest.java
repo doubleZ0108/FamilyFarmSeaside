@@ -21,9 +21,11 @@ public class AdapterTest {
         watchdog.eat();
         System.out.println(watchdog.getName()+"睡...");
         watchdog.sleep();
+        System.out.println(watchdog.getName()+"吠...");
+        watchdog.bark();
     }
 
-//    public static void main(String[] args) {
-//        testAdapter("popo");
-//    }
+    public static void main(String[] args) {
+        testAdapter("popo");
+    }
 }
