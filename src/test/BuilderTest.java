@@ -18,6 +18,7 @@ public class BuilderTest {
     System.out.println("BreedSceneBuilder : BreedSceneBuilder() : Use the same set of construct interfaces to create many different objects. Farms, fish ponds and shacks for farming.");
     System.out.println("HouseBuilder : HouseBuilder() : Use the same set of construct interfaces to create many different objects. Worker's quarters for accommodation and farmer's villa.");
     System.out.println("WarehouseBuilder : WarehouseBuilder() : Use the same set of construct interfaces to create many different objects. Warehouse for storing materials.");
+    System.out.println("");
 
     ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
     ShortTermWorker shortTermWorker_2 = new HouseBuilder();

@@ -24,6 +24,7 @@ public class AdapterTest {
         System.out.println("Watchdog : eat() : Interface that watchdog should have eat function.");
         System.out.println("Watchdog : sleep() : Interface that watchdog should have sleep function.");
         System.out.println("Watchdog : bark() : Interface that watchdog should have bark function.");
+        System.out.println("");
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("创建一个对象watchdog...");
