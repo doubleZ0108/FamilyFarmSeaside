@@ -13,7 +13,7 @@ import main.java.com.familyFarmSeaside.person.worker.shortTerm.WarehouseBuilder;
  **/
 public class BuilderTest {
   public static void main(String[] args){
-    System.out.println("--------------测试命令模式---------------");
+    System.out.println("--------------测试建造者模式---------------");
     ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
     ShortTermWorker shortTermWorker_2 = new HouseBuilder();
     ShortTermWorker shortTermWorker_3 = new WarehouseBuilder();
