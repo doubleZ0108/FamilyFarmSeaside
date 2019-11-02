@@ -83,10 +83,14 @@ public class AbstractFactoryTest {
     public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— 测试[Abstract Factory]模式 —————————————-------------------------------------————");
 
-        System.out.println("SpringProductFactory : createFruit() : Inherited from ProductFactory, create apple and add them into product warehouse.");
-        System.out.println("SpringProductFactory : createVegetable() : Inherited from ProductFactory, create potato and add them into product warehouse.");
-        System.out.println("SummerProductFactory : createFruit() : Inherited from ProductFactory, create cherry and add them into product warehouse.");
-        System.out.println("SummerProductFactory : createVegetable() : Inherited from ProductFactory, create tomato and add them into product warehouse.");
+        System.out.println("ProductFactory : getFruit_species() : Abstract function of get fruit species. Concrete realization in SpringProductFactory and SummerProductFactory.");
+        System.out.println("ProductFactory : getVegetable_species() : Abstract function of get vegetable species. Concrete realization in SpringProductFactory and SummerProductFactory.");
+        System.out.println("SpringProductFactory: SpringProductFactory() : Use previous products in warehouse to rebuild SpringProductFactory.");
+        System.out.println("SummerProductFactory: SummerProductFactory() : Use previous products in warehouse to rebuild SummerProductFactory.");
+        System.out.println("SpringProductFactory : productFruit() : Inherited from ProductFactory, create apple and add them into product warehouse.");
+        System.out.println("SpringProductFactory : productVegetable() : Inherited from ProductFactory, create potato and add them into product warehouse.");
+        System.out.println("SummerProductFactory : productFruit() : Inherited from ProductFactory, create cherry and add them into product warehouse.");
+        System.out.println("SummerProductFactory : productVegetable() : Inherited from ProductFactory, create tomato and add them into product warehouse.");
         System.out.println("");
 
         Scanner input = new Scanner(System.in);
