@@ -43,6 +43,17 @@ public class StateTest {
     }
 
     public static void main(String []args){
+        System.out.println("—————————————-------------------------------------———— 测试[State]模式 —————————————-------------------------------------————");
+
+        System.out.println("Tool : tool() : Inherited from Supply, create instance of Tool.");
+        System.out.println("Tool : getContext() : Inherited from Supply, get the context of this Tool");
+        System.out.println("ToolContext : getState() : Get the state of this context of this Tool");
+        System.out.println("ToolContext : alter() : Alter the value of durability of this context, which may lead to the changing of the state.");
+        System.out.println("AbstractToolState : getStateName() : Get the name of this very State.");
+        System.out.println("");
+
         StateTest.stateChanges();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

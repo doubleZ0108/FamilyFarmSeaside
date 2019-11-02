@@ -14,9 +14,14 @@ import java.util.Scanner;
 
 public class FacadeTest {
     public static void main(String[] args){
+        System.out.println("—————————————-------------------------------------———— 测试[Facade]模式 —————————————-------------------------------------————");
         System.out.println("------------测试外观模式------------");
         System.out.println("以下是系统初始化阶段：");
 
+        System.out.println("Dormitory : setDormNumber() : Set the dormitory number.");
+        System.out.println("Dormitory : addLongTermWorker() : Add a long term worker to dormitory.");
+        System.out.println("BuyerFactory : newWorker() : Create a new worker in buyer factory.");
+        System.out.println("");
         //新建两个宿舍
         List<Dormitory> dormitoryList = new ArrayList<Dormitory>();
         Dormitory dormitory1 = new Dormitory();
@@ -84,6 +89,6 @@ public class FacadeTest {
                 System.out.print("输入的数字无效，");
             System.out.println("请选择住宅管理员要执行的工作[1 叫床 | 2 打扫内务 | 3 运走垃圾 | 4 关灯 | 5 退出]");
         }
-        System.out.println("---------------------------------");
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

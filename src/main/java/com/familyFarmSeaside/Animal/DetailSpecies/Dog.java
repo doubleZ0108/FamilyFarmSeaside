@@ -39,7 +39,7 @@ public class Dog extends Mammals {
 
   @Override
   public void mating() {
-
+      System.out.println("I am mating with...");
   }
 
   @Override
@@ -49,7 +49,9 @@ public class Dog extends Mammals {
 
   @Override
   protected void run() {
-
+      System.out.println("I am a dog!");
+      System.out.println("I'm running!");
+      System.out.println("Come and play with me");
   }
 
 

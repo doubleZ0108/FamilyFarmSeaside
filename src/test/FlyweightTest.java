@@ -8,7 +8,13 @@ import java.util.Scanner;
 
 public class FlyweightTest {
     public static void main(String[] args){
+        System.out.println("—————————————-------------------------------------———— 测试[Flyweight]模式 —————————————-------------------------------------————");
         System.out.println("——————————————————测试Flyweight模式————————————————————");
+        System.out.println("Farmland : setTract() : The Farmland with the coordinates of (loc_x, loc_y) is set to Tract of type tractType.");
+        System.out.println("Farmland : getCanvas() : Export the image of Farmland to the console.");
+        System.out.println("Farmland : Farmland() : Constructor of Farmland class, it creates 12 WasteTract by default.");
+        System.out.println("");
+
         //新建一个farmland
         System.out.println("系统已为你创建一个farmland实例，其由12个土地块构成，大小为3*4的矩阵，默认所有土地块块均为荒地，其俯视图如下：");
         Farmland farmland = new Farmland();
