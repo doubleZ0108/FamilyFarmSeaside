@@ -13,24 +13,59 @@ import java.util.Vector;
  * @create: 2019/10/28
  **/
 public abstract class ProductFactory {
-    protected String fruit_species;
-    protected String vegetable_species;
+    protected String fruit_species;         //specific fruit species
+    protected String vegetable_species;     //specific vegetable species
 
-    protected static Vector<Fruit> fruits_warehouse;
-    protected static Vector<Vegetable> vegetables_warehouse;
-
-
-    protected abstract Fruit createFruit();
-    protected abstract Vegetable createVegetable();
+    protected static Vector<Fruit> fruits_warehouse;            //warehouse for abstract fruits
+    protected static Vector<Vegetable> vegetables_warehouse;    //warehouse for abstract vegetables
 
     public ProductFactory() {
+        /**
+         * @description: create an empty fruits warehouse and an empty vegetables warehouse
+         *
+         * @return : null
+         **/
         fruits_warehouse = new Vector<Fruit>();
         vegetables_warehouse = new Vector<Vegetable>();
     }
 
     public ProductFactory(Vector<Fruit> store_fruits_warehouse, Vector<Vegetable> store_vegetables_warehouse){
+        /**
+         * @description: use previous products in previous warehouse to build new warehouse
+         *
+         * @param store_fruits_warehouse : previous fruits in previous warehouse
+         * @param store_vegetables_warehouse : previous vegetables in previous warehouse
+         *
+         * @return : null
+         **/
         fruits_warehouse = store_fruits_warehouse;
         vegetables_warehouse = store_vegetables_warehouse;
+    }
+
+    /*
+    abstract create function
+    because we don't know the specific fruit species and vegetable species
+    the return type are most abstract -> Fruit & Vegetable
+     */
+    protected abstract Fruit createFruit();
+    protected abstract Vegetable createVegetable();
+
+    public void productFruit(){
+        /**
+         * @description: product abstract fruit and add it into fruits warehouse. The specific fruit will be declared in createFruit function.
+         *
+         * @return : void
+         **/
+        fruits_warehouse.add(createFruit());
+    }
+
+    public void productVegetable(){
+        /**
+         * @description: product abstract vegetable and add it into vegetables warehouse. The specific vegetable will be declared in createVegetable function.
+         *
+         * @return : void
+         **/
+        vegetables_warehouse.add(createVegetable());
     }
 
     public Vector<Fruit> getFruits_warehouse() {
@@ -41,23 +76,13 @@ public abstract class ProductFactory {
         return vegetables_warehouse;
     }
 
-    public void productFruit(){
-        fruits_warehouse.add(createFruit());
-    }
-
-    public void productVegetable(){
-        vegetables_warehouse.add(createVegetable());
-    }
-
-    public int getFruitsNum(){
-        return fruits_warehouse.size();
-    }
-
-    public int getVegetablesNum(){
-        return vegetables_warehouse.size();
-    }
 
     public void getWarehouse(){
+        /**
+         * @description: get all of the fruits and vegetables in this product factory
+         *
+         * @return : void
+         **/
         System.out.println("");
         System.out.println("===== Fruits in " + this.toString() + " ==============");
         getFruits();
@@ -84,6 +109,14 @@ public abstract class ProductFactory {
 
     public String getVegetable_species() {
         return vegetable_species;
+    }
+
+    public int getFruitsNum(){
+        return fruits_warehouse.size();
+    }
+
+    public int getVegetablesNum(){
+        return vegetables_warehouse.size();
     }
 
     @Override
