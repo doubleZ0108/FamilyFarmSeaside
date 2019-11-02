@@ -6,11 +6,11 @@ import main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furni
 
 /**
  * @program: FamilyFarmSeaside
- * @description: The test class for flyweightMethod
- * @author: saturn
- * @create: 2019/10/25
+ * @description: Test the sharable.
+ * @author: Yifan Ye
+ * @create: 2019/11/02
  **/
-public class CopyOnWriteTest {
+public class SharableTest {
     public static void main(String[] args){
         System.out.println("----------Test Copy On Write、Reference Counting、Sharable----------");
         System.out.println("Dormitory : getRoomById() : Get the corresponding room by id.");
