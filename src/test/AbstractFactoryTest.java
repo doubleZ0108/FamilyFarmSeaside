@@ -53,13 +53,13 @@ public class AbstractFactoryTest {
          *
          * @return : void
          **/
-        boolean empty_flag = factoryKind.equals(FactoryKind.dummy); //是否是第一次建立工厂
-        boolean equal_flag = factoryKind.equals(opcode);    //用户想要修改的工厂是否和之前的工厂相同
+        boolean empty_flag = factoryKind.equals(FactoryKind.dummy);     //Is it the first time to set up a factory?
+        boolean equal_flag = factoryKind.equals(opcode);                //Is the factory that the user wants to modify the same as the previous factory?
 
         /*
-            如果工厂之前是空的，则初始化一个新工厂
-            如果工厂之前生产的是其他东西，把之前的产品保存
-            如果工厂之前生产的就是当前的东西，则直接return
+            Initialize a new factory if the factory was previously empty
+            If the factory produced something else before, save the previous product.
+            If the factory produced the current thing, then directly return
          */
         if(empty_flag || !equal_flag){
             switch (opcode){

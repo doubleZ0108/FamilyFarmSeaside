@@ -24,17 +24,20 @@ public class Chicken extends Poultry implements Cloneable{
 
     @Override
     public void eat() {
-
+        System.out.println("I am Chicken!");
+        System.out.println("I am eating!");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("I am Chicken!");
+        System.out.println("I am sleeping!");
     }
 
     @Override
     public void mating() {
-
+        System.out.println("I am Chicken!");
+        System.out.println("I am mating with another Chicken!");
     }
 
     @Override
@@ -44,7 +47,8 @@ public class Chicken extends Poultry implements Cloneable{
 
     @Override
     public void fly() {
-
+        System.out.println("I am Chicken!");
+        System.out.println("I am flying!");
     }
 
     @Override
@@ -63,16 +67,16 @@ public class Chicken extends Poultry implements Cloneable{
     //重写equals函数
     @Override
     public  boolean equals(Object obj){
-        if (this == obj)      //传入的对象是其本身，相等的；
-            return true;
-        if (obj == null)     //如果传入的对象为空，不相等
-            return false;
-        if (getClass() != obj.getClass())  //如果不是同一个类型的，不相等
-            return false;
+        if (this == obj)      //The incoming object is itself, equal
+        {return true;}
+        if (obj == null)     //If the passed in object is empty, not equal
+        {return false;}
+        if (getClass() != obj.getClass())  //If not the same type, not equal
+        {return false;}
         Chicken chicken = (Chicken) obj;
         if(this.detailedSpecies==chicken.detailedSpecies && this.species.equals(chicken.species)
                 && this.sex==chicken.sex&&this.age==chicken.age&&this.lifestage==chicken.lifestage){
-            return true;
+            {return true;}
         }
         return false;
     }

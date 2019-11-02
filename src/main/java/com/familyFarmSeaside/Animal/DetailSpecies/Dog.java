@@ -39,7 +39,8 @@ public class Dog extends Mammals {
 
   @Override
   public void mating() {
-      System.out.println("I am mating with...");
+      System.out.println("I am Dog!");
+      System.out.println("I am mating with another Dog!");
   }
 
   @Override
@@ -71,16 +72,16 @@ public class Dog extends Mammals {
 
     @Override
     public  boolean equals(Object obj){
-        if (this == obj)      //传入的对象是其本身，相等的；
-            return true;
-        if (obj == null)     //如果传入的对象为空，不相等
-            return false;
-        if (getClass() != obj.getClass())  //如果不是同一个类型的，不相等
-            return false;
+        if (this == obj)      //The incoming object is itself, equal
+        {return true;}
+        if (obj == null)     //If the passed in object is empty, not equal
+        {return false;}
+        if (getClass() != obj.getClass())  //If not the same type, not equal
+        {return false;}
         Dog dog = (Dog) obj;
         if(this.detailedSpecies==dog.detailedSpecies && this.species.equals(dog.species)
                 && this.sex==dog.sex&&this.age==dog.age&&this.lifestage==dog.lifestage){
-            return true;
+            {return true;}
         }
         return false;
     }

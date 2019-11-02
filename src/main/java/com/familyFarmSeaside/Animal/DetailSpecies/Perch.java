@@ -25,17 +25,20 @@ public class Perch extends Fish implements Cloneable{
 
     @Override
    public void eat() {
-
+        System.out.println("I am Perch!");
+        System.out.println("I am eating!");
    }
 
    @Override
    public void sleep() {
-
+       System.out.println("I am Perch!");
+       System.out.println("I am sleeping!");
    }
 
    @Override
    public void mating() {
-
+       System.out.println("I am Perch!");
+       System.out.println("I am mating with another Perch!");
     }
 
     @Override
@@ -45,7 +48,8 @@ public class Perch extends Fish implements Cloneable{
 
    @Override
    public void swim() {
-
+       System.out.println("I am Perch!");
+       System.out.println("I am swiming!");
    }
 
 
@@ -64,16 +68,17 @@ public class Perch extends Fish implements Cloneable{
 
     @Override
     public  boolean equals(Object obj){
-        if (this == obj)      //传入的对象是其本身，相等的；
-            return true;
-        if (obj == null)     //如果传入的对象为空，不相等
-            return false;
-        if (getClass() != obj.getClass())  //如果不是同一个类型的，不相等
-            return false;
+        if (this == obj)      //The incoming object is itself, equal
+        {return true;}
+        if (obj == null)     //If the passed in object is empty, not equal
+        {return false;}
+        if (getClass() != obj.getClass())  //If not the same type, not equal
+        {return false;}
+
         Perch perch = (Perch) obj;
         if(this.detailedSpecies==perch.detailedSpecies && this.species.equals(perch.species)
                 && this.sex==perch.sex&&this.age==perch.age&&this.lifestage==perch.lifestage){
-            return true;
+            {return true;}
         }
         return false;
     }
