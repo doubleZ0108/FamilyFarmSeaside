@@ -27,7 +27,14 @@ public class AndExpression implements Expression
     public boolean interpret(String info)
     {
         String s[] = info.split("使用");
-        return person.interpret(s[0])&&supply.interpret(s[1]);
+        try
+        {
+            return person.interpret(s[0])&&supply.interpret(s[1]);
+        }catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("请以“某人使用某物”的格式输入！！");
+            return false;
+        }
     }
 
     public Expression getPerson() {

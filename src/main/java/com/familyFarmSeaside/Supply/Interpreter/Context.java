@@ -64,14 +64,21 @@ public class Context
     //判断使用关系是否成立
     public void allowUse(String info)
     {
-        boolean ok = low_grade_use.interpret(info)||high_grade_use.interpret(info);
-        if(ok)
+        if(!info.contains("使用"))
         {
-            System.out.println(info + "是允许的");
+            System.out.println("请以“某人使用某物的方式输入！！！”");
         }
         else
         {
-            System.out.println(info + "是不允许的");
+            boolean ok = low_grade_use.interpret(info)||high_grade_use.interpret(info);
+            if(ok)
+            {
+                System.out.println(info + "是允许的");
+            }
+            else
+            {
+                System.out.println(info + "是不允许的");
+            }
         }
     }
 
