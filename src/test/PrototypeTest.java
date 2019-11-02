@@ -18,4 +18,8 @@ public class PrototypeTest {
         System.out.println("chicken == chicken1 : " + (chicken == chicken1) );
         System.out.println("chicken.equals(chicken1): "+(chicken.equals(chicken1)));
     }
+
+    public static void main(String[] args) throws CloneNotSupportedException {
+        PrototypeTest.testPrototype();
+    }
 }

@@ -41,4 +41,8 @@ public class StateTest {
         //above 100
         toolContext.alter(80);
     }
+
+    public static void main(String []args){
+        StateTest.stateChanges();
+    }
 }
