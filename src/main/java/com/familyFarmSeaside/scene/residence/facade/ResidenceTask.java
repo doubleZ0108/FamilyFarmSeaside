@@ -11,11 +11,13 @@ public class ResidenceTask {
     private List<Dormitory> dormitories;
     private List<ReceptionCenter> receptionCenters;
     private List<Villa> villas;
+
     public ResidenceTask(List<Dormitory> ld, List<ReceptionCenter> lr, List<Villa> lv){
         dormitories = ld;
         receptionCenters = lr;
         villas = lv;
     }
+
     public void wakeUp(){
         for(Dormitory dormitory : dormitories){
             System.out.println("正在叫醒第" + dormitory.getDormNumber() +"号宿舍...");
@@ -24,6 +26,7 @@ public class ResidenceTask {
             }
         }
     }
+
     public void lightOff(){
         for(Dormitory dormitory : dormitories){
             System.out.println("正在关闭第" + dormitory.getDormNumber() +"号宿舍的灯...");
@@ -32,6 +35,7 @@ public class ResidenceTask {
             }
         }
     }
+
     public void sweep(){
         for(Dormitory dormitory : dormitories){
             System.out.println("正在打扫第" + dormitory.getDormNumber() + "号宿舍...");
@@ -40,6 +44,7 @@ public class ResidenceTask {
             System.out.println("正在打扫第" + receptionCenter.getReceptionCenterNumber() + "号接待中心...");
         }
     }
+
     public void takeTrash(){
         for(Dormitory dormitory : dormitories){
             System.out.println("正在运走第" + dormitory.getDormNumber() + "号宿舍的垃圾...");
@@ -49,5 +54,10 @@ public class ResidenceTask {
         }
         for(Villa villa : villas)
             System.out.println("正在运走第" + villa.getVillaNumber() + "号豪宅的垃圾...");
+    }
+
+    @Override
+    public String toString() {
+        return "class ResidenceTask";
     }
 }

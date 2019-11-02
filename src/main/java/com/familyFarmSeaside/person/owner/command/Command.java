@@ -11,6 +11,7 @@ import main.java.com.familyFarmSeaside.person.owner.FarmOwner;
 public abstract class Command {
   protected FarmOwner farmOwner;
   protected String previousLog;
+
   public abstract boolean execute();
   public Command(FarmOwner farmOwner){
     this.farmOwner = farmOwner;
@@ -23,5 +24,29 @@ public abstract class Command {
     farmOwner.setLogFile(previousLog);
   }
 
+  public Command(FarmOwner farmOwner, String previousLog) {
+    this.farmOwner = farmOwner;
+    this.previousLog = previousLog;
+  }
 
+  public FarmOwner getFarmOwner() {
+    return farmOwner;
+  }
+
+  public void setFarmOwner(FarmOwner farmOwner) {
+    this.farmOwner = farmOwner;
+  }
+
+  public String getPreviousLog() {
+    return previousLog;
+  }
+
+  public void setPreviousLog(String previousLog) {
+    this.previousLog = previousLog;
+  }
+
+  @Override
+  public String toString() {
+    return "abstract class Command";
+  }
 }

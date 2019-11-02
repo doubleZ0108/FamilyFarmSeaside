@@ -12,4 +12,9 @@ public abstract class ResidenceDecorator extends Residence {
 
     @Override
     public abstract double getCost();
+
+    @Override
+    public String toString() {
+        return "abstract class ResidenceDecorator extends Residence";
+    }
 }

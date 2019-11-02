@@ -19,4 +19,9 @@ public class UndoCommand extends Command {
     farmOwner.undoCommand();
     return false;
   }
+
+  @Override
+  public String toString() {
+    return "class UndoCommand extends Command";
+  }
 }

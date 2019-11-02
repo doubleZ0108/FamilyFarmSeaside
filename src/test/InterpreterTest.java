@@ -16,6 +16,7 @@ public class InterpreterTest
         Context farmContext = new Context();
         Scanner scanner = new Scanner(System.in);
         System.out.println("现在开始测试Interpreter设计模式！");
+        //以下四个while用于输入
         while(true)
         {
             System.out.println("请输入低权限使用者（停止输入请输入“停止”）");
@@ -69,6 +70,7 @@ public class InterpreterTest
             }
         }
         farmContext.addIsOver();
+        //判断“某人使用某物”是否合理
         while (true)
         {
             System.out.println("请以“某人使用某物”的形式输入测试语句！（停止输入请输入“停止”）");

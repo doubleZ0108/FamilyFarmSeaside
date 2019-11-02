@@ -35,4 +35,25 @@ public class TractFactory {
         }
         return tract;
     }
+
+    public Hashtable<String, Tract> getTracts() {
+        return tracts;
+    }
+
+    public void setTracts(Hashtable<String, Tract> tracts) {
+        this.tracts = tracts;
+    }
+
+    public static TractFactory getSingleton() {
+        return singleton;
+    }
+
+    public static void setSingleton(TractFactory singleton) {
+        TractFactory.singleton = singleton;
+    }
+
+    @Override
+    public String toString() {
+        return "class TractFactory";
+    }
 }

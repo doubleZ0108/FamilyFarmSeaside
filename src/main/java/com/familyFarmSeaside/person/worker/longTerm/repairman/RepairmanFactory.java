@@ -13,7 +13,7 @@ public class RepairmanFactory implements LongTermWorkerFactory {
 
     @Override
     public LongTermWorker newWorker() {
-        System.out.println("New Guard instance created");
+        System.out.println("New Repairman instance created");
         return new Repairman();
     }
 }

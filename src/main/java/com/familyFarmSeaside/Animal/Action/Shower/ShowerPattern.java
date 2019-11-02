@@ -1,8 +1,8 @@
 package main.java.com.familyFarmSeaside.Animal.Action.Shower;
 
-import com.sun.tools.javac.file.SymbolArchive;
+//import com.sun.tools.javac.file.SymbolArchive;
 
-import java.util.Set;
+//import java.util.Set;
 
 /**
  * @program: FamilyFarmSeaside
@@ -48,5 +48,10 @@ public class ShowerPattern extends Shower {
             System.out.print(" " + name);
         }
         System.out.println();
+    }
+
+    @Override
+    public String toString() {
+        return "class ShowerPattern extends Shower";
     }
 }

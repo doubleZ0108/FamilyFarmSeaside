@@ -15,4 +15,13 @@ public abstract class Fish extends Animal {
     }
 
     abstract public void swim();
+
+    public Fish(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Mammals extends Animal";
+    }
 }

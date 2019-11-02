@@ -22,4 +22,32 @@ public class WarehouseBuilder extends ShortTermWorker implements NormalConstruct
     warehouse = builder.getResult();
   }
 
+  public WarehouseBuilder(){
+  }
+
+  public WarehouseBuilder(WareHouseBuilderImpl builder, Warehouse warehouse) {
+    this.builder = builder;
+    this.warehouse = warehouse;
+  }
+
+  public WareHouseBuilderImpl getBuilder() {
+    return builder;
+  }
+
+  public void setBuilder(WareHouseBuilderImpl builder) {
+    this.builder = builder;
+  }
+
+  public Warehouse getWarehouse() {
+    return warehouse;
+  }
+
+  public void setWarehouse(Warehouse warehouse) {
+    this.warehouse = warehouse;
+  }
+
+  @Override
+  public String toString() {
+    return "class WarehouseBuilder extends ShortTermWorker implements NormalConstruction";
+  }
 }

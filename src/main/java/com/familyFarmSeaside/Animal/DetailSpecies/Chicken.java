@@ -14,36 +14,12 @@ public class Chicken extends Poultry implements Cloneable{
     public Chicken() {
         super();
         detailedSpecies = "CHICKEN";
+        sellValue = 100;
+        buyValue = 50;
     }
 
-    @Override
-    public SpeciesName getSpecies() {
-        return this.species;
-    }
-
-    @Override
-    public String getDetailedSpecies() {
-        return this.detailedSpecies;
-    }
-
-    @Override
-    public Sex getSex() {
-        return this.sex;
-    }
-
-    @Override
-    public LifeStage getLifestage() {
-        return this.lifestage;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
-
-    @Override
-    public int getHungerValue() {
-        return this.hungerValue;
+    public Chicken(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
     }
 
     @Override
@@ -101,4 +77,8 @@ public class Chicken extends Poultry implements Cloneable{
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "class Chicken extends Poultry implements Cloneable";
+    }
 }

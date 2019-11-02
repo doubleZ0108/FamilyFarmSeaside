@@ -17,4 +17,9 @@ public class CentralAirCondition extends ResidenceDecorator {
     public String getDescription() {
         return residence.getDescription() + "，加了一个中央空调";
     }
+
+    @Override
+    public String toString() {
+        return "class CentralAirCondition extends ResidenceDecorator";
+    }
 }

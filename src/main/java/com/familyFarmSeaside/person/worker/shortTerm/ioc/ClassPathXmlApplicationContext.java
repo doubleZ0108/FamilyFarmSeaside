@@ -27,6 +27,7 @@ import java.util.Iterator;
  **/
 public class ClassPathXmlApplicationContext {
     private Map<String,Object> ioc = new HashMap<String, Object>();
+
     public ClassPathXmlApplicationContext(String path) {
       try {
         String classPath="";
@@ -88,19 +89,12 @@ public class ClassPathXmlApplicationContext {
       }
     }
 
-    private Object getBean(String id) {
+    public Object getBean(String id) {
         return ioc.get(id);
     }
 
-    public static void main(String[] args){
-      System.out.println("Loading config XML from src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
-      System.out.println("Every object defined in the file will be instantiated. They are listed as bellow");
-      System.out.println();
-      ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
-      Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_1");
-      warehouse.displayIOCInfo();
-      System.out.println();
-      warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_2");
-      warehouse.displayIOCInfo();
-    }
+  @Override
+  public String toString() {
+    return "class ClassPathXmlApplicationContext";
+  }
 }

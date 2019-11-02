@@ -38,4 +38,17 @@ public class Director {
     Date oneMonthLater = rightNow.getTime();
     builder.setDueDate(oneMonthLater);
   }
+
+  public Builder getBuilder() {
+    return builder;
+  }
+
+  public void setBuilder(Builder builder) {
+    this.builder = builder;
+  }
+
+  @Override
+  public String toString() {
+    return "class Director";
+  }
 }

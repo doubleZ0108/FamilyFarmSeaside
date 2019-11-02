@@ -27,4 +27,24 @@ public class SupplyTeam implements InvocationHandler {
     System.out.println("[Supply] Project is over. Supply team has finished its task!");
     return null;
   }
+
+  public SupplyTeam(){
+  }
+
+  public SupplyTeam(NormalConstruction shortTermWorker) {
+    this.shortTermWorker = shortTermWorker;
+  }
+
+  public NormalConstruction getShortTermWorker() {
+    return shortTermWorker;
+  }
+
+  public void setShortTermWorker(NormalConstruction shortTermWorker) {
+    this.shortTermWorker = shortTermWorker;
+  }
+
+  @Override
+  public String toString() {
+    return "class SupplyTeam implements InvocationHandler";
+  }
 }

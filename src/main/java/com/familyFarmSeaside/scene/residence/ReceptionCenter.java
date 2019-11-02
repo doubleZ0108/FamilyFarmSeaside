@@ -27,4 +27,9 @@ public class ReceptionCenter extends Residence {
 
     private int receptionCenterNumber;
     private List<Visitor> visitors;
+
+    @Override
+    public String toString() {
+        return "class ReceptionCenter extends Residence";
+    }
 }

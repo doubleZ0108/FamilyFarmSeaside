@@ -15,39 +15,15 @@ public class Perch extends Fish implements Cloneable{
     public Perch() {
         super();
         detailedSpecies = "PERCH";
+        sellValue = 70;
+        buyValue = 35;
+    }
+
+    public Perch(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
     }
 
     @Override
-    public SpeciesName getSpecies() {
-        return this.species;
-    }
-
-    @Override
-    public String getDetailedSpecies() {
-        return this.detailedSpecies;
-    }
-
-    @Override
-    public Sex getSex() {
-        return this.sex;
-    }
-
-    @Override
-    public LifeStage getLifestage() {
-        return this.lifestage;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
-
-    @Override
-    public int getHungerValue() {
-        return this.hungerValue;
-    }
-
-   @Override
    public void eat() {
 
    }
@@ -100,5 +76,10 @@ public class Perch extends Fish implements Cloneable{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "class Perch extends Fish implements Cloneable";
     }
 }

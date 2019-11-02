@@ -7,4 +7,19 @@ package main.java.com.familyFarmSeaside.scene.breedScene;
  * @create: 2019/10/19
  **/
 public class LivestockFarm extends BreedScene {
+    public LivestockFarm() {
+    }
+
+    public LivestockFarm(double cost) {
+        super(cost);
+    }
+
+    public LivestockFarm(double cost, String location) {
+        super(cost, location);
+    }
+
+    @Override
+    public String toString() {
+        return "class LivestockFarm extends BreedScene";
+    }
 }

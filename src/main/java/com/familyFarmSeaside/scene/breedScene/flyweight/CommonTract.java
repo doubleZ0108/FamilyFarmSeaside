@@ -17,4 +17,9 @@ public class CommonTract extends Tract{
 //        canvas[loc_y*sideLength + (sideLength - 1)/2][loc_x*sideLength + (sideLength - 1)/2] = '通';
 //        canvas[loc_y*sideLength + (sideLength - 1)/2][loc_x*sideLength + (sideLength - 1)/2 + 1] = '土';
     }
+
+    @Override
+    public String toString() {
+        return "class CommonTract extends Tract";
+    }
 }

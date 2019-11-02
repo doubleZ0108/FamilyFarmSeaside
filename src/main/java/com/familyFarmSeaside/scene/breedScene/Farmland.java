@@ -13,6 +13,7 @@ public class Farmland extends BreedScene {
     private final int length = 4;
     private final int width = 3;
     private Tract[][] tracts; //荒地，普通土地，黑土地
+
     public Farmland() //默认土地块数为 2*3，且所有土地皆为荒地
     {
         tracts = new Tract[width][length];
@@ -24,12 +25,16 @@ public class Farmland extends BreedScene {
                 tracts[i][j] = tractFactory.getTract("WasteTract");
         }
     }
+
     public int getLength(){return length;}
+
     public int getWidth(){return width;}
+
     public void setTract(int loc_x, int loc_y, String TractType){
         TractFactory tractFactory = TractFactory.getInstance();
         tracts[loc_y][loc_x] = tractFactory.getTract(TractType);
     }
+
     public Character[][] getCanvas(){
         Character[][] canvas = new Character[width*Tract.sideLength][length*Tract.sideLength];
         //先将画布清空
@@ -44,5 +49,18 @@ public class Farmland extends BreedScene {
                 tracts[j][i].draw(i, j, canvas);
         }
         return canvas;
+    }
+
+    public Tract[][] getTracts() {
+        return tracts;
+    }
+
+    public void setTracts(Tract[][] tracts) {
+        this.tracts = tracts;
+    }
+
+    @Override
+    public String toString() {
+        return "class Farmland extends BreedScene";
     }
 }

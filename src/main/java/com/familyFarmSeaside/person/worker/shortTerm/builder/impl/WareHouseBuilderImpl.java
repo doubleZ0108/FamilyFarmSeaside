@@ -13,6 +13,7 @@ import java.util.Date;
  **/
 public class WareHouseBuilderImpl implements Builder {
   private Warehouse warehouse;
+
   @Override
   public void reset() {
     System.out.println("The warehouse builder is reset!");
@@ -47,5 +48,25 @@ public class WareHouseBuilderImpl implements Builder {
 
   public Warehouse getResult() {
     return warehouse;
+  }
+
+  public WareHouseBuilderImpl(){
+  }
+
+  public WareHouseBuilderImpl(Warehouse warehouse) {
+    this.warehouse = warehouse;
+  }
+
+  public Warehouse getWarehouse() {
+    return warehouse;
+  }
+
+  public void setWarehouse(Warehouse warehouse) {
+    this.warehouse = warehouse;
+  }
+
+  @Override
+  public String toString() {
+    return "class WareHouseBuilderImpl implements Builder";
   }
 }
