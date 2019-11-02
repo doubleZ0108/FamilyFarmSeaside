@@ -15,8 +15,12 @@ public class ObserverTest
 {
     public static void main(String[] args)
     {
+        System.out.println("—————————————-------------------------------------———— 测试[Observer]模式 —————————————-------------------------------------————");
+
         Consumable feed = new Consumable("肥料", new Date(), 12, true, 2000f);
         feed.addObserver(new FeedObserver(500f));
         feed.consume(1600f);
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

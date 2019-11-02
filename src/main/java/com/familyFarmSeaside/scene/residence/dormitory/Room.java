@@ -42,25 +42,28 @@ public class Room {
         switch (kind){
             case Bed:
                 if(bed.isSharable()) {
+                    int count = bed.getReferenceCount() - 1;
+                    System.out.println(kind.toString() + " reference count - 1 = " + count);
                     bed.minusReferenceCount();
                     bed = new Bed();
-                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 bed.move();
                 break;
             case Desk:
                 if(desk.isSharable()) {
+                    int count = desk.getReferenceCount() - 1;
+                    System.out.println(kind.toString() + " reference count - 1 = " + count);
                     desk.minusReferenceCount();
                     desk = new Desk();
-                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 desk.move();
                 break;
             case Chair:
                 if(chair.isSharable()) {
+                    int count = chair.getReferenceCount() - 1;
+                    System.out.println(kind.toString() + " reference count - 1 = " + count);
                     chair.minusReferenceCount();
                     chair = new Chair();
-                    System.out.println(kind.toString() + " reference count - 1");
                 }
                 chair.move();
                 break;

@@ -10,12 +10,21 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  * @create: 2019/10/28
  **/
 public abstract class Pea extends Vegetable {
+    public Pea(){
+    }
+
     public Pea(Color color) {
         super("PEA");
         this.color=color;
     }
+
     protected Color color;
+
     public abstract String getName();
 
 
+    @Override
+    public String toString() {
+        return "abstract class Pea extends Vegetable";
+    }
 }

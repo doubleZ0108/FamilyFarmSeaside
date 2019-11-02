@@ -15,7 +15,7 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Pea.Wrink
  **/
 public class BridgeTest {
     static public void testBridge(){
-        System.out.println("----桥接模式测试----");
+
         System.out.println("新建一个color对象...");
         System.out.println("绿色...");
         Color green=new Green();
@@ -42,6 +42,14 @@ public class BridgeTest {
     }
 
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Bridge]模式 —————————————-------------------------------------————");
+        System.out.println("Pea : Pea() : Construct a pea object with a color object as a parameter to achieve decoupling of color from the pea itself.");
+        System.out.println("SmoothPea : SmoothPea() : Construct a smooth pea to achieve decoupling of color from the pea itself.");
+        System.out.println("WrinkledPea : WrinkledPea() : Construct a wrinkled pea to achieve decoupling of color from the pea itself.");
+
         testBridge();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
+
     }
 }
