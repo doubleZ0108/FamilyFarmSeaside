@@ -15,6 +15,12 @@ public class ObserverTest
 {
     public static void main(String[] args)
     {
+        System.out.println("Consumable : Consumable() : Inherited from Supply, create an instance of consumable.");
+        System.out.println("Consumable : addObserver() : Inherited from Supply, add an observer to consumable.");
+        System.out.println("Consumable : consume() : Inherited from Supply, consume this consumable.");
+        System.out.println("FeedObserver : FeedObserver() : Implements Observer, create an instance of FeedObserver");
+        System.out.println("");
+
         Consumable feed = new Consumable("肥料", new Date(), 12, true, 2000f);
         feed.addObserver(new FeedObserver(500f));
         feed.consume(1600f);

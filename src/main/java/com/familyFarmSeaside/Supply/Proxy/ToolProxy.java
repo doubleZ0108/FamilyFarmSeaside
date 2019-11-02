@@ -11,6 +11,10 @@ import main.java.com.familyFarmSeaside.Supply.Tool.Tool;
 public class ToolProxy implements ToolSubject{
 
     private Tool toolInstance;
+    public ToolProxy(Tool tool)
+    {
+        this.toolInstance = tool;
+    }
 
     @Override
     public boolean take() {

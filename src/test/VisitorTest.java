@@ -33,6 +33,15 @@ public class VisitorTest {
     }
 
     public static void main(String[] args){
+        System.out.println("ObjectStructure : ObjectStructure() : Create an instance of ObjectStructure.");
+        System.out.println("ObjectStructure : add() : Add elements into ObjectStructure.");
+        System.out.println("ObjectStructure : accept() : All the elements accept the visit of the visitor in sequence.");
+        System.out.println("spv_peasant : spv_peasant() : Implements SupplyVisitor, create an instance of peasant.");
+        System.out.println("spv_admin : spv_admin() : Implements SupplyVisitor, create an instance of administrator.");
+        System.out.println("Tool : Tool() : Inherited Supply and implements Element, create an instance of Tool.");
+        System.out.println("Consumable() : Consumable() : Inherited Supply and implements Element, create an instance of Consumable.");
+        System.out.println("");
+
         VisitorTest.runtest();
     }
 }
