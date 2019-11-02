@@ -12,7 +12,7 @@ public interface Watchdog {
     void setName(String name);
     String getName();
 
-    void bark();        //Watchdog有别于狗的方法
+    void bark();        //The method Watchdog different from basic dog.
 }
 
 

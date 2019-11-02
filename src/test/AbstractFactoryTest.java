@@ -1,8 +1,8 @@
 package test;
 
-import main.java.com.familyFarmSeaside.Product.Factory.ProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SpringProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.ProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SpringProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SummerProductFactory;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -53,13 +53,13 @@ public class AbstractFactoryTest {
          *
          * @return : void
          **/
-        boolean empty_flag = factoryKind.equals(FactoryKind.dummy); //是否是第一次建立工厂
-        boolean equal_flag = factoryKind.equals(opcode);    //用户想要修改的工厂是否和之前的工厂相同
+        boolean empty_flag = factoryKind.equals(FactoryKind.dummy);     //Is it the first time to set up a factory?
+        boolean equal_flag = factoryKind.equals(opcode);                //Is the factory that the user wants to modify the same as the previous factory?
 
         /*
-            如果工厂之前是空的，则初始化一个新工厂
-            如果工厂之前生产的是其他东西，把之前的产品保存
-            如果工厂之前生产的就是当前的东西，则直接return
+            Initialize a new factory if the factory was previously empty
+            If the factory produced something else before, save the previous product.
+            If the factory produced the current thing, then directly return
          */
         if(empty_flag || !equal_flag){
             switch (opcode){
@@ -81,7 +81,7 @@ public class AbstractFactoryTest {
     }
 
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Abstract Factory]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Abstract Factory]Pattern —————————————-------------------------------------————");
 
         System.out.println("ProductFactory : getFruit_species() : Abstract function of get fruit species. Concrete realization in SpringProductFactory and SummerProductFactory.");
         System.out.println("ProductFactory : getVegetable_species() : Abstract function of get vegetable species. Concrete realization in SpringProductFactory and SummerProductFactory.");

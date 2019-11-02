@@ -14,18 +14,23 @@ import java.util.Random;
  * @create: 2019/10/24
  **/
 public abstract class Animal extends Product {
-    static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //哺乳类 禽类 鱼类
-    static protected enum Sex {MALE, FEMALE}                  //雄性 雌性
-    static public enum LifeStage {BABY, ADULT}                //幼年体 成熟体
+    static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //Mammalian poultry
+    static protected enum Sex {MALE, FEMALE}                  //Male Female
+    static public enum LifeStage {BABY, ADULT}                //Juvenile Body
 
-    protected SpeciesName species;                            //种类
-    protected String detailedSpecies;                         //具体类别
-    protected Sex sex;                                        //性别
-    protected LifeStage lifestage;                            //生命阶段
-    protected int age;      								  //年龄
-    protected int hungerValue;  							  //饥饿值(0~100) 0 -> 非常饿     【undo redo pattern】
+    protected SpeciesName species;                            //species
+    protected String detailedSpecies;                         //detailed species
+    protected Sex sex;                                        //gender
+    protected LifeStage lifestage;                            //life stage
+    protected int age;      								  //age
+    protected int hungerValue;  							  //Hunger value (0~100) 0 -> very hungry
 
     public Animal() {
+        /**
+         * @description: randomly generate an animal
+         *
+         * @return : null
+         **/
         this.lifestage = LifeStage.BABY;
         this.age = 1;
         this.hungerValue=100;
@@ -48,12 +53,21 @@ public abstract class Animal extends Product {
         this.hungerValue = hungerValue;
     }
 
-    public SpeciesName getSpecies(){return species;}
-    public String getDetailedSpecies(){return detailedSpecies;}
-    public  Sex getSex(){return sex;}
-    public LifeStage getLifestage(){return lifestage;}
-    public  int getAge(){return age;}
-    public  int getHungerValue(){return  hungerValue;}
+    /* common behavior of animals */
+    public void grow(){
+        this.lifestage = LifeStage.ADULT;
+    }
+
+    abstract public void eat();
+
+    abstract public void sleep();
+
+    abstract public void mating();
+
+    abstract public Animal breed();
+
+
+
     public HashMap<String,String> getAnimalInfo(){
         HashMap<String,String> animalInfo = new HashMap<>();
         animalInfo.put("sex", getSex().toString());
@@ -62,6 +76,7 @@ public abstract class Animal extends Product {
         animalInfo.put("hungerValue",String.valueOf(getHungerValue()));
         return animalInfo;
     }
+
     public void setAnimalInfo(HashMap<String,String> animalInfo){
         for (String key: animalInfo.keySet()){
             switch (key){
@@ -85,13 +100,18 @@ public abstract class Animal extends Product {
         }
     }
 
-    abstract public void eat();
-    abstract public void sleep();
-    abstract public void mating();  //交配
-    abstract public Animal breed();   //繁殖
-    public void grow(){
-        this.lifestage = LifeStage.ADULT;
-    }
+
+    public SpeciesName getSpecies(){return species;}
+
+    public String getDetailedSpecies(){return detailedSpecies;}
+
+    public  Sex getSex(){return sex;}
+
+    public LifeStage getLifestage(){return lifestage;}
+
+    public  int getAge(){return age;}
+
+    public  int getHungerValue(){return  hungerValue;}
 
     public void setSpecies(SpeciesName species) {
         this.species = species;

@@ -22,7 +22,7 @@ public class AndExpression implements Expression
         this.supply = supply;
     }
 
-    //按照句子格式拆分句子，检查两个Expression对于对应元素的interpret是否能通过
+    //Split sentences in sentence format to check whether two Expressions for the corresponding element's interpret can pass
     @Override
     public boolean interpret(String info)
     {

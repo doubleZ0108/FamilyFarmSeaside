@@ -1,4 +1,4 @@
-package main.java.com.familyFarmSeaside.Product.Factory;
+package main.java.com.familyFarmSeaside.Product.ProductFactory;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
 import main.java.com.familyFarmSeaside.Plant.Fruit.Fruit;
@@ -15,12 +15,22 @@ import java.util.Vector;
  **/
 public class SpringProductFactory extends ProductFactory {
     public SpringProductFactory() {
+        /**
+         * @description: the species this product factory product is apple and potato
+         *
+         * @return : null
+         **/
         super();
         this.fruit_species = new Apple().toString();
         this.vegetable_species = new Potato().toString();
     }
 
     public SpringProductFactory(Vector<Fruit> store_fruits_warehouse, Vector<Vegetable> store_vegetables_warehouse) {
+        /**
+         * @description: the species this product factory product is apple and potato. And use previous products in previous warehouse to build new warehouse.
+         *
+         * @return : null
+         **/
         super(store_fruits_warehouse, store_vegetables_warehouse);
         this.fruit_species = new Apple().toString();
         this.vegetable_species = new Potato().toString();

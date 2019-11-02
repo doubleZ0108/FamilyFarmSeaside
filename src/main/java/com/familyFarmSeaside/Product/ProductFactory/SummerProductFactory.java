@@ -1,4 +1,4 @@
-package main.java.com.familyFarmSeaside.Product.Factory;
+package main.java.com.familyFarmSeaside.Product.ProductFactory;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
 import main.java.com.familyFarmSeaside.Plant.Fruit.Fruit;
@@ -15,12 +15,22 @@ import java.util.Vector;
  **/
 public class SummerProductFactory extends ProductFactory {
     public SummerProductFactory() {
+        /**
+         * @description: the species this product factory product is apple and potato
+         *
+         * @return : null
+         **/
         super();
         this.fruit_species = new Cherry().toString();
         this.vegetable_species = new Tomato().toString();
     }
 
     public SummerProductFactory(Vector<Fruit> store_fruits_warehouse, Vector<Vegetable> store_vegetables_warehouse) {
+        /**
+         * @description: the species this product factory product is cherry and tomato. And use previous products in previous warehouse to build new warehouse.
+         *
+         * @return : null
+         **/
         super(store_fruits_warehouse, store_vegetables_warehouse);
         this.fruit_species = new Cherry().toString();
         this.vegetable_species = new Tomato().toString();

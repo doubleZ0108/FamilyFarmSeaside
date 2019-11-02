@@ -18,16 +18,27 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministra
  **/
 public class CommandTest {
   public static void main(String[] args) {
-
-    System.out.println("—————————————-------------------------------------———— 测试[Command]模式 —————————————-------------------------------------————");
+ /**
+   * @description: To test the command pattern, we have to have a main method
+   *
+   * @param args :
+   *
+   * @return : void
+   **/
+    // farm owner is using singleton pattern
+    System.out.println("—————————————-------------------------------------———— Test[Command]Pattern —————————————-------------------------------------————");
 
     FarmOwner farmOwner = FarmOwner.getInstance();
+    CommandWrapper residenceLogCommandWrapper = ()->{
     System.out.println("FarmOwner : getInstance() : Farmowner is singelton, so we need a getInstance method to get it.");
     System.out.println("FarmOwner : executeCommand() : Execute the command, then add it to the command history.");
     System.out.println("ResidenceAdministrator : doSomeLog() : Do the command, if have a command, execute.");
     System.out.println("FarmOwner : getLogFile() : Get the log files.");
     System.out.println("");
-    CommandWrapper residenceLogCommandWrapper = ()->{
+    // this is not important in terms of design pattern
+    // but is crucial because of the design of java language
+    // the object of command passed into the administrators are essentially some lambda expression
+    // so we make some functional interface
       farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
     };
     CommandWrapper resourceCommandWrapper = ()->{
@@ -36,9 +47,11 @@ public class CommandTest {
     CommandWrapper undoCommandWrapper = ()->{
       farmOwner.executeCommand(new UndoCommand(farmOwner));
     };
+    // pass the functional interface into the administrators
     ResidenceAdministrator residenceAdministrator = new ResidenceAdministrator(residenceLogCommandWrapper);
     ResourceAdministrator resourceAdministrator = new ResourceAdministrator(resourceCommandWrapper,undoCommandWrapper);
     try {
+      // we are trying to show some log
       System.out.println("Let repairman and guard do some log. The logfile is:");
       residenceAdministrator.doSomeLog();
       Thread.sleep(1000);
@@ -56,6 +69,8 @@ public class CommandTest {
     }catch (InterruptedException e){
       System.out.println(e.toString());
     }
+    // in order to boost the user's exprience
+    // we add some interactive functions
     System.out.println("请您选择要执行的指令：(residence, resource, undo, quit)");
     Scanner scanner = new Scanner(System.in);
     String command = scanner.nextLine();

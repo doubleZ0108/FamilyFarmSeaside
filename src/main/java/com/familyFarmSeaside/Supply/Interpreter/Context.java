@@ -25,32 +25,32 @@ public class Context
         high_grade_use = new AndExpression();
     }
 
-    //向低权限使用者中加入元素
+    //Add elements to low-grade_person
     public void addToLowGradePerson(String p)
     {
         low_grade_person.add(p);
     }
 
-    //向低权限物品中加入元素
+    //Add elements to low-grade_supplies
     public void addToLowGradeSupplies(String s)
     {
         low_grade_supplies.add(s);
         high_grade_supplies.add(s);
     }
 
-    //向高权限使用者中加入元素
+    //Add elements to high-grade_person
     public void addToHighGradePerson(String p)
     {
         high_grade_person.add(p);
     }
 
-    //向高权限物品中加入元素
+    //Add elements to high-grade_supplies
     public void addToHighGradeSupplies(String s)
     {
         high_grade_supplies.add(s);
     }
 
-    //结束添加过程，实例化AndExpression对象
+    //End the add process, instantiate and EndEObject objects
     public void addIsOver()
     {
         TerminalExpression lp = new TerminalExpression(low_grade_person);
@@ -61,7 +61,7 @@ public class Context
         high_grade_use = new AndExpression(hp, hs);
     }
 
-    //判断使用关系是否成立
+    //Determine if the use relationship is valid
     public void allowUse(String info)
     {
         if(!info.contains("使用"))

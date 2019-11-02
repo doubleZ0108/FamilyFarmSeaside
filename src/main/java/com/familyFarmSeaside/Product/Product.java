@@ -7,16 +7,9 @@ package main.java.com.familyFarmSeaside.Product;
  * @create: 2019/10/25
  **/
 public abstract class Product {
-    //有关买卖的部分
+    /* Part of the sale */
     protected int sellValue = 0;
     protected int buyValue = 0;
-
-    public int getSellValue(){
-        return sellValue;
-    }
-    public int getBuyValue(){
-        return buyValue;
-    }
 
     public Product(){
     }
@@ -26,9 +19,16 @@ public abstract class Product {
         this.buyValue = buyValue;
     }
 
+    public int getSellValue(){
+        return sellValue;
+    }
 
     public void setSellValue(int sellValue) {
         this.sellValue = sellValue;
+    }
+
+    public int getBuyValue(){
+        return buyValue;
     }
 
     public void setBuyValue(int buyValue) {

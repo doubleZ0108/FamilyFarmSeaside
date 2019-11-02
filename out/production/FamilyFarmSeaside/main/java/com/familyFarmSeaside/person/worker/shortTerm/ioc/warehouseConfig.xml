@@ -1,10 +1,4 @@
 <beans>
-<!--  you can add some object(other classes are also supported) here but due to the complexity of class
- relationship I suggest just try with warehouse -->
-<!--  Please refer to the JavaBean Standard -->
-<!--  The class written here has to have a constructor of no args-->
-<!--  And the set...() method has to be upper cased in the first letter-->
-<!--  setName() setNumber() are 2 examples-->
 <bean id="warehouse_1" class="main.java.com.familyFarmSeaside.scene.warehouse.Warehouse">
   <property name="cost" value="65432.1"/>
   <property name="name" value="嘉定一号仓库"/>

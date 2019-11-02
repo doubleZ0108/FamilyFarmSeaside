@@ -9,7 +9,7 @@ import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Dog;
  * @create: 2019/10/28
  **/
 public class Adapter implements Watchdog{
-    private Dog adaptee;    //适配者：Dog，适配Dog类的eat 和 sleep 功能
+    private Dog adaptee;    //Adapter: Dog, adapt for eat and sleep function in class Dog.
     private String name;
 
     public void eat(){

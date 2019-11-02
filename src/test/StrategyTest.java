@@ -2,10 +2,10 @@ package test;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: Test for mediator pattern.
+ * @description: Test for strategy pattern.
  * @author: Di Bu
  * @create: 2019/11/02
  **/
-public class MediatorTest {
+public class StrategyTest {
 
 }

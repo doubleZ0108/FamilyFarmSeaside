@@ -12,15 +12,15 @@ import main.java.com.familyFarmSeaside.Animal.DetailSpecies.Chicken;
 public class PrototypeTest {
     static  public  void  testPrototype()throws CloneNotSupportedException{
         Chicken chicken = new Chicken();
-        System.out.println("创建一个对象chicken...");
+        System.out.println("create an object: chicken...");
         Chicken chicken1 = (Chicken) chicken.clone();
-        System.out.println("从chicken克隆一个对象chicken1...");
-        System.out.println("chicken == chicken1 : " + (chicken == chicken1) );
-        System.out.println("chicken.equals(chicken1): "+(chicken.equals(chicken1)));
+        System.out.println("from chicken clone a new object: chicken1...");
+        System.out.println("chicken == chicken1() : " + (chicken == chicken1) );
+        System.out.println("chicken.equals(chicken1) : "+(chicken.equals(chicken1)));
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
-        System.out.println("—————————————-------------------------------------———— 测试[Prototype]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Prototype]Pattern —————————————-------------------------------------————");
 
         System.out.println("Chicken : Chicken() : Inherited from Poultry and implements Cloneable, create an instance of chicken.");
         System.out.println("Chicken : equals() : Inherited from Poultry and implements Cloneable, judge whether two chickens are the same one.");

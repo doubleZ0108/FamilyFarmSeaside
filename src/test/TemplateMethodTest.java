@@ -1,7 +1,7 @@
 package test;
 
-import main.java.com.familyFarmSeaside.Product.Factory.SpringProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SpringProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SummerProductFactory;
 
 /**
  * @program: FamilyFarmSeaside
@@ -11,7 +11,7 @@ import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
  **/
 public class TemplateMethodTest {
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Abstract Factory]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Abstract Factory]Pattern —————————————-------------------------------------————");
 
         System.out.println("SpringProductFactory : productFruit() : Implement template function productFruit from ProductFactory, create apple and add them into product warehouse.");
         System.out.println("SpringProductFactory : productVegetable() : Implement template function productVegetable from ProductFactory, create potato and add them into product warehouse.");

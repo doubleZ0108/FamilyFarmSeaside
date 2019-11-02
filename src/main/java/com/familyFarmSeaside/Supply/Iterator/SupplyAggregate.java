@@ -22,21 +22,21 @@ public class SupplyAggregate implements Aggregate
         supplies = new ArrayList<Supply>();
     }
 
-    //向集合中添加元素
+    //Add an element to a collection
     @Override
     public void add(Supply supply)
     {
         supplies.add(supply);
     }
 
-    //从集合中删除元素
+    //Remove an element from a collection
     @Override
     public void remove(Supply supply)
     {
         supplies.remove(supply);
     }
 
-    //返回一个复制了私有成员List的Iterator
+    //Returns an Iterator that copies a private member List
     @Override
     public Iterator getIterator()
     {
