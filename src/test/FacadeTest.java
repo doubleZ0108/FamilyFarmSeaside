@@ -15,6 +15,10 @@ public class FacadeTest {
     public static void main(String[] args){
         System.out.println("—————————————-------------------------------------———— 测试[Facade]模式 —————————————-------------------------------------————");
 
+        System.out.println("Dormitory : setDormNumber() : Set the dormitory number.");
+        System.out.println("Dormitory : addLongTermWorker() : Add a long term worker to dormitory.");
+        System.out.println("BuyerFactory : newWorker() : Create a new worker in buyer factory.");
+        System.out.println("");
         //新建两个宿舍
         List<Dormitory> dormitoryList = new ArrayList<Dormitory>();
         Dormitory dormitory1 = new Dormitory();

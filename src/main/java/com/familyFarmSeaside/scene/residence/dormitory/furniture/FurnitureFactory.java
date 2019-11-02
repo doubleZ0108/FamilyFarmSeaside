@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: The factory class of furniture
+ * @description: 家具工厂类，用于维护一套家具对象的池，提供获取家具对象引用的函数
  * @author: saturn
  * @create: 2019/10/24
  **/
@@ -32,7 +32,7 @@ public class FurnitureFactory {
             furniturePool.put(kind, furniture);
         }
         else {
-            System.out.println(kind.toString() + " object shared, reference count + 1 = " + furniture.getReferenceCount() + 1);
+            System.out.println(kind.toString() + " object shared, reference count + 1 = " + (furniture.getReferenceCount() + 1));
         }
         return furniture.getReference();
     }

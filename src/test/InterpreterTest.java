@@ -14,10 +14,14 @@ public class InterpreterTest
 {
     public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— 测试[Interpreter]模式 —————————————-------------------------------------————");
-
         Context farmContext = new Context();
         Scanner scanner = new Scanner(System.in);
         System.out.println("现在开始测试Interpreter设计模式！");
+        System.out.println("TerminalExpression : interpret() : This method is implemented by the TerminalExpression class. It's used to determine if a String as a parameter is included in the set of the TerminalExpression class.");
+        System.out.println("AndExpression : interpret() : This method is implemented by the TerminalExpression class. It's used to disassemble the parameter whose type is String according to the syntax tree, which is used to determine whether the entire sentence is valid.");
+        System.out.println("Context :allowUse(): It is used to determine whether a sentence is legal, that is, low level permission and high level permission should satisfy at least one of them.");
+        System.out.println("");
+
         //以下四个while用于输入
         while(true)
         {
@@ -72,7 +76,6 @@ public class InterpreterTest
             }
         }
         farmContext.addIsOver();
-        //判断“某人使用某物”是否合理
         while (true)
         {
             System.out.println("请以“某人使用某物”的形式输入测试语句！（停止输入请输入“停止”）");
@@ -83,7 +86,6 @@ public class InterpreterTest
                 farmContext.allowUse(s);
             }
         }
-
-        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
+        System.out.println("Interpreter设计模式测试完毕！");
     }
 }

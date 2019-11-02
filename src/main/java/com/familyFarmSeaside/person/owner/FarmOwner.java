@@ -47,7 +47,11 @@ public class FarmOwner extends Person {
 
   public void undoCommand(){
     Command command = commandHistory.popCommand();
-    command.unDo();
+    if(command != null){
+      command.unDo();
+    }else{
+      System.out.println("已经没有命令可以撤销了！");
+    }
   }
 
   public void hire(LongTermWorker.WokerType wokerType){

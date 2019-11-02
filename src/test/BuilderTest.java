@@ -1,9 +1,12 @@
 package test;
 
+import java.util.Scanner;
+
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.BreedSceneBuilder;
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.HouseBuilder;
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.ShortTermWorker;
 import main.java.com.familyFarmSeaside.person.worker.shortTerm.WarehouseBuilder;
+import main.java.com.familyFarmSeaside.person.worker.shortTerm.builder.impl.BreedSceneBuilderImpl;
 
 /**
  * @program: FamilyFarmSeaside
@@ -27,6 +30,16 @@ public class BuilderTest {
     shortTermWorker_1.buildSomeThingNormal();
     shortTermWorker_2.buildSomeThingNormal();
     shortTermWorker_3.buildSomeThingNormal();
+    System.out.println("假设此时准备建造一个养殖场，请你进行一下选择：");
+    BreedSceneBuilderImpl breedSceneBuilderImpl = new BreedSceneBuilderImpl();
+    Scanner scanner = new Scanner(System.in);
+    while(breedSceneBuilderImpl.getBreedScene()==null){
+      System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)");
+      breedSceneBuilderImpl.setBuildingPlan(scanner.nextLine());
+    }
+    System.out.println("请输入建造地点:");
+    breedSceneBuilderImpl.setLocation(scanner.nextLine());
+    System.out.println("--------------------------------------");
 
     System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }

@@ -12,6 +12,11 @@ public class DecoratorTest {
         //尽量不要用Dormitory来测试，因为在创建Dormitory时会同时创建内部的room，会在孔氏台产生大量输出，妨碍观察
 
         System.out.println("—————————————-------------------------------------———— 测试[Decorator]模式 —————————————-------------------------------------————");
+        System.out.println("ResidenceCenter : getDescription() : Get the description of the residence center.");
+        System.out.println("ResidenceCenter : getCost() : Get the cost of the residence center.");
+        System.out.println("Villa : getDescription() : Get the description of the villa.");
+        System.out.println("Villa : getCost() : Get the cost of the residence villa.");
+        System.out.println("");
 
         //创建一个未加装饰地接待中心
         Residence receptionCenter = new ReceptionCenter();

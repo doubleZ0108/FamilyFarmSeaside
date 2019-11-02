@@ -31,37 +31,42 @@ public class MementoTest {
 
     public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— 测试[Memento]模式 —————————————-------------------------------------————");
+        System.out.println("Traders : buyProduct() : Trader buys products and creates an order as a memento");
+        System.out.println("Traders : sellProduct() : Trader buys products and creates an order as a memento");
+        System.out.println("Traders : restoreRecords() : Restores to the specified history state");
+        System.out.println("ManageRecords : addRecords() : Add memento to linked lists for administration.");
+        System.out.println("");
 
         MementoTest mementoTest = new MementoTest();
         mementoTest.traders.setFarmOwner(FarmOwner.getInstance());
-        System.out.println("--------------备忘录模式测试--------------");
-        System.out.println("**                 1 --- 买入产品                   **");
-        System.out.println("**                 2 --- 卖出产品                   **");
-        System.out.println("**                 3 --- 查看订单列表             **");
-        System.out.println("**                 4 --- 查看产品信息             **");
-        System.out.println("**                 5 --- 使目前生物生长          **");
-        System.out.println("**                 6 --- 恢复历史状态              **");
-        System.out.println("**                 7 --- 退出测试                    **");
-        System.out.println("--------------------------------------------");
+        System.out.println("--------------备忘录模式测试-------------");
+        System.out.println("**            1 --- 买入产品           **");
+        System.out.println("**            2 --- 卖出产品           **");
+        System.out.println("**            3 --- 查看订单列表       **");
+        System.out.println("**            4 --- 查看产品信息       **");
+        System.out.println("**            5 --- 使目前生物生长     **");
+        System.out.println("**            6 --- 恢复历史状态       **");
+        System.out.println("**            7 --- 退出测试           **");
+        System.out.println("-----------------------------------------");
         while (true) {
             Scanner sc = new Scanner(System.in);
-            System.out.println("请输入命令：");
+            System.out.print("请输入命令：");
             int order = sc.nextInt();
             switch (order){
                 case 1:{
                     Scanner sc1 = new Scanner(System.in);
-                    System.out.println("请输入要买入的产品名称：");
+                    System.out.print("请输入要买入的产品名称：");
                     String name = sc1.nextLine();
-                    System.out.println("请输入数量：");
+                    System.out.print("请输入数量：");
                     int number = sc1.nextInt();
                     mementoTest.buy(name,number);
                     break;
                 }
                 case 2:{
                     Scanner sc1 = new Scanner(System.in);
-                    System.out.println("请输入要卖出的产品名称：");
+                    System.out.print("请输入要卖出的产品名称：");
                     String name = sc1.nextLine();
-                    System.out.println("请输入数量：");
+                    System.out.print("请输入数量：");
                     int number = sc1.nextInt();
                     mementoTest.sell(name,number);
                     break;
@@ -76,13 +81,13 @@ public class MementoTest {
                 }
                 case 5:{
                     mementoTest.grow();
-                    System.out.println("当前生物已生长！");
+                    System.out.println("当前生物已生长！\n");
                     break;
                 }
                 case 6:{
                     Scanner sc1 = new Scanner(System.in);
                     mementoTest.viewTransationRecords();
-                    System.out.println("请输入要恢复到的订单编号：");
+                    System.out.print("请输入要恢复到的订单编号：");
                     int number = sc1.nextInt();
                     mementoTest.restoreHistoryState(number);
                     System.out.println("恢复成功！\n");
@@ -111,19 +116,22 @@ public class MementoTest {
 
     public void buy(String species, int number){
         TransationRecords transationRecords = traders.buyProduct(species,number);
-        System.out.println("买入"+species+"  数量："+number+"\n");
+        System.out.println("\n");
+        System.out.println("买入"+species+"  数量："+number);
         manageRecords.addRecords(transationRecords);
-        System.out.println("创建订单成功！\n");
+        System.out.println("创建订单成功！");
         transationRecords.printRecordsInfo();
+        System.out.println("");
     }
 
     public void sell(String species, int number){
         TransationRecords transationRecords = traders.sellProduct(species,number);
         if (transationRecords !=NullPointerException) {
-            System.out.println("卖出" + species + "  数量：" + number + "\n");
+            System.out.println("卖出" + species + "  数量：" + number);
             manageRecords.addRecords(transationRecords);
-            System.out.println("创建订单成功！\n");
+            System.out.println("创建订单成功！");
             transationRecords.printRecordsInfo();
+            System.out.println("");
         }
     }
 
