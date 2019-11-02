@@ -15,10 +15,19 @@ import java.util.Scanner;
 public class AdapterTest {
     public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— 测试[Adapter]模式 —————————————-------------------------------------————");
+        System.out.println("Adapter : eat() : Use adapter to implement eat function in Watchdog.");
+        System.out.println("Adapter : sleep() : Use adapter to implement sleep function in Watchdog.");
+        System.out.println("Adapter : bark() : Use adapter to implement bark function in Watchdog.");
+        System.out.println("Dog : eat() : Abstract eat function in dog base class.");
+        System.out.println("Dog : sleep() : Abstract sleep function in dog base class.");
+        System.out.println("Dog : bark() : Abstract bark function in dog base class.");
+        System.out.println("Watchdog : eat() : Interface that watchdog should have eat function.");
+        System.out.println("Watchdog : sleep() : Interface that watchdog should have sleep function.");
+        System.out.println("Watchdog : bark() : Interface that watchdog should have bark function.");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("----适配器模式测试----");
         System.out.println("创建一个对象watchdog...");
+
         Watchdog watchdog= new Adapter(new Dog());
         System.out.println("给watchdog取一个名字...");
         String name = scanner.nextLine();

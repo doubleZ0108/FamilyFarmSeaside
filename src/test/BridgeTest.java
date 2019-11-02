@@ -43,6 +43,9 @@ public class BridgeTest {
 
     public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— 测试[Bridge]模式 —————————————-------------------------------------————");
+        System.out.println("Pea : Pea() : Construct a pea object with a color object as a parameter to achieve decoupling of color from the pea itself.");
+        System.out.println("SmoothPea : SmoothPea() : Construct a smooth pea to achieve decoupling of color from the pea itself.");
+        System.out.println("WrinkledPea : WrinkledPea() : Construct a wrinkled pea to achieve decoupling of color from the pea itself.");
 
         testBridge();
 

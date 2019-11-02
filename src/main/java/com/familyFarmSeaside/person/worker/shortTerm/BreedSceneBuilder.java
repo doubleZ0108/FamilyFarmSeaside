@@ -16,12 +16,6 @@ import java.util.UUID;
 public class BreedSceneBuilder extends ShortTermWorker implements NormalConstruction {
   private BreedSceneBuilderImpl builder = new BreedSceneBuilderImpl();
   private BreedScene breedScene;
-  @Override
-  public void buildSomeThingNormal(){
-    Director director = new Director(builder);
-    director.buildANormalScene();
-    breedScene = builder.getResult();
-  }
 
   public BreedSceneBuilder(){}
 
@@ -34,6 +28,18 @@ public class BreedSceneBuilder extends ShortTermWorker implements NormalConstruc
     super(name, age, money, id);
     this.builder = builder;
     this.breedScene = breedScene;
+  }
+
+  @Override
+  public void buildSomeThingNormal(){
+    /**
+     * @description: Farms, fish ponds and shacks for farming.
+     *
+     * @return : void
+     **/
+    Director director = new Director(builder);
+    director.buildANormalScene();
+    breedScene = builder.getResult();
   }
 
   public BreedSceneBuilderImpl getBuilder() {
