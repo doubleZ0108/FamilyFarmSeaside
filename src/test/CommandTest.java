@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Scanner;
+
 import main.java.com.familyFarmSeaside.person.owner.FarmOwner;
 import main.java.com.familyFarmSeaside.person.owner.command.CommandWrapper;
 import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
@@ -49,6 +51,25 @@ public class CommandTest {
     }catch (InterruptedException e){
       System.out.println(e.toString());
     }
+    System.out.println("请您选择要执行的指令：(residence, resource, undo, quit)");
+    Scanner scanner = new Scanner(System.in);
+    String command = scanner.nextLine();
+    while(!command.equals("quit")){
+      switch(command){
+        case "residence":{
+          residenceAdministrator.doSomeLog();
+        }break;
+        case "resource":{
+          resourceAdministrator.doSomeLog();
+        }break;
+        case "undo":{
+          farmOwner.undoCommand();
+        }break;
+      }
+      System.out.print(farmOwner.getLogFile());
+      command = scanner.nextLine();
+    }
+    System.out.println("---------------------------------------------");
 
     System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }

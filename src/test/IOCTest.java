@@ -22,6 +22,8 @@ public class IOCTest {
     System.out.println();
     warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_2");
     warehouse.displayIOCInfo();
+    System.out.println("如果您想测试这个功能，不妨试试在上述路径的 XML 文件中加入自己的内容，然后用 ID 来获取它");
+    System.out.println("--------------------------------------------------");
 
     System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
