@@ -43,7 +43,7 @@ public class StateTest {
     }
 
     public static void main(String []args){
-        System.out.println("—————————————-------------------------------------———— 测试[State]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[State]Pattern —————————————-------------------------------------————");
 
         System.out.println("Tool : tool() : Inherited from Supply, create instance of Tool.");
         System.out.println("Tool : getContext() : Inherited from Supply, get the context of this Tool");

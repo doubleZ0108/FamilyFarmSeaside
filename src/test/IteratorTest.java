@@ -17,7 +17,7 @@ public class IteratorTest
 {
     public static void main(String[] args)
     {
-        System.out.println("—————————————-------------------------------------———— 测试[Iterator]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Iterator]Pattern —————————————-------------------------------------————");
         System.out.println("SupplyAggregate : getIterator() : Gets an iterator for an item created from the item's aggregation class.");
         System.out.println("Iterator : first() : Gets the first reasonable element.");
         System.out.println("Iterator : next() : Gets the next reasonable element.");

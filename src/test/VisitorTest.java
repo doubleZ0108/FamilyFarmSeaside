@@ -32,7 +32,7 @@ public class VisitorTest {
     }
 
     public static void main(String[] args){
-        System.out.println("—————————————-------------------------------------———— 测试[Visitor]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Visitor]Pattern —————————————-------------------------------------————");
 
         System.out.println("ObjectStructure : ObjectStructure() : Create an instance of ObjectStructure.");
         System.out.println("ObjectStructure : add() : Add elements into ObjectStructure.");

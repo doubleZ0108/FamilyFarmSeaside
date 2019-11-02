@@ -114,7 +114,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -138,7 +138,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -162,7 +162,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -186,7 +186,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -210,7 +210,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -234,7 +234,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;
@@ -258,7 +258,7 @@ public class Traders {
                 }
             }
             if (numberBeSold < number) {
-                System.out.println("超出可售卖的最大数量！");
+                System.out.println("Exceeding the maximum quantity available for sale！");
                 return emptyRecords;
             }
             int hasSoldNumber = 0;

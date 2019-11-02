@@ -81,7 +81,7 @@ public class AbstractFactoryTest {
     }
 
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Abstract Factory]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Abstract Factory]Pattern —————————————-------------------------------------————");
 
         System.out.println("ProductFactory : getFruit_species() : Abstract function of get fruit species. Concrete realization in SpringProductFactory and SummerProductFactory.");
         System.out.println("ProductFactory : getVegetable_species() : Abstract function of get vegetable species. Concrete realization in SpringProductFactory and SummerProductFactory.");

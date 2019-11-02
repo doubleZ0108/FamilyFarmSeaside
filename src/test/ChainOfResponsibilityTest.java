@@ -93,7 +93,7 @@ public class ChainOfResponsibilityTest {
 
 
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Chain of Responsibility]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Chain of Responsibility]Pattern —————————————-------------------------------------————");
 
 
         System.out.println("Shower : addAnimalName() : Add a name to the list of animals' names.");

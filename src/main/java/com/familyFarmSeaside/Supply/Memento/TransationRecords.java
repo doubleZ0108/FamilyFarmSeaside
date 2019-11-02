@@ -47,13 +47,13 @@ public class TransationRecords {
     public void printRecordsInfo(){
         SimpleDateFormat sdf = new SimpleDateFormat();
         sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
-        System.out.println("日期："+sdf.format(this.date));
-        System.out.println("交易产品："+this.product);
-        System.out.println("单价："+this.unitPrice);
-        System.out.println("交易数量："+this.number);
-        System.out.println("交易金额："+this.transactionAmount);
-        System.out.println("交易类型："+this.sellOrBuy.toString());
-        System.out.println("剩余财产："+this.money);
+        System.out.println("Date："+sdf.format(this.date));
+        System.out.println("Trading_products："+this.product);
+        System.out.println("Unit_price："+this.unitPrice);
+        System.out.println("Number："+this.number);
+        System.out.println("Transaction_amount："+this.transactionAmount);
+        System.out.println("SellOrBuy："+this.sellOrBuy.toString());
+        System.out.println("Balance："+this.money);
     }
 
     public Date getDate() {

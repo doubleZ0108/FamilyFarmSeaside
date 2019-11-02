@@ -14,8 +14,7 @@ import java.util.Scanner;
 
 public class FacadeTest {
     public static void main(String[] args){
-        System.out.println("—————————————-------------------------------------———— 测试[Facade]模式 —————————————-------------------------------------————");
-        System.out.println("------------测试外观模式------------");
+        System.out.println("—————————————-------------------------------------———— Test[Facade]Pattern —————————————-------------------------------------————");
         System.out.println("以下是系统初始化阶段：");
 
         System.out.println("Dormitory : setDormNumber() : Set the dormitory number.");

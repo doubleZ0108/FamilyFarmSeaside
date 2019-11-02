@@ -12,7 +12,7 @@ import main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furni
  **/
 public class ReferenceCountingTest {
     public static void main(String[] args){
-        System.out.println("----------Test Copy On Write、Reference Counting、Sharable----------");
+        System.out.println("—————————————-------------------------------------———— Test[Copy On Write、Reference Counting、Sharable]Pattern —————————————-------------------------------------————");
         System.out.println("Dormitory : getRoomById() : Get the corresponding room by id.");
         System.out.println("Room : moveFurniture() : Move the furniture to somewhere.");
 

@@ -22,7 +22,7 @@ public class IOCTest {
     // Only a IOC container is implemented!
     // the full IOC pattern still requires a dependency injection
     // but it is too hard to implement
-    System.out.println("—————————————-------------------------------------———— 测试[IOC]模式 —————————————-------------------------------------————");
+    System.out.println("—————————————-------------------------------------———— Test[IOC]Pattern —————————————-------------------------------------————");
     System.out.println("ClassPathXmlApplicationContext : ClassPathXmlApplicationContext() : ClassPathXmlApplicationContext constructors, accept parameters is used to construct the object of the path of the XML file. After accepting the argument, this function will read the contents of the XML file through the StAX interface, thereby constructing the corresponding object in its own Set.");
     System.out.println("ClassPathXmlApplicationContext :  getBean() : In the XML definition, the user needs to specify the appropriate object ID, which is passed in as a parameter when this function is called.");
     System.out.println("");

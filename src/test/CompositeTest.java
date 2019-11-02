@@ -134,7 +134,7 @@ public class CompositeTest {
 
 
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Composite]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Composite]Pattern —————————————-------------------------------------————");
 
 
         System.out.println("SucculentCluster : add() : Add a element to the list of cluster.");

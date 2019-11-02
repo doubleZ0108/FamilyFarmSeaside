@@ -14,7 +14,7 @@ import java.util.Scanner;
  **/
 public class AdapterTest {
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Adapter]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Adapter]Pattern —————————————-------------------------------------————");
         System.out.println("Adapter : eat() : Use adapter to implement eat function in Watchdog.");
         System.out.println("Adapter : sleep() : Use adapter to implement sleep function in Watchdog.");
         System.out.println("Adapter : bark() : Use adapter to implement bark function in Watchdog.");

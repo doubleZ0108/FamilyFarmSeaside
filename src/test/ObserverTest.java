@@ -15,7 +15,7 @@ public class ObserverTest
 {
     public static void main(String[] args)
     {
-        System.out.println("—————————————-------------------------------------———— 测试[Observer]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Observer]Pattern —————————————-------------------------------------————");
 
         System.out.println("Consumable : Consumable() : Inherited from Supply, create an instance of consumable.");
         System.out.println("Consumable : addObserver() : Inherited from Supply, add an observer to consumable.");
