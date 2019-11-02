@@ -13,7 +13,7 @@ public class Warehouse extends Scene {
   private int floorNumber;
   private String name;
 
-  // 这个无参构造函数一定保留，对于 IOC 不可或缺
+  // this constructor has to be kept in order to perform IOC
   public Warehouse(){}
 
 
@@ -32,7 +32,7 @@ public class Warehouse extends Scene {
 
   public void displayIOCInfo(){
      /**
-       * @description: IOC 展示使用，cost，floorNumber，name 属性将从配置文件中读取。
+       * @description: To show for the IOC pattern
        *
 
        *
@@ -42,5 +42,43 @@ public class Warehouse extends Scene {
     System.out.println("cost: " + cost);
     System.out.println("floorNumber: " + floorNumber);
     System.out.println("name: " + name);
+  }
+
+  public Warehouse(double cost, int floorNumber, String name) {
+    this.cost = cost;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  public Warehouse(double cost, double cost1, int floorNumber, String name) {
+    super(cost);
+    this.cost = cost1;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  public Warehouse(double cost, String location, double cost1, int floorNumber, String name) {
+    super(cost, location);
+    this.cost = cost1;
+    this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  @Override
+  public double getCost() {
+    return cost;
+  }
+
+  public int getFloorNumber() {
+    return floorNumber;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  @Override
+  public String toString() {
+    return "class Warehouse extends Scene";
   }
 }

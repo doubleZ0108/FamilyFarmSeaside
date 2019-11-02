@@ -1,17 +1,11 @@
 package main.java.com.familyFarmSeaside.person.owner;
 
+import main.java.com.familyFarmSeaside.person.Person;
 import main.java.com.familyFarmSeaside.person.owner.command.Command;
 import main.java.com.familyFarmSeaside.person.owner.command.CommandHistory;
-import main.java.com.familyFarmSeaside.person.owner.command.CommandWrapper;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.UndoCommand;
 import main.java.com.familyFarmSeaside.person.visitor.Customer;
 import main.java.com.familyFarmSeaside.person.visitor.Traveller;
 import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
-import main.java.com.familyFarmSeaside.person.worker.longTerm.ResidenceAdministrator;
-import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministrator;
-import main.java.com.familyFarmSeaside.person.Person;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResourceLogCommand;
 import main.java.com.familyFarmSeaside.scene.Scene;
 
 import java.util.List;
@@ -25,20 +19,27 @@ import java.util.Map;
  **/
 public class FarmOwner extends Person {
   private static FarmOwner farmOwner;
+
   private FarmOwner(){}
+
   public static FarmOwner getInstance(){
     if(farmOwner == null){
+      System.out.println("这是第一次创建 FarmOwner，使用 new ");
       farmOwner = new FarmOwner();
+    }else {
+      System.out.println("已经创建过对象，直接返回");
     }
+
     return farmOwner;
   }
+
   private String logFile = "";
   private CommandHistory commandHistory = new CommandHistory();
   private Map<LongTermWorker.WokerType, Double> salaryTable;
 //  private List<LongTermWorker> longTermWorkers = new ArrayList<>();
   private Map<LongTermWorker.WokerType, List<LongTermWorker>> longTermWorkers ;
 
-  private void executeCommand(Command command){
+  public void executeCommand(Command command){
     if(command.execute()) {
       commandHistory.addCommand(command);
     }
@@ -46,7 +47,11 @@ public class FarmOwner extends Person {
 
   public void undoCommand(){
     Command command = commandHistory.popCommand();
-    command.unDo();
+    if(command != null){
+      command.unDo();
+    }else{
+      System.out.println("已经没有命令可以撤销了！");
+    }
   }
 
   public void hire(LongTermWorker.WokerType wokerType){
@@ -98,39 +103,35 @@ public class FarmOwner extends Person {
 
   }
 
-  public static void main(String[] args) {
-    FarmOwner farmOwner = FarmOwner.getInstance();
-    System.out.println("---------------测试命令模式-----------------");
-    CommandWrapper residenceLogCommandWrapper = ()->{
-      farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
-    };
-    CommandWrapper resourceCommandWrapper = ()->{
-      farmOwner.executeCommand(new ResourceLogCommand(farmOwner));
-    };
-    CommandWrapper undoCommandWrapper = ()->{
-      farmOwner.executeCommand(new UndoCommand(farmOwner));
-    };
-    ResidenceAdministrator residenceAdministrator = new ResidenceAdministrator(residenceLogCommandWrapper);
-    ResourceAdministrator resourceAdministrator = new ResourceAdministrator(resourceCommandWrapper,undoCommandWrapper);
-    try {
-      System.out.println("Let repairman and guard do some log. The logfile is:");
-      residenceAdministrator.doSomeLog();
-      Thread.sleep(1000);
-      resourceAdministrator.doSomeLog();
-      Thread.sleep(1000);
-      residenceAdministrator.doSomeLog();
-      System.out.print(farmOwner.getLogFile());
-      // Now is undo function
-      resourceAdministrator.undoLog();
-      System.out.println("Undo one command. The logfile is:");
-      System.out.print(farmOwner.getLogFile());
-      farmOwner.undoCommand();
-      System.out.println("Undo one more command. The logfile is:");
-      System.out.println(farmOwner.getLogFile());
-    }catch (InterruptedException e){
-      System.out.println(e.toString());
-    }
-    System.out.println("---------------------------------------------");
+  public static FarmOwner getFarmOwner() {
+    return farmOwner;
+  }
 
+  public static void setFarmOwner(FarmOwner farmOwner) {
+    FarmOwner.farmOwner = farmOwner;
+  }
+
+  public CommandHistory getCommandHistory() {
+    return commandHistory;
+  }
+
+  public void setCommandHistory(CommandHistory commandHistory) {
+    this.commandHistory = commandHistory;
+  }
+
+  public Map<LongTermWorker.WokerType, Double> getSalaryTable() {
+    return salaryTable;
+  }
+
+  public void setSalaryTable(Map<LongTermWorker.WokerType, Double> salaryTable) {
+    this.salaryTable = salaryTable;
+  }
+
+  public Map<LongTermWorker.WokerType, List<LongTermWorker>> getLongTermWorkers() {
+    return longTermWorkers;
+  }
+
+  public void setLongTermWorkers(Map<LongTermWorker.WokerType, List<LongTermWorker>> longTermWorkers) {
+    this.longTermWorkers = longTermWorkers;
   }
 }

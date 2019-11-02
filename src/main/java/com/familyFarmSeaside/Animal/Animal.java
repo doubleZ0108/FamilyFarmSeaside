@@ -2,6 +2,9 @@ package main.java.com.familyFarmSeaside.Animal;
 
 import main.java.com.familyFarmSeaside.Product.Product;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -11,18 +14,23 @@ import java.util.Random;
  * @create: 2019/10/24
  **/
 public abstract class Animal extends Product {
-    static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //哺乳类 禽类 鱼类
-    static protected enum Sex {MALE, FEMALE}                                   //雄性 雌性
-    static protected enum LifeStage {BABY, ADULT}                            //幼年体 成熟体
+    static protected enum SpeciesName {MAMMALS,POULTRY,FISH}  //Mammalian poultry
+    static protected enum Sex {MALE, FEMALE}                  //Male Female
+    static public enum LifeStage {BABY, ADULT}                //Juvenile Body
 
-    protected SpeciesName species;                                                    //种类
-    protected String detailedSpecies;                                                   //具体类别
-    protected Sex sex;                                                                         //性别
-    protected LifeStage lifestage;                                                        //生命阶段
-    protected int age;      								                                   //年龄
-    protected int hungerValue;  							                               //饥饿值(0~100) 0 -> 非常饿       【undo redo pattern】
+    protected SpeciesName species;                            //species
+    protected String detailedSpecies;                         //detailed species
+    protected Sex sex;                                        //gender
+    protected LifeStage lifestage;                            //life stage
+    protected int age;      								  //age
+    protected int hungerValue;  							  //Hunger value (0~100) 0 -> very hungry
 
     public Animal() {
+        /**
+         * @description: randomly generate an animal
+         *
+         * @return : null
+         **/
         this.lifestage = LifeStage.BABY;
         this.age = 1;
         this.hungerValue=100;
@@ -35,18 +43,102 @@ public abstract class Animal extends Product {
         }
     }
 
-    abstract  public SpeciesName getSpecies();
-    abstract  public String getDetailedSpecies();
-    abstract  public  Sex getSex();
-    abstract  public LifeStage getLifestage();
-    abstract  public  int getAge();
-    abstract  public  int getHungerValue();
+    public Animal(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue);
+        this.species = species;
+        this.detailedSpecies = detailedSpecies;
+        this.sex = sex;
+        this.lifestage = lifestage;
+        this.age = age;
+        this.hungerValue = hungerValue;
+    }
 
-    abstract public void eat();
-    abstract public void sleep();
-    abstract public void mating();  //交配
-    abstract public Animal breed();   //繁殖
+    /* common behavior of animals */
     public void grow(){
         this.lifestage = LifeStage.ADULT;
+    }
+
+    abstract public void eat();
+
+    abstract public void sleep();
+
+    abstract public void mating();
+
+    abstract public Animal breed();
+
+
+
+    public HashMap<String,String> getAnimalInfo(){
+        HashMap<String,String> animalInfo = new HashMap<>();
+        animalInfo.put("sex", getSex().toString());
+        animalInfo.put("lifeStage", getLifestage().toString());
+        animalInfo.put("value", String.valueOf(getSellValue()));
+        animalInfo.put("hungerValue",String.valueOf(getHungerValue()));
+        return animalInfo;
+    }
+
+    public void setAnimalInfo(HashMap<String,String> animalInfo){
+        for (String key: animalInfo.keySet()){
+            switch (key){
+                case "sex":{
+                    if (animalInfo.get(key).equals("MALE"))
+                    {this.sex=Sex.MALE;}
+                    else {this.sex=Sex.FEMALE;}
+                    break;
+                }
+                case "lifeStage":{
+                    if(animalInfo.get(key).equals("BABY")){
+                        this.lifestage=LifeStage.BABY;
+                    }
+                    else {this.lifestage=LifeStage.ADULT;}
+                    break;
+                }
+                default:{
+                    break;
+                }
+            }
+        }
+    }
+
+
+    public SpeciesName getSpecies(){return species;}
+
+    public String getDetailedSpecies(){return detailedSpecies;}
+
+    public  Sex getSex(){return sex;}
+
+    public LifeStage getLifestage(){return lifestage;}
+
+    public  int getAge(){return age;}
+
+    public  int getHungerValue(){return  hungerValue;}
+
+    public void setSpecies(SpeciesName species) {
+        this.species = species;
+    }
+
+    public void setDetailedSpecies(String detailedSpecies) {
+        this.detailedSpecies = detailedSpecies;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+
+    public void setLifestage(LifeStage lifestage) {
+        this.lifestage = lifestage;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHungerValue(int hungerValue) {
+        this.hungerValue = hungerValue;
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Animal extends Product";
     }
 }

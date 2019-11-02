@@ -8,6 +8,7 @@ package main.java.com.familyFarmSeaside.Animal.Action;
  **/
 public abstract class Action {
     private String name;
+
     public Action() {}
     public Action(String name) {
         this.name = name;
@@ -18,7 +19,13 @@ public abstract class Action {
     public String getName() {
         return this.name;
     }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "abstract class Action";
     }
 }

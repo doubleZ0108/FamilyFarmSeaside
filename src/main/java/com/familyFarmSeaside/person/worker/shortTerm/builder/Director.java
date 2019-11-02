@@ -21,7 +21,15 @@ public class Director {
   }
 
   public void buildANormalScene(){
+     /**
+       * @description: This is the duty of director. It specifies a common type of construction which is often constructed.
+       *
+
+       *
+       * @return : void
+       **/
     System.out.println("Director: This will generate an ordinary scene");
+    // determain which type of builder it is
     if(builder instanceof BreedSceneBuilderImpl){
       builder.setBuildingPlan("Farmland");
     }else if (builder instanceof HouseBuilderImpl){
@@ -29,6 +37,7 @@ public class Director {
     }else {
       builder.setBuildingPlan("Warehouse");
     }
+    // do some normal construction
     builder.setLocation("Center of the farm");
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     Date dt = new Date();
@@ -37,5 +46,18 @@ public class Director {
     rightNow.add(Calendar.MONTH, 1);
     Date oneMonthLater = rightNow.getTime();
     builder.setDueDate(oneMonthLater);
+  }
+
+  public Builder getBuilder() {
+    return builder;
+  }
+
+  public void setBuilder(Builder builder) {
+    this.builder = builder;
+  }
+
+  @Override
+  public String toString() {
+    return "class Director";
   }
 }

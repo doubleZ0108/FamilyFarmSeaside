@@ -14,51 +14,33 @@ public class Dog extends Mammals {
     public Dog() {
         super();
         detailedSpecies = "DOG";
+        sellValue = 200;
+        buyValue = 100;
+    }
+
+    public Dog(int sellValue, int buyValue, SpeciesName species, String detailedSpecies, Sex sex, LifeStage lifestage, int age, int hungerValue) {
+        super(sellValue, buyValue, species, detailedSpecies, sex, lifestage, age, hungerValue);
     }
 
     @Override
-    public SpeciesName getSpecies() {
-        return this.species;
-    }
-
-    @Override
-    public String getDetailedSpecies() {
-        return this.detailedSpecies;
-    }
-
-    @Override
-    public Sex getSex() {
-        return this.sex;
-    }
-
-    @Override
-    public LifeStage getLifestage() {
-        return this.lifestage;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
-
-    @Override
-    public int getHungerValue() {
-        return this.hungerValue;
-    }
-
-  @Override
   public void eat() {
+        System.out.println("I am a dog!");
+        System.out.println("I'm going to eat!");
+        System.out.println("Food delicious! wangwangwang!");
 
   }
 
   @Override
   public void sleep() {
-
+      System.out.println("I am a dog!");
+      System.out.println("I'm going to sleep!");
+      System.out.println("Good dream! wangwangwang!");
   }
 
   @Override
   public void mating() {
-
+      System.out.println("I am Dog!");
+      System.out.println("I am mating with another Dog!");
   }
 
   @Override
@@ -68,7 +50,9 @@ public class Dog extends Mammals {
 
   @Override
   protected void run() {
-
+      System.out.println("I am a dog!");
+      System.out.println("I'm running!");
+      System.out.println("Come and play with me");
   }
 
 
@@ -88,18 +72,22 @@ public class Dog extends Mammals {
 
     @Override
     public  boolean equals(Object obj){
-        if (this == obj)      //传入的对象是其本身，相等的；
-            return true;
-        if (obj == null)     //如果传入的对象为空，不相等
-            return false;
-        if (getClass() != obj.getClass())  //如果不是同一个类型的，不相等
-            return false;
+        if (this == obj)      //The incoming object is itself, equal
+        {return true;}
+        if (obj == null)     //If the passed in object is empty, not equal
+        {return false;}
+        if (getClass() != obj.getClass())  //If not the same type, not equal
+        {return false;}
         Dog dog = (Dog) obj;
         if(this.detailedSpecies==dog.detailedSpecies && this.species.equals(dog.species)
                 && this.sex==dog.sex&&this.age==dog.age&&this.lifestage==dog.lifestage){
-            return true;
+            {return true;}
         }
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "class Dog extends Mammals";
+    }
 }

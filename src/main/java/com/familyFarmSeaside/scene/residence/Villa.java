@@ -25,4 +25,18 @@ public class Villa extends Residence {
     }
 
     private int villaNumber;
+
+    public Villa(int villaNumber) {
+        this.villaNumber = villaNumber;
+    }
+
+    public Villa(double x, int villaNumber) {
+        super(x);
+        this.villaNumber = villaNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "class Villa extends Residence";
+    }
 }

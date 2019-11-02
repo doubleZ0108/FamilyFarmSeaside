@@ -12,7 +12,7 @@ import java.util.*;
  * @create: 2019/10/19
  **/
 public class Dormitory extends Residence {
-  private static final int ROON_NUM = 50;
+  public static final int ROON_NUM = 10;
 
   public Dormitory(){
     super(20000);
@@ -48,6 +48,15 @@ public class Dormitory extends Residence {
 
   public void addLongTermWorker(LongTermWorker longTermWorker){
     longTermWorkers.add(longTermWorker);
+  }
+
+  public Room getRoomById(int id){
+    if(id >= 0 && id < ROON_NUM){
+      return rooms.get(id);
+    }
+    else {
+      return null;
+    }
   }
 
   private int dormNumber;

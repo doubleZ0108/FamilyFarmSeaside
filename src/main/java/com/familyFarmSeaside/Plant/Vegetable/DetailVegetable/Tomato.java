@@ -10,4 +10,14 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  **/
 public class Tomato extends Vegetable {
 
+    public Tomato(){
+        super("TOMATO");
+        sellValue = 60;
+        buyValue = 30;
+    }
+
+    @Override
+    public String toString() {
+        return "Vegetable->Tomato";
+    }
 }

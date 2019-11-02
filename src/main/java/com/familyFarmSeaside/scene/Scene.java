@@ -18,9 +18,16 @@ public abstract class Scene {
   }
 
   public Scene(){}
-  public Scene(double x){
-    cost = x;
+
+  public Scene(double cost) {
+    this.cost = cost;
   }
+
+  public Scene(double cost, String location) {
+    this.cost = cost;
+    this.location = location;
+  }
+
   public double getCost()
   {
     return cost;

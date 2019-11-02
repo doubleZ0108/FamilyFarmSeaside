@@ -4,13 +4,13 @@ import java.util.HashMap;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: The factory class of furniture
+ * @description: 家具工厂类，用于维护一套家具对象的池，提供获取家具对象引用的函数
  * @author: saturn
  * @create: 2019/10/24
  **/
 public class FurnitureFactory {
-    private HashMap<FurnitureKind, Furniture> furniturePool;
-    private static FurnitureFactory furnitureFactory = new FurnitureFactory();
+    private HashMap<FurnitureKind, Furniture> furniturePool;  //存放家具对象的池
+    private static FurnitureFactory furnitureFactory = new FurnitureFactory();  //家具工厂
 
     public FurnitureFactory(){furniturePool = new HashMap<>();}
 
@@ -24,27 +24,26 @@ public class FurnitureFactory {
          *
          * @param kind : The kind of furniture to be returned.
          *
-         * @return : main.java.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
+         * @return : main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = furniturePool.get(kind);
         if(furniture == null){
             furniture = createFurniture(kind);
             furniturePool.put(kind, furniture);
-            System.out.println("New " + kind.toString() + " object created");
         }
         else {
-            System.out.println(kind.toString() + " object shared");
+            System.out.println(kind.toString() + " object shared, reference count + 1 = " + (furniture.getReferenceCount() + 1));
         }
-        return furniture;
+        return furniture.getReference();
     }
 
-    private Furniture createFurniture(FurnitureKind kind){
+    public Furniture createFurniture(FurnitureKind kind){
         /**
          * @description: Create the furniture instance according to the kind provided.
          *
          * @param kind : The kind of the furniture to be created.
          *
-         * @return : main.java.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
+         * @return : main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.Furniture
          **/
         Furniture furniture = null;
         switch (kind){

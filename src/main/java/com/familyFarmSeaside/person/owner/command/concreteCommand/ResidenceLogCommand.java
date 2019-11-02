@@ -25,4 +25,9 @@ public class ResidenceLogCommand extends Command {
     farmOwner.setLogFile(old);
     return true;
   }
+
+  @Override
+  public String toString() {
+    return "class ResidenceLogCommand extends Command";
+  }
 }

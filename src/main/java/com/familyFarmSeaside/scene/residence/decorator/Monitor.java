@@ -17,4 +17,9 @@ public class Monitor extends ResidenceDecorator{
     public String getDescription() {
         return residence.getDescription() + "，加了一个监视器";
     }
+
+    @Override
+    public String toString() {
+        return "class Monitor extends ResidenceDecorator";
+    }
 }

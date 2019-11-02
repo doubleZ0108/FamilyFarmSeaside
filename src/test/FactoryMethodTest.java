@@ -15,11 +15,13 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.repairman.Repairma
  **/
 public class FactoryMethodTest {
     public static void main(String[] args){
-        System.out.println("------------测试工厂方法模式------------");
+        System.out.println("—————————————-------------------------------------———— Test[Factory Method]Pattern —————————————-------------------------------------————");
+        System.out.println("LongTermWorker : newWorker() : " +
+                "The abstract method of the factory parent class, the implementation of which is determined by the specific factory subclass that creates the specific LongTermWorker object.");
+        System.out.println("");
         Repairman repairman = (Repairman) new RepairmanFactory().newWorker();
         Buyer buyer = (Buyer) new BuyerFactory().newWorker();
         Guard guard = (Guard) new GuardFactory().newWorker();
         System.out.println("---------------------------------");
-
     }
 }
