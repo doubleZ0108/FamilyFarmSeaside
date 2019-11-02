@@ -17,7 +17,6 @@ import java.util.Date;
  **/
 public class VisitorTest {
     public static void runtest(){
-
         System.out.println("Add a tool and a consumable to object structure");
         ObjectStructure os=new ObjectStructure();
         os.add(new Tool());
@@ -33,6 +32,10 @@ public class VisitorTest {
     }
 
     public static void main(String[] args){
+        System.out.println("—————————————-------------------------------------———— 测试[Visitor]模式 —————————————-------------------------------------————");
+
         VisitorTest.runtest();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

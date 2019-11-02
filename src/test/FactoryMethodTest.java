@@ -15,11 +15,12 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.repairman.Repairma
  **/
 public class FactoryMethodTest {
     public static void main(String[] args){
-        System.out.println("------------测试工厂方法模式------------");
+        System.out.println("—————————————-------------------------------------———— 测试[Factory Method]模式 —————————————-------------------------------------————");
+
         Repairman repairman = (Repairman) new RepairmanFactory().newWorker();
         Buyer buyer = (Buyer) new BuyerFactory().newWorker();
         Guard guard = (Guard) new GuardFactory().newWorker();
-        System.out.println("---------------------------------");
 
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

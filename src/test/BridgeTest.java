@@ -15,7 +15,7 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Pea.Wrink
  **/
 public class BridgeTest {
     static public void testBridge(){
-        System.out.println("----桥接模式测试----");
+
         System.out.println("新建一个color对象...");
         System.out.println("绿色...");
         Color green=new Green();
@@ -42,6 +42,11 @@ public class BridgeTest {
     }
 
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Bridge]模式 —————————————-------------------------------------————");
+
         testBridge();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
+
     }
 }

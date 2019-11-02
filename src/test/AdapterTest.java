@@ -14,6 +14,8 @@ import java.util.Scanner;
  **/
 public class AdapterTest {
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Adapter]模式 —————————————-------------------------------------————");
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("----适配器模式测试----");
         System.out.println("创建一个对象watchdog...");
@@ -28,5 +30,7 @@ public class AdapterTest {
         watchdog.sleep();
         System.out.println(watchdog.getName()+"吠...");
         watchdog.bark();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

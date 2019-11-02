@@ -20,6 +20,10 @@ public class PrototypeTest {
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
+        System.out.println("—————————————-------------------------------------———— 测试[Prototype]模式 —————————————-------------------------------------————");
+
         PrototypeTest.testPrototype();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

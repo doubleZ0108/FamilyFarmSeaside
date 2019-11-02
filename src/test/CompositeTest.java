@@ -10,6 +10,8 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Succulent
  **/
 public class CompositeTest {
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Composite]模式 —————————————-------------------------------------————");
+
         System.out.println("Making root SucculentBonsai...");
         SucculentCluster root = new SucculentCluster("root");
         SucculentCluster cluster1 = new SucculentCluster("cluster1");
@@ -33,6 +35,8 @@ public class CompositeTest {
         cluster1.show();
         System.out.println("Show Root:");
         root.show();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
 
     }
 }

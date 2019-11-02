@@ -13,6 +13,8 @@ import java.util.Scanner;
 public class InterpreterTest
 {
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Interpreter]模式 —————————————-------------------------------------————");
+
         Context farmContext = new Context();
         Scanner scanner = new Scanner(System.in);
         System.out.println("现在开始测试Interpreter设计模式！");
@@ -81,6 +83,7 @@ public class InterpreterTest
                 farmContext.allowUse(s);
             }
         }
-        System.out.println("Interpreter设计模式测试完毕！");
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

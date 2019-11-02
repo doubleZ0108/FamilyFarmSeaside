@@ -13,7 +13,8 @@ import main.java.com.familyFarmSeaside.person.worker.shortTerm.aop.SupplyTeam;
  **/
 public class AOPTest {
   public static void main(String[] args){
-    System.out.println("——————————————————测试AOP模式————————————————————");
+    System.out.println("—————————————-------------------------------------———— 测试[AOP]模式 —————————————-------------------------------------————");
+
     QualityAssuranceTeam qualityAssuranceTeam = new QualityAssuranceTeam();
     SupplyTeam supplyTeam = new SupplyTeam();
     // 这样随意的组合可以体现 AOP 的优势，只需要把公共任务抽象出来，套到另外主要业务逻辑外面就可以了
@@ -27,6 +28,7 @@ public class AOPTest {
     QualityAssuranceTeam outer_qa = new QualityAssuranceTeam();
     NormalConstruction QA_Supply_Warehouse = outer_qa.doConstructionUnderQA(Supply_Warehouse);
     QA_Supply_Warehouse.buildSomeThingNormal();
-    System.out.println("--------------------------------------------------");
+
+    System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
 }
