@@ -5,6 +5,7 @@ import main.java.com.familyFarmSeaside.Supply.Tool.Tool;
 import main.java.com.familyFarmSeaside.Supply.Visitor.ObjectStructure;
 import main.java.com.familyFarmSeaside.Supply.Visitor.spv_admin;
 import main.java.com.familyFarmSeaside.Supply.Visitor.spv_peasant;
+import main.java.com.familyFarmSeaside.person.visitor.Visitor;
 
 import java.util.Date;
 
@@ -29,5 +30,9 @@ public class VisitorTest {
         System.out.println("------------------------");
         System.out.println("Administrator visits!");
         os.accept(admin);
+    }
+
+    public static void main(String[] args){
+        VisitorTest.runtest();
     }
 }
