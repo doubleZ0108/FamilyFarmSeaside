@@ -55,7 +55,7 @@ public class AbstractToolState {
             System.out.println("It's above 100, so we set it to 100!");
             this.durability=100;
         }
-        System.out.println("The final durability is "+this.durability);
+        System.out.println("The final durability is "+this.durability+" and its efficiency is "+durability/20);
         checkState();
     }
 
