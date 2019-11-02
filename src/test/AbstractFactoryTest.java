@@ -4,6 +4,7 @@ import main.java.com.familyFarmSeaside.Product.Factory.ProductFactory;
 import main.java.com.familyFarmSeaside.Product.Factory.SpringProductFactory;
 import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -89,8 +90,18 @@ public class AbstractFactoryTest {
 
             /* 用户指定使用何种工厂生产 */
             try{
-                opcode = FactoryKind.values()[input.nextInt()];
+                int i = Integer.parseInt(input.nextLine());
+                opcode = FactoryKind.values()[i];
             }catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("错误输入，请重新选择");
+                System.out.println("");
+                continue;
+            }catch (InputMismatchException e2){
+                System.out.println("错误输入，请重新选择");
+                System.out.println("");
+                continue;
+            }catch (NumberFormatException e3)
+            {
                 System.out.println("错误输入，请重新选择");
                 System.out.println("");
                 continue;
