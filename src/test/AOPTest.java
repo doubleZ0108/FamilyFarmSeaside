@@ -17,7 +17,7 @@ public class AOPTest {
     System.out.println("NormalConstruction : buildSomeThingNormal() : Abstract function of build something normal.");
     System.out.println("QualityAssuranceTeam : doConstructionUnderQA() : The quality assurance term Worker who belong to quality assurance team and want to do construction under QA. Create a proxy object. The user passes in the ShortTermWorker class object that needs to be proxied, and we will return a proxy object with the same interface. (The class to which the returned object belongs is created by the JVM at runtime)");
     System.out.println("SupplyTeam : doConstructionUnderQA() : The short term Worker who belong to quality assurance team and want to do construction under QA. Create a proxy object. The user passes in the ShortTermWorker class object that needs to be proxied, and we will return a proxy object with the same interface. (The class to which the returned object belongs is created by the JVM at runtime)。");
-
+    System.out.println("");
 
     QualityAssuranceTeam qualityAssuranceTeam = new QualityAssuranceTeam();
     SupplyTeam supplyTeam = new SupplyTeam();

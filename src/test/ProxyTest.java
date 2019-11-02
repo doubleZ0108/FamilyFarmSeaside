@@ -1,5 +1,6 @@
 package test;
 import main.java.com.familyFarmSeaside.Supply.Proxy.*;
+import main.java.com.familyFarmSeaside.Supply.Tool.*;
 
 /**
  * @program: FamilyFarmSeaside
@@ -12,7 +13,8 @@ public class ProxyTest {
     {
         System.out.println("—————————————-------------------------------------———— 测试[Proxy]模式 —————————————-------------------------------------————");
 
-        ToolProxy toolProxy=new ToolProxy();
+        Tool tool = new Tool();
+        ToolProxy toolProxy=new ToolProxy(tool);
 
         System.out.println("Try taking a Tool.");
         toolProxy.take();
@@ -29,6 +31,17 @@ public class ProxyTest {
         System.out.println("Try returning This Tool again");
         toolProxy.returnTool();
         System.out.println();
+    }
+
+    public static void main(String[] args){
+        System.out.println("Tool : Tool() : Inherited from Supply, create an instance of Tool.");
+        System.out.println("ToolProxy : ToolProxy() : Implements ToolSubjects, create an instance of ToolProxy and bind it to an Tool.");
+        System.out.println("ToolProxy : take() : Implements ToolSubjects, take the tool through the proxy.");
+        System.out.println("ToolProxy : returnTool() : Implements ToolSubjects, return the tool to the proxy.");
+        System.out.println("");
+
+
+        ProxyTest.runTest();
 
         System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
