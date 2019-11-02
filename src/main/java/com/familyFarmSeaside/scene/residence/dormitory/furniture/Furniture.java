@@ -18,7 +18,9 @@ abstract public class Furniture {
     }  //返回共享标志
     public int getReferenceCount(){return referenceCount;}  //返回引用计数
     public void minusReferenceCount(){ //共享的对象有副本产生时引用计数减1
-        referenceCount--;
+        if(--referenceCount == 0){
+            System.out.println("\nThis furniture object has been released!\n");
+        }
     }
     public Furniture getReference(){  //返回家具引用
         referenceCount++;
