@@ -9,7 +9,8 @@ import main.java.com.familyFarmSeaside.Plant.Color.Color;
  * @create: 2019/10/28
  **/
 public class SmoothPea extends Pea{
-
+    public SmoothPea(){
+    }
 
     public SmoothPea(Color color) {
         super(color);
@@ -17,6 +18,10 @@ public class SmoothPea extends Pea{
 
     public String getName(){
         return color.getColor()+"Smooth Pea";
+    }
 
+    @Override
+    public String toString() {
+        return "class SmoothPea extends Pea";
     }
 }

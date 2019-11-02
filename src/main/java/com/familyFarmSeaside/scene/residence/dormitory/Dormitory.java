@@ -12,7 +12,7 @@ import java.util.*;
  * @create: 2019/10/19
  **/
 public class Dormitory extends Residence {
-  private static final int ROON_NUM = 10;
+  public static final int ROON_NUM = 10;
 
   public Dormitory(){
     super(20000);

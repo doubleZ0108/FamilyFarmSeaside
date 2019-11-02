@@ -10,6 +10,8 @@ import main.java.com.familyFarmSeaside.person.owner.FarmOwner;
  **/
 public class SingletonTest {
     public static void main(String[] args){
+        System.out.println("—————————————-------------------------------------———— 测试[Singleton]模式 —————————————-------------------------------------————");
+
         System.out.println("FarmOwner : getInstance() : Inherited from Person, create an instance of farm owner if there is none.");
         System.out.println("FarmOwner : getFarmOwner() : Inherited from Person, return the one and only farm owner.");
         System.out.println("");
@@ -17,6 +19,7 @@ public class SingletonTest {
         System.out.println("----------------测试单例模式-----------------");
         FarmOwner farmOwner_1 = FarmOwner.getInstance();
         FarmOwner farmOwner_2 = FarmOwner.getFarmOwner();
-        System.out.println("---------------------------------------------");
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

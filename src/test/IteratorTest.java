@@ -17,6 +17,13 @@ public class IteratorTest
 {
     public static void main(String[] args)
     {
+        System.out.println("—————————————-------------------------------------———— 测试[Iterator]模式 —————————————-------------------------------------————");
+        System.out.println("SupplyAggregate : getIterator() : Gets an iterator for an item created from the item's aggregation class.");
+        System.out.println("Iterator : first() : Gets the first reasonable element.");
+        System.out.println("Iterator : next() : Gets the next reasonable element.");
+        System.out.println("Iterator : hasNext() : Determine if there is the next logical element.");
+        System.out.println("");
+
         Date date = new Date();
         long m = date.getTime();
         SupplyAggregate supplyAggregate = new SupplyAggregate();

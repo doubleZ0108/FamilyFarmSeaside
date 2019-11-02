@@ -1,6 +1,5 @@
 package test;
 import main.java.com.familyFarmSeaside.Supply.Proxy.*;
-import main.java.com.familyFarmSeaside.Supply.Tool.*;
 
 /**
  * @program: FamilyFarmSeaside
@@ -11,6 +10,8 @@ import main.java.com.familyFarmSeaside.Supply.Tool.*;
 public class ProxyTest {
     public static void runTest()
     {
+        System.out.println("—————————————-------------------------------------———— 测试[Proxy]模式 —————————————-------------------------------------————");
+
         Tool tool = new Tool();
         ToolProxy toolProxy=new ToolProxy(tool);
 
@@ -40,5 +41,7 @@ public class ProxyTest {
 
 
         ProxyTest.runTest();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

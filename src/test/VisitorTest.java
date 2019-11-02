@@ -17,7 +17,6 @@ import java.util.Date;
  **/
 public class VisitorTest {
     public static void runtest(){
-
         System.out.println("Add a tool and a consumable to object structure");
         ObjectStructure os=new ObjectStructure();
         os.add(new Tool());
@@ -33,6 +32,8 @@ public class VisitorTest {
     }
 
     public static void main(String[] args){
+        System.out.println("—————————————-------------------------------------———— 测试[Visitor]模式 —————————————-------------------------------------————");
+
         System.out.println("ObjectStructure : ObjectStructure() : Create an instance of ObjectStructure.");
         System.out.println("ObjectStructure : add() : Add elements into ObjectStructure.");
         System.out.println("ObjectStructure : accept() : All the elements accept the visit of the visitor in sequence.");
@@ -43,5 +44,7 @@ public class VisitorTest {
         System.out.println("");
 
         VisitorTest.runtest();
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Scanner;
+
 import main.java.com.familyFarmSeaside.person.owner.FarmOwner;
 import main.java.com.familyFarmSeaside.person.owner.command.CommandWrapper;
 import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
@@ -16,8 +18,15 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministra
  **/
 public class CommandTest {
   public static void main(String[] args) {
+
+    System.out.println("—————————————-------------------------------------———— 测试[Command]模式 —————————————-------------------------------------————");
+
     FarmOwner farmOwner = FarmOwner.getInstance();
-    System.out.println("---------------测试命令模式-----------------");
+    System.out.println("FarmOwner : getInstance() : Farmowner is singelton, so we need a getInstance method to get it.");
+    System.out.println("FarmOwner : executeCommand() : Execute the command, then add it to the command history.");
+    System.out.println("ResidenceAdministrator : doSomeLog() : Do the command, if have a command, execute.");
+    System.out.println("FarmOwner : getLogFile() : Get the log files.");
+    System.out.println("");
     CommandWrapper residenceLogCommandWrapper = ()->{
       farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
     };
@@ -47,7 +56,25 @@ public class CommandTest {
     }catch (InterruptedException e){
       System.out.println(e.toString());
     }
-    System.out.println("---------------------------------------------");
+    System.out.println("请您选择要执行的指令：(residence, resource, undo, quit)");
+    Scanner scanner = new Scanner(System.in);
+    String command = scanner.nextLine();
+    while(!command.equals("quit")){
+      switch(command){
+        case "residence":{
+          residenceAdministrator.doSomeLog();
+        }break;
+        case "resource":{
+          resourceAdministrator.doSomeLog();
+        }break;
+        case "undo":{
+          farmOwner.undoCommand();
+        }break;
+      }
+      System.out.print(farmOwner.getLogFile());
+      command = scanner.nextLine();
+    }
 
+    System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
 }
