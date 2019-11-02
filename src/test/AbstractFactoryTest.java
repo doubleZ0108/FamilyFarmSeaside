@@ -81,12 +81,13 @@ public class AbstractFactoryTest {
     }
 
     public static void main(String[] args) {
-        System.out.println("—————————————————测试抽象工厂模式———————————————————");
+        System.out.println("—————————————-------------------------------------———— 测试[Abstract Factory]模式 —————————————-------------------------------------————");
 
-        System.out.println("SpringProductFactory : (objectid) : createFruit : Inherited from ProductFactory, create apple and add them into product warehouse.");
-        System.out.println("SpringProductFactory : (objectid) : createVegetable : Inherited from ProductFactory, create potato and add them into product warehouse.");
-        System.out.println("SummerProductFactory : (objectid) : createFruit : Inherited from ProductFactory, create cherry and add them into product warehouse.");
-        System.out.println("SummerProductFactory : (objectid) : createVegetable : Inherited from ProductFactory, create tomato and add them into product warehouse.");
+        System.out.println("SpringProductFactory : createFruit() : Inherited from ProductFactory, create apple and add them into product warehouse.");
+        System.out.println("SpringProductFactory : createVegetable() : Inherited from ProductFactory, create potato and add them into product warehouse.");
+        System.out.println("SummerProductFactory : createFruit() : Inherited from ProductFactory, create cherry and add them into product warehouse.");
+        System.out.println("SummerProductFactory : createVegetable() : Inherited from ProductFactory, create tomato and add them into product warehouse.");
+        System.out.println("");
 
         Scanner input = new Scanner(System.in);
         FactoryKind opcode;
@@ -94,7 +95,7 @@ public class AbstractFactoryTest {
         boolean stop_flag = false;
 
         do{
-            System.out.print("请选择农产品工厂[1 春季农产品 | 2 夏季农产品 | 0]");
+            System.out.print("请选择农产品工厂[1 春季农产品 | 2 夏季农产品 | 0]: ");
 
             /* 用户指定使用何种工厂生产 */
             try{
@@ -128,7 +129,8 @@ public class AbstractFactoryTest {
 
         }while(!stop_flag);
 
-        System.out.println("--------------------------------------------------");
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
+
     }
 
 }

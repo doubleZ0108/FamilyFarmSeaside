@@ -15,19 +15,24 @@ public class WarehouseBuilder extends ShortTermWorker implements NormalConstruct
   private WareHouseBuilderImpl builder = new WareHouseBuilderImpl();
   private Warehouse warehouse;
 
-  @Override
-  public void buildSomeThingNormal(){
-    Director director = new Director(builder);
-    director.buildANormalScene();
-    warehouse = builder.getResult();
-  }
-
   public WarehouseBuilder(){
   }
 
   public WarehouseBuilder(WareHouseBuilderImpl builder, Warehouse warehouse) {
     this.builder = builder;
     this.warehouse = warehouse;
+  }
+
+  @Override
+  public void buildSomeThingNormal(){
+    /**
+     * @description: Warehouse for storing materials.
+     *
+     * @return : void
+     **/
+    Director director = new Director(builder);
+    director.buildANormalScene();
+    warehouse = builder.getResult();
   }
 
   public WareHouseBuilderImpl getBuilder() {

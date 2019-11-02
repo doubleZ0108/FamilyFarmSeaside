@@ -10,6 +10,8 @@ import main.java.com.familyFarmSeaside.Animal.Action.Shower.*;
  **/
 public class ChainOfResponsibilityTest {
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Chain of Responsibility]模式 —————————————-------------------------------------————");
+
         Shower shower1 = new ShowerPattern("1");
         shower1.addAnimalName("Pig");
         shower1.addAnimalName("Cow");
@@ -25,5 +27,7 @@ public class ChainOfResponsibilityTest {
         shower1.selectPattern("Cat");
         shower1.selectPattern("Goat");
         shower1.selectPattern("Zebra");
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

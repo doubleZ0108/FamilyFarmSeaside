@@ -12,6 +12,19 @@ public class Adapter implements Watchdog{
     private Dog adaptee;    //适配者：Dog，适配Dog类的eat 和 sleep 功能
     private String name;
 
+    public void eat(){
+        this.adaptee.eat();
+    }
+
+    public void sleep(){
+        this.adaptee.sleep();
+    }
+
+    @Override
+    public void bark() {
+        System.out.println("Watchdog: bark...");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -25,19 +38,6 @@ public class Adapter implements Watchdog{
 
     public Adapter(Dog adaptee){
         this.adaptee=adaptee;
-    }
-
-    public void eat(){
-        this.adaptee.eat();
-    }
-
-    public void sleep(){
-        this.adaptee.sleep();
-    }
-
-    @Override
-    public void bark() {
-        System.out.println("Watchdog: bark...");
     }
 
     public Dog getAdaptee() {

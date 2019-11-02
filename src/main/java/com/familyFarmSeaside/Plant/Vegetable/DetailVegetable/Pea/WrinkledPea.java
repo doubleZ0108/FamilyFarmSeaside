@@ -9,12 +9,19 @@ import main.java.com.familyFarmSeaside.Plant.Color.Color;
  * @create: 2019/10/28
  **/
 public class WrinkledPea extends Pea {
+    public WrinkledPea(){
+    }
+
     public WrinkledPea(Color color) {
         super(color);
     }
 
     public String getName(){
         return color.getColor()+"Wrinkled Pea";
+    }
 
+    @Override
+    public String toString() {
+        return "class WrinkledPea extends Pea";
     }
 }

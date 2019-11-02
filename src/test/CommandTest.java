@@ -16,6 +16,8 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministra
  **/
 public class CommandTest {
   public static void main(String[] args) {
+    System.out.println("—————————————-------------------------------------———— 测试[Command]模式 —————————————-------------------------------------————");
+
     FarmOwner farmOwner = FarmOwner.getInstance();
     System.out.println("---------------测试命令模式-----------------");
     CommandWrapper residenceLogCommandWrapper = ()->{
@@ -47,7 +49,7 @@ public class CommandTest {
     }catch (InterruptedException e){
       System.out.println(e.toString());
     }
-    System.out.println("---------------------------------------------");
 
+    System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
 }

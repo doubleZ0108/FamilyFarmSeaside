@@ -17,6 +17,8 @@ public class IteratorTest
 {
     public static void main(String[] args)
     {
+        System.out.println("—————————————-------------------------------------———— 测试[Iterator]模式 —————————————-------------------------------------————");
+
         Date date = new Date();
         long m = date.getTime();
         SupplyAggregate supplyAggregate = new SupplyAggregate();
@@ -41,5 +43,7 @@ public class IteratorTest
                 break;
             }
         }
+
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

@@ -6,7 +6,7 @@ import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.Tract;
 
 public class FlyweightTest {
     public static void main(String[] args){
-        System.out.println("——————————————————测试Flyweight模式————————————————————");
+        System.out.println("—————————————-------------------------------------———— 测试[Flyweight]模式 —————————————-------------------------------------————");
         //新建一个farmland
         System.out.println("创建一个farmland实例");
         Farmland farmland = new Farmland();
@@ -29,5 +29,6 @@ public class FlyweightTest {
             System.out.print('\n');
         }
 
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }

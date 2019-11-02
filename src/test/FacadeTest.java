@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FacadeTest {
     public static void main(String[] args){
-        System.out.println("------------测试外观模式------------");
+        System.out.println("—————————————-------------------------------------———— 测试[Facade]模式 —————————————-------------------------------------————");
 
         //新建两个宿舍
         List<Dormitory> dormitoryList = new ArrayList<Dormitory>();
@@ -65,6 +65,6 @@ public class FacadeTest {
         residenceAdministrator.takeTrash();
         residenceAdministrator.lightOff();
 
-        System.out.println("---------------------------------");
+        System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }
 }
