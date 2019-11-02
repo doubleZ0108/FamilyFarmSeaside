@@ -11,7 +11,8 @@ import main.java.com.familyFarmSeaside.scene.warehouse.Warehouse;
  **/
 public class IOCTest {
   public static void main(String[] args){
-    System.out.println("——————————————————测试IOC模式————————————————————");
+    System.out.println("—————————————-------------------------------------———— 测试[IOC]模式 —————————————-------------------------------------————");
+
     System.out.println("Loading config XML from src/main/java/com/com.familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
     System.out.println("Every object defined in the file will be instantiated. They are listed as bellow");
     System.out.println();
@@ -23,5 +24,7 @@ public class IOCTest {
     warehouse.displayIOCInfo();
     System.out.println("如果您想测试这个功能，不妨试试在上述路径的 XML 文件中加入自己的内容，然后用 ID 来获取它");
     System.out.println("--------------------------------------------------");
+
+    System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
 }

@@ -16,13 +16,6 @@ public class HouseBuilder extends ShortTermWorker {
   private HouseBuilderImpl builder = new HouseBuilderImpl();
   private Residence residence;
 
-  @Override
-  public void buildSomeThingNormal() {
-    Director director = new Director(builder);
-    director.buildANormalScene();
-    residence = builder.getResult();
-  }
-
   public HouseBuilder(){}
 
   public HouseBuilder(HouseBuilderImpl builder, Residence residence) {
@@ -34,6 +27,18 @@ public class HouseBuilder extends ShortTermWorker {
     super(name, age, money, id);
     this.builder = builder;
     this.residence = residence;
+  }
+
+  @Override
+  public void buildSomeThingNormal() {
+    /**
+     * @description: Worker's quarters for accommodation and farmer's villa.
+     *
+     * @return : void
+     **/
+    Director director = new Director(builder);
+    director.buildANormalScene();
+    residence = builder.getResult();
   }
 
   public HouseBuilderImpl getBuilder() {

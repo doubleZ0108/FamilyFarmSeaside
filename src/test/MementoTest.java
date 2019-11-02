@@ -30,6 +30,8 @@ public class MementoTest {
 
 
     public static void main(String[] args) {
+        System.out.println("—————————————-------------------------------------———— 测试[Memento]模式 —————————————-------------------------------------————");
+
         MementoTest mementoTest = new MementoTest();
         mementoTest.traders.setFarmOwner(FarmOwner.getInstance());
         System.out.println("--------------备忘录模式测试--------------");
@@ -93,6 +95,8 @@ public class MementoTest {
                     System.out.println("命令不存在，请重新输入！\n");
                 }
             }
+
+            System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
         }
     }
 
