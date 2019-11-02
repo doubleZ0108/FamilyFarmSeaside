@@ -1,7 +1,5 @@
 package main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture;
 
-import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
-
 /**
  * @program: FamilyFarmSeaside
  * @description: The class for desk

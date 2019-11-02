@@ -82,11 +82,19 @@ public class AbstractFactoryTest {
 
     public static void main(String[] args) {
         System.out.println("—————————————————测试抽象工厂模式———————————————————");
+
+        System.out.println("SpringProductFactory : (objectid) : createFruit : Inherited from ProductFactory, create apple and add them into product warehouse.");
+        System.out.println("SpringProductFactory : (objectid) : createVegetable : Inherited from ProductFactory, create potato and add them into product warehouse.");
+        System.out.println("SummerProductFactory : (objectid) : createFruit : Inherited from ProductFactory, create cherry and add them into product warehouse.");
+        System.out.println("SummerProductFactory : (objectid) : createVegetable : Inherited from ProductFactory, create tomato and add them into product warehouse.");
+
         Scanner input = new Scanner(System.in);
         FactoryKind opcode;
 
-        while (true){
-            System.out.println("请选择农产品工厂[1 春季农产品][2 夏季农产品]");
+        boolean stop_flag = false;
+
+        do{
+            System.out.print("请选择农产品工厂[1 春季农产品 | 2 夏季农产品 | 0]");
 
             /* 用户指定使用何种工厂生产 */
             try{
@@ -107,16 +115,20 @@ public class AbstractFactoryTest {
                 continue;
             }
 
-            SwitchProductFactory(opcode);
+            if(opcode == FactoryKind.dummy){
+                stop_flag = !stop_flag;
+            }
+            else{
+                SwitchProductFactory(opcode);
 
-            TestSpecies();
-            TestProduct();
-            TestOutputWarehouse();
-        }
+                TestSpecies();
+                TestProduct();
+                TestOutputWarehouse();
+            }
 
+        }while(!stop_flag);
 
-
-//        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
     }
 
 }

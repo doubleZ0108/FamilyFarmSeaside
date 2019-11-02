@@ -1,17 +1,11 @@
 package main.java.com.familyFarmSeaside.person.owner;
 
+import main.java.com.familyFarmSeaside.person.Person;
 import main.java.com.familyFarmSeaside.person.owner.command.Command;
 import main.java.com.familyFarmSeaside.person.owner.command.CommandHistory;
-import main.java.com.familyFarmSeaside.person.owner.command.CommandWrapper;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResidenceLogCommand;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.UndoCommand;
 import main.java.com.familyFarmSeaside.person.visitor.Customer;
 import main.java.com.familyFarmSeaside.person.visitor.Traveller;
 import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
-import main.java.com.familyFarmSeaside.person.worker.longTerm.ResidenceAdministrator;
-import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministrator;
-import main.java.com.familyFarmSeaside.person.Person;
-import main.java.com.familyFarmSeaside.person.owner.command.concreteCommand.ResourceLogCommand;
 import main.java.com.familyFarmSeaside.scene.Scene;
 
 import java.util.List;
