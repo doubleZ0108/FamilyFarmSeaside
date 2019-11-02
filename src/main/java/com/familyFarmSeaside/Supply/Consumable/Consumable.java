@@ -20,7 +20,7 @@ public class Consumable extends Supply implements Element
     private float storage; //grams
     private List<Observer> observers = new ArrayList<Observer>();
 
-    //观察者模式所使用的accept方法，接收一个Visitor
+    //The accept method used in the visitor mode receives a Visitor
     @Override
     public void accept(SupplyVisitor visitor) {
         visitor.visitConsumable(this);
@@ -43,7 +43,7 @@ public class Consumable extends Supply implements Element
         return poisoned;
     }
 
-    //消耗指定数量，触发观察者
+    //Consume a specified quantity to trigger the observer
     public void consume(float s)
     {
         if(s > storage)
