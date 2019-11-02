@@ -10,6 +10,12 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Succulent
  **/
 public class CompositeTest {
     public static void main(String[] args) {
+        System.out.println("------------测试组合模式------------");
+        System.out.println("SucculentCluster : add() : Add a element to the list of cluster.");
+        System.out.println("SucculentCluster : show() : Show all elements in the list of cluster.");
+        System.out.println("SucculentPlant : add() : Add a element to the list of plant.");
+        System.out.println("SucculentPlant : show() : Show all elements in the list of plant.");
+        System.out.println("");
         System.out.println("Making root SucculentBonsai...");
         SucculentCluster root = new SucculentCluster("root");
         SucculentCluster cluster1 = new SucculentCluster("cluster1");

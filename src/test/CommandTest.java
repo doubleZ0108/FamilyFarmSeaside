@@ -16,8 +16,14 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.ResourceAdministra
  **/
 public class CommandTest {
   public static void main(String[] args) {
+
     FarmOwner farmOwner = FarmOwner.getInstance();
     System.out.println("---------------测试命令模式-----------------");
+    System.out.println("FarmOwner : getInstance() : Farmowner is singelton, so we need a getInstance method to get it.");
+    System.out.println("FarmOwner : executeCommand() : Execute the command, then add it to the command history.");
+    System.out.println("ResidenceAdministrator : doSomeLog() : Do the command, if have a command, execute.");
+    System.out.println("FarmOwner : getLogFile() : Get the log files.");
+    System.out.println("");
     CommandWrapper residenceLogCommandWrapper = ()->{
       farmOwner.executeCommand(new ResidenceLogCommand(farmOwner));
     };
