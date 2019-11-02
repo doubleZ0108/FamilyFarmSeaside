@@ -1,7 +1,7 @@
 package test;
 
-import main.java.com.familyFarmSeaside.Product.Factory.SpringProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SpringProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SummerProductFactory;
 
 /**
  * @program: FamilyFarmSeaside

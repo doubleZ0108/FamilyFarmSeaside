@@ -1,4 +1,4 @@
-package main.java.com.familyFarmSeaside.Product.Factory;
+package main.java.com.familyFarmSeaside.Product.ProductFactory;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
 import main.java.com.familyFarmSeaside.Plant.Fruit.Fruit;

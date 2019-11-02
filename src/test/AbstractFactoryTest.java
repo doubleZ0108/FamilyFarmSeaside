@@ -1,8 +1,8 @@
 package test;
 
-import main.java.com.familyFarmSeaside.Product.Factory.ProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SpringProductFactory;
-import main.java.com.familyFarmSeaside.Product.Factory.SummerProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.ProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SpringProductFactory;
+import main.java.com.familyFarmSeaside.Product.ProductFactory.SummerProductFactory;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,8 +1,7 @@
-package main.java.com.familyFarmSeaside.Product.Factory;
+package main.java.com.familyFarmSeaside.Product.ProductFactory;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.Fruit;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
-import main.java.com.familyFarmSeaside.Product.Product;
 
 import java.util.Vector;
 
