@@ -2,7 +2,7 @@ package main.java.com.familyFarmSeaside.Supply.State;
 import main.java.com.familyFarmSeaside.Supply.State.ToolContext;
 /**
  * @program: FamilyFarmSeaside
- * @description:
+ * @description: Abstract Tool State and detailed States
  * @author: Yimo Liu
  * @create: 2019/10/29
  **/
@@ -12,6 +12,14 @@ public class AbstractToolState {
     protected float durability; //耐久
 
     void checkState() {
+        /**
+         * @description: check the current durability and maybe change the state if needed
+         *
+
+         *
+         * @return : void
+         **/
+
         System.out.println("Now, check the state!");
         System.out.println("The current state is "+this.stateName);
         if(this.durability<20)
@@ -42,6 +50,14 @@ public class AbstractToolState {
     }
 
     public void alterDurability(float x) {
+        /**
+         * @description: Alter the value of durability by x
+         *
+         * @param x : Alter the value of durability by x
+         *
+         * @return : void
+         **/
+
         System.out.println("The current durability is "+this.durability);
         System.out.println("Now we alter it by "+x);
         this.durability+=x;

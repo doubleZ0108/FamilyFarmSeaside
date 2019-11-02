@@ -3,9 +3,11 @@ import main.java.com.familyFarmSeaside.Supply.*;
 import main.java.com.familyFarmSeaside.Supply.State.ToolContext;
 import main.java.com.familyFarmSeaside.Supply.Tool.Tool;
 
+import java.util.Scanner;
+
 /**
  * @program: FamilyFarmSeaside
- * @description:
+ * @description: Test of State pattern
  * @author: Yimo Liu
  * @create: 2019/10/30
  **/
@@ -13,33 +15,42 @@ public class StateTest {
     public static void stateChanges()
     {
         Tool TestTool=new Tool();
+        System.out.println("----------------Proxy Test---------------");
+        System.out.println("**      1 --- Alter the durability     **");
+        System.out.println("**      2 --- Show the current state   **");
+        System.out.println("**      3 --- Exit                     **");
+        System.out.println("-----------------------------------------");
+
         System.out.println("Create a new tool! And its state is: "+TestTool.getContext().getState().getStateName());
 
-        ToolContext toolContext=TestTool.getContext();
-
-        //To Minimal Wear
-        toolContext.alter(-6);
-        //To field Tested
-        toolContext.alter(-10);
-        //To Well Worn
-        toolContext.alter(-35);
-        //To Battle Scarred
-        toolContext.alter(-30);
-
-        //Below 0
-        toolContext.alter(-50);
-
-        //To Well Worn
-        toolContext.alter(21);
-        //To Field Tested
-        toolContext.alter(30);
-        //To Minimal Wear
-        toolContext.alter(35);
-        //To Factory New
-        toolContext.alter(10);
-
-        //above 100
-        toolContext.alter(80);
+        while (true) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("");
+            System.out.print("Input your order：");
+            int order = sc.nextInt();
+            switch (order) {
+                case 1: {
+                    Scanner input = new Scanner(System.in);
+                    System.out.println("");
+                    System.out.print("Input your value of altering：");
+                    int val = input.nextInt();
+                    TestTool.getContext().alter(val);
+                    break;
+                }
+                case 2: {
+                    float dura = TestTool.getContext().getState().getDurability();
+                    String state = TestTool.getContext().getState().getStateName();
+                    System.out.println("Durability: "+dura+", state: "+state);
+                    break;
+                }
+                case 3: {
+                    return;
+                }
+                default: {
+                    System.out.println("Invalid input!\n");
+                }
+            }
+        }
     }
 
     public static void main(String []args){

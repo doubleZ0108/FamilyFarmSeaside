@@ -9,7 +9,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @program: FamilyFarmSeaside
- * @description:
+ * @description: Object Structure used to save all the elements
  * @author: Yimo Liu
  * @create: 2019/10/30
  **/
@@ -17,6 +17,14 @@ public class ObjectStructure {
     private List<Element> EleList=new ArrayList<Element>();
     public void accept(SupplyVisitor visitor)
     {
+        /**
+         * @description: All the elements accept the visit of visitor
+         *
+         * @param visitor :  the visitor
+         *
+         * @return : void
+         **/
+
         LinkedBlockingQueue<Object> list;
         Iterator<Element> i=this.EleList.iterator();
         while(i.hasNext())

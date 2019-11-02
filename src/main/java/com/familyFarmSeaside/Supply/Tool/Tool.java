@@ -7,7 +7,7 @@ import main.java.com.familyFarmSeaside.Supply.Visitor.SupplyVisitor;
 
 /**
  * @program: Farm
- * @description:
+ * @description: Tool class
  * @author: Yimo Liu
  * @create: 2019/10/24
  **/

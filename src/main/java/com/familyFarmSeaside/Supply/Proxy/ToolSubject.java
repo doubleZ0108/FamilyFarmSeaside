@@ -3,7 +3,7 @@ package main.java.com.familyFarmSeaside.Supply.Proxy;
 /**
 * @program: ToolSubject.java
 *
-* @description:
+* @description: Subject of Tool Proxy
 *
 * @author: Yimo Liu
 *

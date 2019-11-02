@@ -4,7 +4,7 @@ import main.java.com.familyFarmSeaside.Supply.Tool.Tool;
 
 /**
  * @program: FamilyFarmSeaside
- * @description:
+ * @description: Proxy for Tool, to manage the access of users.
  * @author: Yimo Liu
  * @create: 2019/10/30
  **/

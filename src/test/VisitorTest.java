@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * @program: FamilyFarmSeaside
- * @description:
+ * @description: Test of Visitor pattern
  * @author: Yimo Liu
  * @create: 2019/10/30
  **/
