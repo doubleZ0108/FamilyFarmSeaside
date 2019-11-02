@@ -29,6 +29,15 @@ public class QualityAssuranceTeam implements InvocationHandler {
 
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+     /**
+       * @description: This is required by the Invocation handler,and this is where AOP happends
+       *
+       * @param proxy : The actual proxy being called.
+       * @param method : The method being called.
+       * @param args : The args passed to the actual object.
+       *
+       * @return : Object
+       **/
     System.out.println("[QA] Project is not started. QA Team is working on creating some test");
     method.invoke(shortTermWorker,args);
     System.out.println("[QA] Project is over. QA Team is verifying all kinds of issues");

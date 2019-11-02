@@ -29,6 +29,15 @@ public class SupplyTeam implements InvocationHandler {
 
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    /**
+     * @description: This is required by the Invocation handler,and this is where AOP happends
+     *
+     * @param proxy : The actual proxy being called.
+     * @param method : The method being called.
+     * @param args : The args passed to the actual object.
+     *
+     * @return : Object
+     **/
     System.out.println("[Supply] Project is not started. Supply Team is ready to serve!");
     method.invoke(shortTermWorker,args);
     System.out.println("[Supply] Project is over. Supply team has finished its task!");

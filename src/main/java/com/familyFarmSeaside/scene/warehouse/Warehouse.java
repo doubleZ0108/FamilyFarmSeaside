@@ -13,7 +13,7 @@ public class Warehouse extends Scene {
   private int floorNumber;
   private String name;
 
-  // 这个无参构造函数一定保留，对于 IOC 不可或缺
+  // this constructor has to be kept in order to perform IOC
   public Warehouse(){}
 
 
@@ -32,7 +32,7 @@ public class Warehouse extends Scene {
 
   public void displayIOCInfo(){
      /**
-       * @description: IOC 展示使用，cost，floorNumber，name 属性将从配置文件中读取。
+       * @description: To show for the IOC pattern
        *
 
        *
