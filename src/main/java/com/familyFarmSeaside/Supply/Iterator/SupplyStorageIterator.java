@@ -31,12 +31,14 @@ public class SupplyStorageIterator implements Iterator
         this.dead_line = dead_line;
     }
 
+    //指向第一个元素，（可简单地修改为满足条件的第一个元素，下同）
     @Override
     public Supply first() {
         index = 0;
         return supplies.get(index);
     }
 
+    //指向下一个元素
     @Override
     public Supply next() {
         if(this.hasNext())
@@ -46,6 +48,7 @@ public class SupplyStorageIterator implements Iterator
         return null;
     }
 
+    //判断是否有下一个元素
     @Override
     public boolean hasNext() {
         if(index < supplies.size() - 1)

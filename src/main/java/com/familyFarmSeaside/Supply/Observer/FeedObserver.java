@@ -20,6 +20,7 @@ public class FeedObserver implements Observer
         dead_line = f;
     }
 
+    //当观察的对象发生改变时，即会产生响应
     @Override
     public void response(float f)
     {

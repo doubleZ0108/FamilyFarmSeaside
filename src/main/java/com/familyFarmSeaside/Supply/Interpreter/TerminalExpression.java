@@ -21,6 +21,7 @@ public class TerminalExpression implements  Expression
         }
     }
 
+    //检查终结符集合中是否有对应元素
     @Override
     public boolean interpret(String info)
     {
