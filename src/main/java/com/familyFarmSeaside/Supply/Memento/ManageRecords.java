@@ -10,6 +10,7 @@ import java.util.List;
  * @create: 2019/10/29
  **/
 
+
 public class ManageRecords {
     //存储交易记录的链表
     List<TransationRecords> transationRecordsList=new ArrayList<>();
@@ -21,10 +22,10 @@ public class ManageRecords {
     public  void  printRecords(){
         int i=0;
         for (TransationRecords transationRecords: transationRecordsList){
-            System.out.println("订单ID："+i);
+            System.out.println("ORDER_ID："+i);
             i++;
             transationRecords.printRecordsInfo();;
-            System.out.println("\n");
+            System.out.println("");
         }
     }
 

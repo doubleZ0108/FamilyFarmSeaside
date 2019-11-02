@@ -17,7 +17,7 @@ public class SingletonTest {
          *
          * @return : void
          **/
-        System.out.println("—————————————-------------------------------------———— 测试[Singleton]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Singleton]Pattern —————————————-------------------------------------————");
 
         System.out.println("FarmOwner : getInstance() : Inherited from Person, create an instance of farm owner if there is none.");
         System.out.println("FarmOwner : getFarmOwner() : Inherited from Person, return the one and only farm owner.");

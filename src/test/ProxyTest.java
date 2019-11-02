@@ -11,7 +11,7 @@ import main.java.com.familyFarmSeaside.Supply.Tool.*;
 public class ProxyTest {
     public static void runTest()
     {
-        System.out.println("—————————————-------------------------------------———— 测试[Proxy]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— Test[Proxy]Pattern —————————————-------------------------------------————");
 
         Tool tool = new Tool();
         ToolProxy toolProxy=new ToolProxy(tool);

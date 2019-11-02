@@ -23,23 +23,19 @@ public class BuilderTest {
        *
        * @return : void
        **/
-    System.out.println("—————————————-------------------------------------———— 测试[Builder]模式 —————————————-------------------------------------————");
+    System.out.println("—————————————-------------------------------------———— Test[Builder]Pattern —————————————-------------------------------------————");
     System.out.println("ShortTermWorker : buildSomeThingNormal() : Defined in the Director class. After the constructor gets the concrete Builder class, Director can further simplify the use by constructing the building according to a set of pre-defined default steps.");
     System.out.println("BreedSceneBuilder : BreedSceneBuilder() : Use the same set of construct interfaces to create many different objects. Farms, fish ponds and shacks for farming.");
     System.out.println("HouseBuilder : HouseBuilder() : Use the same set of construct interfaces to create many different objects. Worker's quarters for accommodation and farmer's villa.");
     System.out.println("WarehouseBuilder : WarehouseBuilder() : Use the same set of construct interfaces to create many different objects. Warehouse for storing materials.");
-    System.out.println("");
-    // new three shortTermWorker who have the director object inside their buildSomeThingNormal() method
+
     ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
     ShortTermWorker shortTermWorker_2 = new HouseBuilder();
     ShortTermWorker shortTermWorker_3 = new WarehouseBuilder();
-    // director is invoked
-    // this is done in order to show the convience brought by the usage of director
+
     shortTermWorker_1.buildSomeThingNormal();
     shortTermWorker_2.buildSomeThingNormal();
     shortTermWorker_3.buildSomeThingNormal();
-    // in order to let the uesr have a better experience
-    // we add some interactive part
     System.out.println("假设此时准备建造一个养殖场，请你进行一下选择：");
     BreedSceneBuilderImpl breedSceneBuilderImpl = new BreedSceneBuilderImpl();
     Scanner scanner = new Scanner(System.in);

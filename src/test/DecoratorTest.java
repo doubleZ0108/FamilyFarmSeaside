@@ -13,8 +13,7 @@ import java.util.Scanner;
 public class DecoratorTest {
     public static void main(String[] args){
         //尽量不要用Dormitory来测试，因为在创建Dormitory时会同时创建内部的room，会在孔氏台产生大量输出，妨碍观察
-
-        System.out.println("------------测试装饰模式------------");
+        System.out.println("—————————————-------------------------------------———— Test[Decorator]Pattern —————————————-------------------------------------————");
         System.out.print("请选择要新建建筑[1 接待中心 | 2 豪宅]");
         Residence residence;
         Scanner reader=new Scanner(System.in);
