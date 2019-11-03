@@ -14,6 +14,11 @@ public class ShowerPattern extends Shower {
     }
 
     public void selectPattern(String animalName)
+    /**
+     * @description: scan through the chain until certain node find the animal's name is suitable and give reaction.
+     *
+     * @return : void
+     **/
     {
         if (nameListOfAnimal.contains(animalName)) {
             System.out.println("Animal " + animalName + " is showering.");
