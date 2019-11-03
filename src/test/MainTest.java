@@ -1,8 +1,8 @@
 package test;
-
 import test.DesignPatternTest.*;
 
 import java.util.Scanner;
+
 
 /**
  * @program: FamilyFarmSeaside

@@ -31,10 +31,10 @@ public abstract class LongTermWorker extends Worker {
   }
 
   public void getUp(){
-    System.out.println("第"+workerID+"号员工起床了");
+    System.out.println("Employee number " +workerID+" is up");
   }
   public void goToSleep(){
-    System.out.println("第"+workerID+"号员工睡觉了");
+    System.out.println("Employee number " +workerID+ " is asleep");
   }
 
 

@@ -27,9 +27,9 @@ public abstract class Cultivator extends LongTermWorker {
     killCreature();
   }
 
-  public abstract void addCreature();// 增加动植物
-  public abstract void raiseCreature(); //养育动植物、（治疗动植物）
-  public abstract void killCreature(); //收获动植物
+  public abstract void addCreature();// Add plants and animals
+  public abstract void raiseCreature(); //Breeding plants and animals,(Therapeutic plant and animal）
+  public abstract void killCreature(); //Harvest plant and animal
 
 
 
