@@ -27,18 +27,23 @@ public class IOCTest {
     System.out.println("ClassPathXmlApplicationContext :  getBean() : In the XML definition, the user needs to specify the appropriate object ID, which is passed in as a parameter when this function is called.");
     System.out.println("");
 
-    System.out.println("Loading config XML from src/main/java/com/com.familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
+    System.out.println("Loading config XML from src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
     System.out.println("Every object defined in the file will be instantiated. They are listed as bellow");
     System.out.println();
     // we will create a new classPathXmlApplicationContext using the specifig XML file.
-    ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/com.familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
-    Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_1");
-    warehouse.displayIOCInfo();
-    System.out.println();
-    // we can get the object we created by their IDs
-    warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_2");
-    warehouse.displayIOCInfo();
-    System.out.println("如果您想测试这个功能，不妨试试在上述路径的 XML 文件中加入自己的内容，然后用 ID 来获取它");
+    try {
+      ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("src/main/java/com/familyFarmSeaside/person/worker/shortTerm/ioc/warehouseConfig.xml");
+      Warehouse warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_1");
+      warehouse.displayIOCInfo();
+      System.out.println();
+      // we can get the object we created by their IDs
+      warehouse = (Warehouse)classPathXmlApplicationContext.getBean("warehouse_2");
+      warehouse.displayIOCInfo();
+      System.out.println("If you want to try this function by yourself, you can go to the path mentioned above and take a look at the comment!");
+    }catch (Exception exception){
+      System.out.println("The file path is not correct");
+    }
+
     System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }
 }
