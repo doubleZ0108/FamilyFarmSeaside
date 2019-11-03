@@ -1,6 +1,11 @@
 package main.java.com.familyFarmSeaside.scene.breedScene.flyweight;
 
-//荒地
+/**
+ * @program: FamilyFarmSeaside
+ * @description: It is a type of tract - waste tract
+ * @author: Yimin Li
+ * @create: 2019/10/28
+ **/
 public class WasteTract extends Tract{
     public WasteTract(){
         tractType = "WasteTract";

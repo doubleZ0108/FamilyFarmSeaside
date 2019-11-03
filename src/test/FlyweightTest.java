@@ -6,6 +6,12 @@ import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.Tract;
 
 import java.util.Scanner;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: Test the flyweight pattern.
+ * @author: Yimin Li
+ * @create: 2019/10/19
+ **/
 public class FlyweightTest {
     public static void main(String[] args){
         System.out.println("—————————————-------------------------------------———— Test[Flyweight]Pattern —————————————-------------------------------------————");
@@ -14,10 +20,14 @@ public class FlyweightTest {
         System.out.println("Farmland : Farmland() : Constructor of Farmland class, it creates 12 WasteTract by default.");
         System.out.println("");
 
-        //新建一个farmland
+        /**
+         * create a farmland
+         */
         System.out.println("系统已为你创建一个farmland实例，其由12个土地块构成，大小为3*4的矩阵，默认所有土地块块均为荒地，其俯视图如下：");
         Farmland farmland = new Farmland();
-        //输出 farmland 初始俯视图
+        /**
+         * output the initial vertical view of the farmland in the console.
+         */
         Character[][] canvas = farmland.getCanvas();
         for(int i = 0; i < farmland.getWidth()* Tract.sideLength; i++){
             for(int j = 0; j < farmland.getLength()*Tract.sideLength; j++) {
@@ -27,7 +37,9 @@ public class FlyweightTest {
             System.out.print('\n');
         }
 
-        //设置土地
+        /**
+         * it's time for the tester to choose an option!
+         */
         Scanner scanner = new Scanner(System.in);
         int option;
         while(true){

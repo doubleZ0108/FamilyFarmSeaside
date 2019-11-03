@@ -2,6 +2,12 @@ package main.java.com.familyFarmSeaside.scene.residence.decorator;
 
 import main.java.com.familyFarmSeaside.scene.residence.Residence;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: central air condition which can be installed in a residence.
+ * @author: Yimin Li
+ * @create: 2019/10/25
+ **/
 public class CentralAirCondition extends ResidenceDecorator {
     public CentralAirCondition(Residence r){
         super(r);

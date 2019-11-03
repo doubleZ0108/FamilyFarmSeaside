@@ -12,6 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: Test the facade pattern.
+ * @author: Yimin Li
+ * @create: 2019/10/19
+ **/
 public class FacadeTest {
     public static void main(String[] args){
         System.out.println("—————————————-------------------------------------———— Test[Facade]Pattern —————————————-------------------------------------————");
@@ -21,7 +27,10 @@ public class FacadeTest {
         System.out.println("Dormitory : addLongTermWorker() : Add a long term worker to dormitory.");
         System.out.println("BuyerFactory : newWorker() : Create a new worker in buyer factory.");
         System.out.println("");
-        //新建两个宿舍
+
+        /**
+         * create two dormitories
+         */
         List<Dormitory> dormitoryList = new ArrayList<Dormitory>();
         Dormitory dormitory1 = new Dormitory();
         Dormitory dormitory2 = new Dormitory();
@@ -30,7 +39,10 @@ public class FacadeTest {
         dormitoryList.add(dormitory1);
         dormitoryList.add(dormitory2);
 
-        //新建十个LongTermWorker，为方便起见全部创建为Buyer，前四个加入一号寝室，后六个加入二号寝室
+        /**
+         * Create 10 long-term workers. To make the test expilicit, all the workers are buyer.
+         * By default, 4 buyers are added to No.1 dormitory, and the 6 buyers left are added to No.2 dormitory.
+         */
         BuyerFactory buyerFactory = new BuyerFactory();
         for(int i = 1 ; i <= 10 ; i ++){
             Buyer temp = (Buyer) buyerFactory.newWorker();
@@ -41,7 +53,9 @@ public class FacadeTest {
                 dormitory2.addLongTermWorker(temp);
         }
 
-        //新建两个接待中心
+        /**
+         * create 2 acception centers
+         */
         List<ReceptionCenter> receptionCenterList = new ArrayList<ReceptionCenter>();
         ReceptionCenter receptionCenter1 = new ReceptionCenter();
         ReceptionCenter receptionCenter2 = new ReceptionCenter();
@@ -50,7 +64,9 @@ public class FacadeTest {
         receptionCenterList.add(receptionCenter1);
         receptionCenterList.add(receptionCenter2);
 
-        //创建两个豪宅
+        /**
+         * create 2 villas
+         */
         List<Villa> villaList = new ArrayList<Villa>();
         Villa villa1 = new Villa();
         Villa villa2 = new Villa();
@@ -59,14 +75,18 @@ public class FacadeTest {
         villaList.add(villa1);
         villaList.add(villa2);
 
-        //创建一个住宅管理员
+
+        /**
+         * create a residence administrator
+         */
         ResidenceAdministrator residenceAdministrator = new ResidenceAdministrator();
 
-        //给住宿管理员分配工作
+        /**
+         * assign a task to the residence administrator
+         */
         ResidenceTask residenceTask = new ResidenceTask(dormitoryList, receptionCenterList, villaList);
         residenceAdministrator.setResidenceTask(residenceTask);
 
-        //宿舍管理员开始工作
         System.out.println("\n***************以下是住宅管理员工作的内容*****************");
         System.out.println("系统已经为您创建好一个住宅管理员，他将负责两个宿舍，两个接待中心，两个豪宅的工作。");
         System.out.println("请选择住宅管理员要执行的工作[1 叫床 | 2 打扫内务 | 3 运走垃圾 | 4 关灯 | 5 退出]");

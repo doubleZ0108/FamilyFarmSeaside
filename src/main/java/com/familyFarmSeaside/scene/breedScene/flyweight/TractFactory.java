@@ -2,9 +2,21 @@ package main.java.com.familyFarmSeaside.scene.breedScene.flyweight;
 
 import java.util.Hashtable;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: It is the factory used to create tract.
+ * @author: Yimin Li
+ * @create: 2019/10/28
+ **/
 public class TractFactory {
+    /**
+    * store the instances of the three types of tracts.
+    */
     private Hashtable<String, Tract> tracts = new Hashtable<String, Tract>();
 
+    /**
+     * Here we use singleton pattern.
+     */
     private static TractFactory singleton= new TractFactory();
     private TractFactory() { }
     public static TractFactory getInstance() {    return singleton; }

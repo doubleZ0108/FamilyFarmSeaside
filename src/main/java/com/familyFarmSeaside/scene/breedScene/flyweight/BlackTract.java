@@ -1,6 +1,11 @@
 package main.java.com.familyFarmSeaside.scene.breedScene.flyweight;
 
-//文土地
+/**
+ * @program: FamilyFarmSeaside
+ * @description: It is a type of tract - Black tract
+ * @author: Yimin Li
+ * @create: 2019/10/28
+ **/
 public class BlackTract extends Tract{
     public BlackTract(){
         tractType = "BlackTract";

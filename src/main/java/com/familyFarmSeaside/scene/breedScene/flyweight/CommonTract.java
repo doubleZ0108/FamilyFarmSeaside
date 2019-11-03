@@ -1,6 +1,11 @@
 package main.java.com.familyFarmSeaside.scene.breedScene.flyweight;
 
-//普通土地
+/**
+ * @program: FamilyFarmSeaside
+ * @description: It is a type of tract - Common tract
+ * @author: Yimin Li
+ * @create: 2019/10/28
+ **/
 public class CommonTract extends Tract{
     public CommonTract(){
         tractType = "CommonTract";

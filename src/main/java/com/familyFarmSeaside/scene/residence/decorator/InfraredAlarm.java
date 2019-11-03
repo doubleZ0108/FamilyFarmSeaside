@@ -2,7 +2,12 @@ package main.java.com.familyFarmSeaside.scene.residence.decorator;
 
 import main.java.com.familyFarmSeaside.scene.residence.Residence;
 
-//红外报警器
+/**
+ * @program: FamilyFarmSeaside
+ * @description: Infrared Alarm which can be installed in a residence.
+ * @author: Yimin Li
+ * @create: 2019/10/25
+ **/
 public class InfraredAlarm extends ResidenceDecorator {
 
     public InfraredAlarm(Residence r){

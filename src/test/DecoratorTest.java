@@ -9,10 +9,14 @@ import main.java.com.familyFarmSeaside.scene.residence.decorator.Monitor;
 
 import java.util.Scanner;
 
-//by李一珉，有问题戳我
+/**
+ * @program: FamilyFarmSeaside
+ * @description: Test the decorator pattern.
+ * @author: Yimin Li
+ * @create: 2019/10/19
+ **/
 public class DecoratorTest {
     public static void main(String[] args){
-        //尽量不要用Dormitory来测试，因为在创建Dormitory时会同时创建内部的room，会在孔氏台产生大量输出，妨碍观察
         System.out.println("—————————————-------------------------------------———— Test[Decorator]Pattern —————————————-------------------------------------————");
         System.out.print("请选择要新建建筑[1 接待中心 | 2 豪宅]");
         Residence residence;
@@ -21,12 +25,16 @@ public class DecoratorTest {
         while(true) {
             i = reader.nextInt();
             if (i == 1) {
-                //创建一个未加装饰地接待中心
+                /**
+                 * create a reception center without decorations
+                 */
                 residence = new ReceptionCenter();
                 break;
             }
             else if (i == 2) {
-                //创建一个未加装饰的豪宅
+                /**
+                 * create a villa without decorations
+                 */
                 residence = new Villa();
                 break;
             }
@@ -38,19 +46,27 @@ public class DecoratorTest {
         while(true){
             i = reader.nextInt();
             if(i == 1){
-                //增加一个红外报警器
+                /**
+                 * add an infrared alarm
+                 */
                 residence = new InfraredAlarm(residence);
             }
             else if(i == 2){
-                //增加一个中央空调
+                /**
+                 * add a central air condition
+                 */
                 residence = new CentralAirCondition(residence);
             }
             else if(i == 3){
-                //增加一个监视器
+                /**
+                 * add a monitor
+                 */
                 residence = new Monitor(residence);
             }
             else if(i == 4){
-                //显示建筑当前造价
+                /**
+                 * show the current proce of the house
+                 */
                 System.out.print(residence.getDescription());
                 System.out.println("，其价格为" + residence.getCost());
             }

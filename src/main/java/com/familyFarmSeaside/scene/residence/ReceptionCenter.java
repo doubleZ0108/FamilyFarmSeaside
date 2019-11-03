@@ -5,6 +5,12 @@ import main.java.com.familyFarmSeaside.person.visitor.Visitor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: The house for visitors.
+ * @author: CodeGroup
+ * @create: 2019/10/19
+ **/
 public class ReceptionCenter extends Residence {
     public ReceptionCenter(){
         super(30000);

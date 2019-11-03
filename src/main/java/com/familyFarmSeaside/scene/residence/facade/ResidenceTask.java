@@ -7,7 +7,16 @@ import main.java.com.familyFarmSeaside.scene.residence.ReceptionCenter;
 
 import java.util.List;
 
+/**
+ * @program: FamilyFarmSeaside
+ * @description: The task assigned to ResidenceAdministrator.
+ * @author: Yimin Li
+ * @create: 2019/10/19
+ **/
 public class ResidenceTask {
+    /**
+     * These three variables below represent a set of Residences of which the ResidenceAdministrator takes charge.
+     */
     private List<Dormitory> dormitories;
     private List<ReceptionCenter> receptionCenters;
     private List<Villa> villas;
