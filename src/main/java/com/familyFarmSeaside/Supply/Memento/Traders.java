@@ -36,10 +36,12 @@ public class Traders {
         return productList;
     }
 
+    //It is used to restore the historical state
     public void updateProductList(ProductList productList) {
         this.productList = productList;
     }
 
+    //Buy the product and create a memento
     public TransationRecords buyProduct(String species, int number) {
         HashMap<String , List<HashMap<String,String >>> productInfo = new HashMap<>();
         productInfo = productList.getProductInfo();
@@ -103,6 +105,7 @@ public class Traders {
         return emptyRecords;
     }
 
+    //Sell the product and create a memento
     public TransationRecords sellProduct(String species, int number) {
         HashMap<String , List<HashMap<String,String >>> productInfo = new HashMap<>();
         productInfo = productList.getProductInfo();
@@ -278,6 +281,7 @@ public class Traders {
         return emptyRecords;
     }
 
+    //Restore the historical state
     public void restoreRecords(ManageRecords manageRecords, int num) {
         TransationRecords transationRecords = manageRecords.getTransationRecordsList().get(num);
         ProductList productList = new ProductList();

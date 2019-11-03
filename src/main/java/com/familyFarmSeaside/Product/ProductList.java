@@ -21,6 +21,7 @@ import java.util.List;
 
 public class ProductList {
 
+
     public List<Chicken> chickenList=new ArrayList<>();
     public List<Dog>dogList=new ArrayList<>();
     public List<Perch>perchList=new ArrayList<>();
@@ -30,6 +31,11 @@ public class ProductList {
     public List<Potato>potatoList=new ArrayList<>();
     public List<Tomato>tomatoList=new ArrayList<>();
 
+    /**
+     * @description: Get information about all current plants and animals
+     * @param :null
+     * @return : HashMap<String , List<HashMap<String,String >>>
+     **/
     public HashMap<String , List<HashMap<String,String >>> getProductInfo(){
         HashMap<String , List<HashMap<String,String >>>  info = new HashMap<>();
         List<HashMap<String,String >>chickenInfo = new ArrayList<>();
@@ -76,6 +82,11 @@ public class ProductList {
         return info;
     }
 
+    /**
+     * @description: Print information about all current plants and animals
+     * @param : null
+     * @return : null
+     **/
     public void printProductInfo(){
         for (String key1: this.getProductInfo().keySet()){
             System.out.println(key1+ "：\n " );

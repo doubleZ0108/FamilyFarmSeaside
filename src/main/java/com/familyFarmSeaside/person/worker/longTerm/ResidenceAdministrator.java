@@ -13,7 +13,7 @@ import main.java.com.familyFarmSeaside.scene.residence.facade.ResidenceTask;
 public class ResidenceAdministrator extends LongTermWorker {
 //  Dormitory dormitory;
 //  List<LongTermWorker> longTermWorkersInDorm;
-//  以上两个属性被去掉了。我在residence包里新增了一个包叫facade，里面有个类叫ResidenceTask，表示每个管理员负责的区域。
+// the above two attributes have been removed. A new package is added in the residence package called facade, which has a class ResidenceTask, representing the area responsible for each administrator.
   private ResidenceTask residenceTask;
   public ResidenceAdministrator(){};
   private CommandWrapper logCommand;

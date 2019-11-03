@@ -64,7 +64,7 @@ public class Chicken extends Poultry implements Cloneable{
         return newchicken;
     }
 
-    //重写equals函数
+    //Override equals method
     @Override
     public  boolean equals(Object obj){
         if (this == obj)      //The incoming object is itself, equal

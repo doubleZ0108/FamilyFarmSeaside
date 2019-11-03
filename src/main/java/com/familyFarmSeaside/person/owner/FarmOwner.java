@@ -24,10 +24,10 @@ public class FarmOwner extends Person {
 
   public static FarmOwner getInstance(){
     if(farmOwner == null){
-      System.out.println("这是第一次创建 FarmOwner，使用 new ");
+      System.out.println("This is the first time FarmOwner is created, using new ");
       farmOwner = new FarmOwner();
     }else {
-      System.out.println("已经创建过对象，直接返回");
+      System.out.println("The object has been created！");
     }
 
     return farmOwner;
@@ -50,7 +50,7 @@ public class FarmOwner extends Person {
     if(command != null){
       command.unDo();
     }else{
-      System.out.println("已经没有命令可以撤销了！");
+      System.out.println("There are no commands to override！");
     }
   }
 

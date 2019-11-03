@@ -23,11 +23,16 @@ public class ChainOfResponsibilityTest {
          **/
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("请输入创建节点ShowerPattern的编号：");
+        System.out.println("请输入创建节点ShowerPattern的编号（'0'除外）：");
         String no = sc.next();
+        while(no.equals("0")) {
+            System.out.println("该编号不可使用。");
+            System.out.println("请输入创建节点ShowerPattern的编号（'0'除外）：");
+            no = sc.next();
+        }
         while(showerPatterns.get(no) != null) {
             System.out.println("该编号已被使用。");
-            System.out.println("请输入创建节点ShowerPattern的编号：");
+            System.out.println("请输入创建节点ShowerPattern的编号（'0'除外）：");
             no = sc.next();
         }
 
@@ -45,7 +50,9 @@ public class ChainOfResponsibilityTest {
             else if(choice.equals("2")) {
                 System.out.println("请输入动物名称：");
                 String name = sc.next();
-                showerNode.removeAnimalName(name);
+                if(!showerNode.removeAnimalName(name)){
+                    System.out.println("该模式原本就不适用于这种动物。");
+                };
             }
             else if(choice.equals("3")) {
                 showerNode.showAnimalName();
@@ -68,23 +75,35 @@ public class ChainOfResponsibilityTest {
          * @return : void
          **/
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入成链的前驱节点编号：");
+        System.out.println("请输入成链的前驱节点编号（输入'0'退出操作）：");
         String front = sc.next();
+        if(front.equals("0")) {
+            return;
+        }
         Shower frontNode = showerPatterns.get(front);
         while(frontNode == null) {
             System.out.println("不存在该节点。");
-            System.out.println("请输入成链的前驱节点编号：");
+            System.out.println("请输入成链的前驱节点编号（输入'0'退出操作）：");
             front = sc.next();
+            if(front.equals("0")) {
+                return;
+            }
             frontNode = showerPatterns.get(front);
         }
 
-        System.out.println("请输入成链的后继节点编号：");
+        System.out.println("请输入成链的后继节点编号（输入'0'退出操作）：");
         String next = sc.next();
+        if(next.equals("0")) {
+            return;
+        }
         Shower nextNode = showerPatterns.get(next);
         while(nextNode == null) {
             System.out.println("不存在该节点。");
-            System.out.println("请输入成链的后继节点编号：");
+            System.out.println("请输入成链的后继节点编号（输入'0'退出操作）：");
             next = sc.next();
+            if(next.equals("0")) {
+                return;
+            }
             nextNode = showerPatterns.get(next);
         }
 
@@ -116,14 +135,25 @@ public class ChainOfResponsibilityTest {
                 setNext();
             }
             else if(choice.equals("3")) {
-                System.out.println("请选择作为查询起点的节点编号：");
+                boolean exit = false;
+                System.out.println("请选择作为查询起点的节点编号（输入'0'退出操作）：");
                 String no = sc.next();
+                if(no.equals("0")) {
+                    continue;
+                }
                 Shower root = showerPatterns.get(no);
                 while(root == null) {
                     System.out.println("不存在该节点。");
-                    System.out.println("请输入后继节点的编号：");
+                    System.out.println("请选择作为查询起点的节点编号（输入'0'退出操作）：");
                     no = sc.next();
+                    if(no.equals("0")) {
+                        exit = true;
+                        break;
+                    }
                     root = showerPatterns.get(no);
+                }
+                if(exit) {
+                    continue;
                 }
                 System.out.println("请选择待查询的动物名称：");
                 String name = sc.next();
