@@ -1,6 +1,6 @@
 package test;
 
-import test.DesignPatternTest.MementoTest;
+import test.DesignPatternTest.*;
 
 import java.util.Scanner;
 
@@ -12,26 +12,6 @@ import java.util.Scanner;
  **/
 
 public class MainTest {
-
-    public static void clear(){
-        try
-        {
-            String os = System.getProperty("os.name");
-
-            if (os.contains("Windows"))
-            {
-                Runtime.getRuntime().exec("cls");
-            }
-            else
-            {
-                Runtime.getRuntime().exec("clear");
-            }
-        }
-        catch (Exception exception)
-        {
-            //  Handle exception.
-        }
-    }
 
     public static void display_interface(){
         System.out.println("---------------Design Pattern List---------------");
@@ -64,79 +44,112 @@ public class MainTest {
         System.out.println("**            27 --- AOP                       **");
         System.out.println("**            28 --- IOC                       **");
         System.out.println("-------------------------------------------------");
-        System.out.println("Which design pattern do you want to test? [0 to quit]");
+        System.out.print("Which design pattern do you want to test? [0 to quit]: ");
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws CloneNotSupportedException {
 
         boolean flag = true;
         int opCode;
         Scanner input = new Scanner(System.in);
 
         do{
-//            clear();
             display_interface();
             opCode = input.nextInt();
 
-            switch (opCode){
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-                case 11:
-                    break;
-                case 12:
-                    break;
-                case 13:
-                    break;
-                case 14:
-                    break;
-                case 15:
-                    break;
-                case 16:
-                    break;
-                case 17:
-                    break;
-                case 18:
-                    break;
-                case 19:
-                    break;
-                case 20:
-                    break;
-                case 21:
-                    break;
-                case 22:
-                    break;
-                case 23:
-                    break;
-                case 24:
-                    break;
-                case 25:
-                    break;
-                case 26:
-                    break;
-                case 27:
-                    break;
-                case 28:
-                    break;
-                default:
-                    System.out.println("Invalid input!");
-                    System.out.println("Please input again!");
+            if(opCode == 0){
+                flag = false;
+            }
+            else{
+                switch (opCode){
+                    case 1:
+                        AbstractFactoryTest.main(new String[]{});
+                        break;
+                    case 2:
+                        AdapterTest.main(new String[]{});
+                        break;
+                    case 3:
+                        BridgeTest.main(new String[]{});
+                        break;
+                    case 4:
+                        BuilderTest.main(new String[]{});
+                        break;
+                    case 5:
+                        ChainOfResponsibilityTest.main(new String[]{});
+                        break;
+                    case 6:
+                        CommandTest.main(new String[]{});
+                        break;
+                    case 7:
+                        CompositeTest.main(new String[]{});
+                        break;
+                    case 8:
+                        DecoratorTest.main(new String[]{});
+                        break;
+                    case 9:
+                        FacadeTest.main(new String[]{});
+                        break;
+                    case 10:
+                        FactoryMethodTest.main(new String[]{});
+                        break;
+                    case 11:
+                        FlyweightTest.main(new String[]{});
+                        break;
+                    case 12:
+                        InterpreterTest.main(new String[]{});
+                        break;
+                    case 13:
+                        IteratorTest.main(new String[]{});
+                        break;
+                    case 14:
+//                        MediatorTest.main(new String[]{});
+                        break;
+                    case 15:
+                        MementoTest.main(new String[]{});
+                        break;
+                    case 16:
+                        ObserverTest.main(new String[]{});
+                        break;
+                    case 17:
+                        PrototypeTest.main(new String[]{});
+                        break;
+                    case 18:
+                        ProxyTest.main(new String[]{});
+                        break;
+                    case 19:
+                        SingletonTest.main(new String[]{});
+                        break;
+                    case 20:
+                        StateTest.main(new String[]{});
+                        break;
+                    case 21:
+//                        StrategyTest.main(new String[]{});
+                        break;
+                    case 22:
+                        TemplateMethodTest.main(new String[]{});
+                        break;
+                    case 23:
+                        VisitorTest.main(new String[]{});
+                        break;
+                    case 24:
+                        ReferenceCountingTest.main(new String[]{});
+                        break;
+                    case 25:
+                        CopyOnWriteTest.main(new String[]{});
+                        break;
+                    case 26:
+                        SharableTest.main(new String[]{});
+                        break;
+                    case 27:
+                        AOPTest.main(new String[]{});
+                        break;
+                    case 28:
+                        IOCTest.main(new String[]{});
+                        break;
+                    default:
+                        System.out.println("Invalid input!");
+                        System.out.println("Please input again!");
+                }
             }
 
         }while(flag);
