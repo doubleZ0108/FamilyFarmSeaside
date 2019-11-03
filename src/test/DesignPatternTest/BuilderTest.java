@@ -39,9 +39,15 @@ public class BuilderTest {
     System.out.println("假设此时准备建造一个养殖场，请你进行一下选择：");
     BreedSceneBuilderImpl breedSceneBuilderImpl = new BreedSceneBuilderImpl();
     Scanner scanner = new Scanner(System.in);
+    System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)（输入“停止”以结束）");
+    String s = scanner.nextLine();
     while(breedSceneBuilderImpl.getBreedScene()==null){
-      System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)");
-      breedSceneBuilderImpl.setBuildingPlan(scanner.nextLine());
+      if(s.equals("停止")) {
+        break;
+      }
+      breedSceneBuilderImpl.setBuildingPlan(s);
+      System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)（输入“停止”以结束）");
+      s = scanner.nextLine();
     }
     System.out.println("请输入建造地点:");
     breedSceneBuilderImpl.setLocation(scanner.nextLine());
