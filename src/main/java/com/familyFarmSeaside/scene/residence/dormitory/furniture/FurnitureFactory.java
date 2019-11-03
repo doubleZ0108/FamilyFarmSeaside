@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @program: FamilyFarmSeaside
- * @description: 家具工厂类，用于维护一套家具对象的池，提供获取家具对象引用的函数
+ * @description: Furniture factory class
  * @author: saturn
  * @create: 2019/10/24
  **/
