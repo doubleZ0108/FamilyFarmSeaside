@@ -34,7 +34,7 @@ public abstract class Shower extends Action {
 
     // add, remove and show the info in nameListOfAnimal
     public abstract void addAnimalName(String name);
-    public abstract void removeAnimalName(String name);
+    public abstract boolean removeAnimalName(String name);
     public abstract void showAnimalName();
 
     public Set<String> getNameListOfAnimal() {

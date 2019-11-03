@@ -24,11 +24,16 @@ public class CompositeTest {
          **/
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("请输入创建Cluster的编号：");
+        System.out.println("请输入创建Cluster的编号（'#'除外）：");
         String no = sc.next();
+        while(no.equals("#")) {
+            System.out.println("该编号不可使用。");
+            System.out.println("请输入创建Cluster的编号（'#'除外）：");
+            no = sc.next();
+        }
         while(succulentClusters.get(no) != null) {
             System.out.println("该编号已被使用。");
-            System.out.println("请输入创建Cluster的编号：");
+            System.out.println("请输入创建Cluster的编号（'#'除外）：");
             no = sc.next();
         }
 
@@ -44,11 +49,16 @@ public class CompositeTest {
          **/
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("请输入创建Plant的名字：");
+        System.out.println("请输入创建Plant的名字（'#'除外）：");
         String name = sc.next();
+        while(name.equals("#")) {
+            System.out.println("该名字不可使用。");
+            System.out.println("请输入创建Cluster的编号（'#'除外）：");
+            name = sc.next();
+        }
         while(succulentPlants.get(name) != null) {
             System.out.println("该名字已被使用。");
-            System.out.println("请输入创建Plant的名字：");
+            System.out.println("请输入创建Plant的名字（'#'除外）：");
             name = sc.next();
         }
 
@@ -67,39 +77,60 @@ public class CompositeTest {
         SucculentBonsai leafNode;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入根节点（只能是Cluster）编号：");
+        System.out.println("请输入根节点（只能是Cluster）编号（输入'#'退出操作）：");
         String root = sc.next();
+        if(root.equals("#")){
+            return;
+        }
         rootNode = succulentClusters.get(root);
         while(rootNode == null) {
             System.out.println("不存在该节点。");
-            System.out.println("请输入成链的前驱节点编号：");
+            System.out.println("请输入成链的前驱节点编号（输入'#'退出操作）：");
             root = sc.next();
+            if(root.equals("#")){
+                return;
+            }
             rootNode = succulentClusters.get(root);
         }
 
         while(true) {
-            System.out.println("请输入子节点种类：[0 Cluster多株 | 1 Plant单株]");
+            System.out.println("请输入子节点种类（输入'#'退出操作）：[0 Cluster多株 | 1 Plant单株]");
             String choice = sc.next();
+            if(choice.equals("#")){
+                return;
+            }
             if(choice.equals("0")) {
-                System.out.println("请输入Cluster的编号：");
+                System.out.println("请输入Cluster的编号（输入'#'退出操作）：");
                 String no = sc.next();
+                if(no.equals("#")){
+                    return;
+                }
                 leafNode = succulentClusters.get(no);
                 while(leafNode == null) {
                     System.out.println("不存在该节点。");
-                    System.out.println("请输入Cluster的编号：");
+                    System.out.println("请输入Cluster的编号（输入'#'退出操作）：");
                     no = sc.next();
+                    if(no.equals("#")){
+                        return;
+                    }
                     leafNode = succulentClusters.get(no);
                 }
                 break;
             }
             else if(choice.equals("1")){
-                System.out.println("请输入Plant的名字：");
+                System.out.println("请输入Plant的名字（输入'#'退出操作）：");
                 String name = sc.next();
+                if(name.equals("#")){
+                    return;
+                }
                 leafNode = succulentPlants.get(name);
                 while(leafNode == null) {
                     System.out.println("不存在该节点。");
-                    System.out.println("请输入Plant的名字：");
+                    System.out.println("请输入Plant的名字（输入'#'退出操作）：");
                     name = sc.next();
+                    if(name.equals("#")){
+                        return;
+                    }
                     leafNode = succulentPlants.get(name);
                 }
                 break;
@@ -118,17 +149,23 @@ public class CompositeTest {
          * @return : void
          **/
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入根节点（只能是Cluster）编号：");
+        System.out.println("请输入根节点（只能是Cluster）编号（输入'#'退出操作）：");
         String root = sc.next();
+        if(root.equals("#")){
+            return;
+        }
         SucculentCluster rootNode = succulentClusters.get(root);
         while(rootNode == null) {
             System.out.println("不存在该节点。");
-            System.out.println("请输入成链的前驱节点编号：");
+            System.out.println("请输入成链的前驱节点编号（输入'#'退出操作）：");
             root = sc.next();
+            if(root.equals("#")){
+                return;
+            }
             rootNode = succulentClusters.get(root);
         }
 
-        System.out.println("查询节点内容：");
+        System.out.println("查询节点内容如下：");
         rootNode.show();
     }
 

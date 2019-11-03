@@ -38,8 +38,8 @@ public class ShowerPattern extends Shower {
     }
 
     @Override
-    public void removeAnimalName(String name) {
-        this.nameListOfAnimal.remove(name);
+    public boolean removeAnimalName(String name) {
+        return this.nameListOfAnimal.remove(name);
     }
 
     @Override
