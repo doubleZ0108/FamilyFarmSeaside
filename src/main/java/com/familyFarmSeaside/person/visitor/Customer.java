@@ -10,7 +10,7 @@ import java.util.UUID;
  * @create: 2019/10/19
  **/
 public class Customer extends Visitor {
-  Map<?,Integer> thingsToBuy;//要买的东西
+  Map<?,Integer> thingsToBuy;//Things to buy
 
   public Customer(Map<?, Integer> thingsToBuy) {
     this.thingsToBuy = thingsToBuy;
