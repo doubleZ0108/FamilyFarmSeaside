@@ -15,7 +15,7 @@ import java.util.List;
  **/
 
 public class TransationRecords {
-    //存储交易记录：时间、交易产品、买入or卖出
+    //Store transaction records: time, product, SellOrBuy, unitPrice, number, transactionAmount, balance...
     static enum SellOrBuy{SELL,BUY}
 
     Date date;
@@ -33,6 +33,7 @@ public class TransationRecords {
     public  HashMap<String , List<HashMap<String,String >>>getProductInfo()
         {return this.productInfo;}
 
+    //Constructor of TransationRecords
     public TransationRecords(String product, SellOrBuy sellOrBuy, int number, int unitPrice, int money, HashMap<String , List<HashMap<String,String >>> productInfo){
         this.date = new Date();
         this.product=product;

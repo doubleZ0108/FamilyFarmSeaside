@@ -12,7 +12,7 @@ import java.util.List;
 
 
 public class ManageRecords {
-    //存储交易记录的链表
+    //A linked list that stores transaction records
     List<TransationRecords> transationRecordsList=new ArrayList<>();
 
     public void addRecords(TransationRecords transationRecords){
