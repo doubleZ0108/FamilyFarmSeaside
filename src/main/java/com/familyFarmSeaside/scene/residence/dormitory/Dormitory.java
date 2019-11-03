@@ -13,6 +13,9 @@ import java.util.*;
  **/
 public class Dormitory extends Residence {
   public static final int ROON_NUM = 10;
+  private int dormNumber;
+  private List<Room> rooms;
+  private List<LongTermWorker> longTermWorkers;
 
   public Dormitory(){
     super(20000);
@@ -20,17 +23,6 @@ public class Dormitory extends Residence {
     longTermWorkers = new ArrayList<>();
     createRooms();
     System.out.println("一栋员工宿舍被创建");
-  }
-
-  public int getDormNumber(){
-    return dormNumber;
-  }
-  public void setDormNumber(int id){
-    dormNumber = id;
-  }
-
-  public List<LongTermWorker> getLongTermWorkers(){
-    return longTermWorkers;
   }
 
   @Override
@@ -59,7 +51,16 @@ public class Dormitory extends Residence {
     }
   }
 
-  private int dormNumber;
-  private List<Room> rooms;
-  private List<LongTermWorker> longTermWorkers;
+  public int getDormNumber(){
+    return dormNumber;
+  }
+
+  public void setDormNumber(int id){
+    dormNumber = id;
+  }
+
+  public List<LongTermWorker> getLongTermWorkers(){
+    return longTermWorkers;
+  }
+
 }

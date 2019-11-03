@@ -10,6 +10,7 @@ import main.java.com.familyFarmSeaside.scene.Scene;
  **/
 public abstract class Residence extends Scene {
     public Residence(){}
+
     public Residence(double x){
         super(x);
     }

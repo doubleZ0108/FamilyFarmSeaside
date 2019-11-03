@@ -9,26 +9,13 @@ import main.java.com.familyFarmSeaside.scene.residence.dormitory.furniture.*;
  * @create: 2019/10/24
  **/
 public class Room {
-    public Desk getDesk() {
-        return desk;
-    }
-
-    public Bed getBed() {
-        return bed;
-    }
-
-    public Chair getChair() {
-        return chair;
-    }
-
-    public int getRoomId() {
-        return roomId;
-    }
-
     private Desk desk;
     private Bed bed;
     private Chair chair;
     private int roomId;
+
+    public Room(){
+    }
 
     public Room(int i){
         roomId = i;
@@ -68,5 +55,21 @@ public class Room {
                 chair.move();
                 break;
         }
+    }
+
+    public Desk getDesk() {
+        return desk;
+    }
+
+    public Bed getBed() {
+        return bed;
+    }
+
+    public Chair getChair() {
+        return chair;
+    }
+
+    public int getRoomId() {
+        return roomId;
     }
 }

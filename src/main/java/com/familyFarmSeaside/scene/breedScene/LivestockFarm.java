@@ -7,6 +7,7 @@ package main.java.com.familyFarmSeaside.scene.breedScene;
  * @create: 2019/10/19
  **/
 public class LivestockFarm extends BreedScene {
+
     public LivestockFarm() {
     }
 

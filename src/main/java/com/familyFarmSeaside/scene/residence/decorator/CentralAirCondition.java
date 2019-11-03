@@ -3,6 +3,10 @@ package main.java.com.familyFarmSeaside.scene.residence.decorator;
 import main.java.com.familyFarmSeaside.scene.residence.Residence;
 
 public class CentralAirCondition extends ResidenceDecorator {
+
+    public CentralAirCondition(){
+    }
+
     public CentralAirCondition(Residence r){
         super(r);
         System.out.println("添加一个中央空调");
@@ -10,7 +14,7 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     @Override
     public double getCost() {
-        return residence.getCost() + 200; //一个椅子价格200
+        return residence.getCost() + 200; //chair 200yuan/per
     }
 
     @Override
