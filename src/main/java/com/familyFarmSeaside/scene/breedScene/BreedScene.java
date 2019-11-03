@@ -9,6 +9,7 @@ import main.java.com.familyFarmSeaside.scene.Scene;
  * @create: 2019/10/19
  **/
 public abstract class BreedScene extends Scene {
+
     public BreedScene() {
     }
 

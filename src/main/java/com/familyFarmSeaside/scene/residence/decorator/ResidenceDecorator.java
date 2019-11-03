@@ -9,10 +9,11 @@ import main.java.com.familyFarmSeaside.scene.residence.Residence;
  * @create: 2019/10/25
  **/
 public abstract class ResidenceDecorator extends Residence {
-    /**
-     * it represent the Residence decorated by this ResidenceDecorator.
-     */
-    protected Residence residence; //被该ResidenceDecorator装饰的Residence
+    protected Residence residence;      //Residence decorated by the ResidenceDecorator
+
+    public ResidenceDecorator(){
+    }
+
 
     public ResidenceDecorator(Residence r){
         residence = r;

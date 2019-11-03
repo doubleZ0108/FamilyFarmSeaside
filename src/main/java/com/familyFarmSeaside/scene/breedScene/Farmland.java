@@ -12,23 +12,24 @@ import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.TractFactory;
 public class Farmland extends BreedScene {
     private final int length = 4;
     private final int width = 3;
-    private Tract[][] tracts; //荒地，普通土地，黑土地
+    private Tract[][] tracts;       //Wasteland, ordinary land, black land
 
-    public Farmland() //默认土地块数为 2*3，且所有土地皆为荒地
-    {
+    public Farmland() {
+        /**
+         * @description: The default land block number is 2*3, and all land is wasteland.
+         *
+         * @return : null
+         **/
         tracts = new Tract[width][length];
         TractFactory tractFactory = TractFactory.getInstance();
-        //初始状态下所有土地都为荒地
+
+        //In the initial state, all the land is wasteland.
         for(int i = 0; i < width; i++) {
             for (int j = 0; j < length; j++)
-                //将所有Tract置为荒地
+                //Put all Tract as wasteland
                 tracts[i][j] = tractFactory.getTract("WasteTract");
         }
     }
-
-    public int getLength(){return length;}
-
-    public int getWidth(){return width;}
 
     public void setTract(int loc_x, int loc_y, String TractType){
         TractFactory tractFactory = TractFactory.getInstance();
@@ -37,13 +38,15 @@ public class Farmland extends BreedScene {
 
     public Character[][] getCanvas(){
         Character[][] canvas = new Character[width*Tract.sideLength][length*Tract.sideLength];
-        //先将画布清空
+
+        //Empty the canvas first
         for(int i = 0; i < width*Tract.sideLength; i++){
             for(int j = 0; j < length*Tract.sideLength; j++){
                 canvas[i][j] = ' ';
             }
         }
-        //渲染画布
+
+        //Rendering the canvas
         for(int j = 0; j < width; j++) {
             for (int i = 0; i < length; i++)
                 tracts[j][i].draw(i, j, canvas);
@@ -58,6 +61,10 @@ public class Farmland extends BreedScene {
     public void setTracts(Tract[][] tracts) {
         this.tracts = tracts;
     }
+
+    public int getLength(){return length;}
+
+    public int getWidth(){return width;}
 
     @Override
     public String toString() {

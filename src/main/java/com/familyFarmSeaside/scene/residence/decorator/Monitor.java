@@ -9,6 +9,10 @@ import main.java.com.familyFarmSeaside.scene.residence.Residence;
  * @create: 2019/10/25
  **/
 public class Monitor extends ResidenceDecorator{
+
+    public Monitor(){
+    }
+
     public Monitor(Residence r){
         super(r);
         System.out.println("添加一个监视器");
@@ -16,7 +20,7 @@ public class Monitor extends ResidenceDecorator{
 
     @Override
     public double getCost() {
-        return residence.getCost() + 500; //一张价桌子价格500
+        return residence.getCost() + 500; //table 500yuan/per
     }
 
     @Override

@@ -13,36 +13,8 @@ public class Warehouse extends Scene {
   private int floorNumber;
   private String name;
 
-  // this constructor has to be kept in order to perform IOC
+  /* this constructor has to be kept in order to perform IOC */
   public Warehouse(){}
-
-
-  @Override
-  public void setCost(double cost) {
-    this.cost = cost;
-  }
-
-  public void setFloorNumber(int floorNumber) {
-    this.floorNumber = floorNumber;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public void displayIOCInfo(){
-     /**
-       * @description: To show for the IOC pattern
-       *
-
-       *
-       * @return : void
-       **/
-    System.out.println("Warehouse info:");
-    System.out.println("cost: " + cost);
-    System.out.println("floorNumber: " + floorNumber);
-    System.out.println("name: " + name);
-  }
 
   public Warehouse(double cost, int floorNumber, String name) {
     this.cost = cost;
@@ -61,6 +33,32 @@ public class Warehouse extends Scene {
     super(cost, location);
     this.cost = cost1;
     this.floorNumber = floorNumber;
+    this.name = name;
+  }
+
+  public void displayIOCInfo(){
+    /**
+     * @description: To show for the IOC pattern
+     *
+     * @return : void
+     **/
+    System.out.println("Warehouse info:");
+    System.out.println("cost: " + cost);
+    System.out.println("floorNumber: " + floorNumber);
+    System.out.println("name: " + name);
+  }
+
+
+  @Override
+  public void setCost(double cost) {
+    this.cost = cost;
+  }
+
+  public void setFloorNumber(int floorNumber) {
+    this.floorNumber = floorNumber;
+  }
+
+  public void setName(String name) {
     this.name = name;
   }
 

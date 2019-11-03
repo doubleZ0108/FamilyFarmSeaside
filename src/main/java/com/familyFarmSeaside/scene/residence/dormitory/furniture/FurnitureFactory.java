@@ -9,8 +9,8 @@ import java.util.HashMap;
  * @create: 2019/10/24
  **/
 public class FurnitureFactory {
-    private HashMap<FurnitureKind, Furniture> furniturePool;  //存放家具对象的池
-    private static FurnitureFactory furnitureFactory = new FurnitureFactory();  //家具工厂
+    private HashMap<FurnitureKind, Furniture> furniturePool;         //Pool for storing furniture objects
+    private static FurnitureFactory furnitureFactory = new FurnitureFactory();  //furniture factory
 
     public FurnitureFactory(){furniturePool = new HashMap<>();}
 

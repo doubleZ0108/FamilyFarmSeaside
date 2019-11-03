@@ -10,14 +10,12 @@ import main.java.com.familyFarmSeaside.person.worker.longTerm.LongTermWorker;
  **/
 public class Bed extends Furniture {
 
-    //构造函数
     public Bed(){
         sharable = true;
         referenceCount = 0;
         System.out.println("New Bed object created");
     }
 
-    //重写家具构造函数
     @Override
     public void move() {
         sharable = false;

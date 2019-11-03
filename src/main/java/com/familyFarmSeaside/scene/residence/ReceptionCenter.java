@@ -12,15 +12,25 @@ import java.util.List;
  * @create: 2019/10/19
  **/
 public class ReceptionCenter extends Residence {
+    private int receptionCenterNumber;
+    private List<Visitor> visitors;
+
     public ReceptionCenter(){
         super(30000);
         visitors = new ArrayList<Visitor>();
         System.out.println("一栋接待中心被创建");
     }
-    public int getReceptionCenterNumber(){
-        return receptionCenterNumber;
+
+    public ReceptionCenter(int receptionCenterNumber, List<Visitor> visitors) {
+        this.receptionCenterNumber = receptionCenterNumber;
+        this.visitors = visitors;
     }
-    public void setReceptionCenterNumber(int id){receptionCenterNumber = id;}
+
+    public ReceptionCenter(double x, int receptionCenterNumber, List<Visitor> visitors) {
+        super(x);
+        this.receptionCenterNumber = receptionCenterNumber;
+        this.visitors = visitors;
+    }
 
     @Override
     public String getDescription() {
@@ -31,8 +41,11 @@ public class ReceptionCenter extends Residence {
         visitors.add(visitor);
     }
 
-    private int receptionCenterNumber;
-    private List<Visitor> visitors;
+    public int getReceptionCenterNumber(){
+        return receptionCenterNumber;
+    }
+
+    public void setReceptionCenterNumber(int id){receptionCenterNumber = id;}
 
     @Override
     public String toString() {
