@@ -47,5 +47,18 @@ public class Apple extends Fruit implements Cloneable{
 //    public  List<Flower>getMaleFlowerList(){
 //        return maleFlowerList;
 //    }
+
+    /**
+     * harvest the plant
+     */
+    public void harvested(){
+        if(this.isHarvestable()) {
+            this.plantState.moveToNext(this);
+        }else if(this.isDead()) {
+            //do nothing
+        }else{
+            System.out.println("This " + this.getPlantType() + " hasn't been harvestable yet.");
+        }
+    }
 }
 

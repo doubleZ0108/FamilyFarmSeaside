@@ -1,7 +1,6 @@
 package test.DesignPatternTest;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
-import main.java.com.familyFarmSeaside.Plant.Mediator.PollinationMediator;
 import main.java.com.familyFarmSeaside.Plant.Strategy.ArtificialPollination;
 import main.java.com.familyFarmSeaside.Plant.Strategy.PollinationStrategy;
 import main.java.com.familyFarmSeaside.Plant.Strategy.SpontaneousPollination;
@@ -9,14 +8,13 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 
 import java.util.ArrayList;
 
-
 /**
  * @program: FamilyFarmSeaside
- * @description: Test for mediator pattern.
- * @author: Di Bu
+ * @description: Test for state pattern
+ * @author: Di
  * @create: 2019/11/02
  **/
-public class MediatorTest {
+public class StateTest2 {
     /**
      * test for mediator
      * pollinate
@@ -30,8 +28,8 @@ public class MediatorTest {
      * 􏱦􏱧􏱨Pistil􏰀􏱩􏰧􏱪􏱧􏱨 Stamen􏰀􏱩􏱏􏱖􏱫􏱬􏰧􏰟􏰠􏰡 􏱨PollinationMediator􏰀􏱩􏱭􏱡􏰘􏰙
      */
 
-    public static void MediatorTest() {
-        System.out.println("\n\n-----------------Mediator in Plant------------------");
+    public static void StateTest2() {
+        System.out.println("\n\n-----------------State in Plant------------------");
         System.out.println("Oops, those apples and potatoes need to be pollinated.");
 
 
@@ -43,6 +41,7 @@ public class MediatorTest {
             PollinationStrategy ps = new ArtificialPollination(); /** Use of Strategy Pattern **/
             ps.pollinate(item); /** Use of Mediator Pattern **/
         }
+
 
         /** Use of State Pattern **/
         System.out.println("\nWe just pollinated those corns. Let's harvest them!");

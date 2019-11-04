@@ -20,4 +20,18 @@ public class Tomato extends Vegetable {
     public String toString() {
         return "Vegetable->Tomato";
     }
+
+    /**
+     * harvest the plant
+     */
+    public void harvested(){
+        if(this.isHarvestable()) {
+            this.plantState.moveToNext(this);
+            System.out.println("By harvesting this tomato, you got 5 tomato seeds and 1 tomato product.");
+        }else if(this.isDead()) {
+            //do nothing
+        }else{
+            System.out.println("This " + this.getPlantType() + " hasn't been harvestable yet.");
+        }
+    }
 }
