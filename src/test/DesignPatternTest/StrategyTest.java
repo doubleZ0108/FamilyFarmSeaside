@@ -33,7 +33,7 @@ public class StrategyTest {
     }
 
     public static void StrategyTest() {
-        System.out.println("\n\n-----------------Mediator in Plant------------------");
+        System.out.println("\n\n-----------------Strategy Test------------------");
         System.out.println("Oops, those apples and potatoes need to be pollinated.");
 
 
