@@ -102,7 +102,7 @@ public class MainTest {
                         IteratorTest.main(new String[]{});
                         break;
                     case 14:
-//                        MediatorTest.main(new String[]{});
+                        MediatorTest.main(new String[]{});
                         break;
                     case 15:
                         MementoTest.main(new String[]{});
@@ -123,7 +123,7 @@ public class MainTest {
                         StateTest.main(new String[]{});
                         break;
                     case 21:
-//                        StrategyTest.main(new String[]{});
+                        StrategyTest.main(new String[]{});
                         break;
                     case 22:
                         TemplateMethodTest.main(new String[]{});

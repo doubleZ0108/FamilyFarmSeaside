@@ -53,4 +53,8 @@ public class MediatorTest {
             item.harvested();
         }
     }
+
+    public static void main(String[] args) {
+        MediatorTest();
+    }
 }

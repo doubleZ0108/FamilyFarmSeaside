@@ -28,6 +28,10 @@ public class StrategyTest {
      * 􏱦􏱧􏱨Pistil􏰀􏱩􏰧􏱪􏱧􏱨 Stamen􏰀􏱩􏱏􏱖􏱫􏱬􏰧􏰟􏰠􏰡 􏱨PollinationMediator􏰀􏱩􏱭􏱡􏰘􏰙
      */
 
+    public static void main(String[] args) {
+        StrategyTest();
+    }
+
     public static void StrategyTest() {
         System.out.println("\n\n-----------------Mediator in Plant------------------");
         System.out.println("Oops, those apples and potatoes need to be pollinated.");
