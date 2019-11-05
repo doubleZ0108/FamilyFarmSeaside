@@ -29,29 +29,41 @@ public class BuilderTest {
     System.out.println("HouseBuilder : HouseBuilder() : Use the same set of construct interfaces to create many different objects. Worker's quarters for accommodation and farmer's villa.");
     System.out.println("WarehouseBuilder : WarehouseBuilder() : Use the same set of construct interfaces to create many different objects. Warehouse for storing materials.");
 
-    ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
+    /*ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
     ShortTermWorker shortTermWorker_2 = new HouseBuilder();
     ShortTermWorker shortTermWorker_3 = new WarehouseBuilder();
 
     shortTermWorker_1.buildSomeThingNormal();
     shortTermWorker_2.buildSomeThingNormal();
-    shortTermWorker_3.buildSomeThingNormal();
+    shortTermWorker_3.buildSomeThingNormal();*/
     System.out.println("假设此时准备建造一个养殖场，请你进行一下选择：");
     BreedSceneBuilderImpl breedSceneBuilderImpl = new BreedSceneBuilderImpl();
     Scanner scanner = new Scanner(System.in);
-    System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)（输入“停止”以结束）");
-    String s = scanner.nextLine();
-    while(breedSceneBuilderImpl.getBreedScene()==null){
-      if(s.equals("停止")) {
-        break;
-      }
+    boolean buildMore = true;
+    do {
+      System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)");
+      String s = scanner.nextLine();
       breedSceneBuilderImpl.setBuildingPlan(s);
-      System.out.println("请选择建造计划:(Farmland, FishPond,LivestockFarm)（输入“停止”以结束）");
+      while (breedSceneBuilderImpl.getBreedScene() == null) {
+        System.out.println("请重新选择建造计划:(Farmland, FishPond,LivestockFarm)（输入“停止”以取消本次建造）");
+        s = scanner.nextLine();
+        if (s.equals("停止")) {
+          break;
+        }
+        breedSceneBuilderImpl.setBuildingPlan(s);
+      }
+      if (breedSceneBuilderImpl.getResult() != null) {
+        System.out.println("请输入建造地点:");
+        breedSceneBuilderImpl.setLocation(scanner.nextLine());
+        System.out.println("--------------------------------------");
+      }
+      System.out.println("您还要继续建造吗？继续请输入 y，其他输入将退出");
       s = scanner.nextLine();
-    }
-    System.out.println("请输入建造地点:");
-    breedSceneBuilderImpl.setLocation(scanner.nextLine());
-    System.out.println("--------------------------------------");
+      buildMore = s.equals("y");
+      if(buildMore){
+        breedSceneBuilderImpl.reset();
+      }
+    }while (buildMore);
 
     System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
   }

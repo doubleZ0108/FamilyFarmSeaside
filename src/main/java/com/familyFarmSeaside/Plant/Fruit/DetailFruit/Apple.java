@@ -16,11 +16,13 @@ import java.util.Random;
  * @create: 2019/10/25
  **/
 public class Apple extends Fruit implements Cloneable{
-    protected List<Flower> femaleFlowerList = new ArrayList<>();
-    protected List<Flower> maleFlowerList = new ArrayList<>();
+
+    public Flower flower;
 
     public Apple(){
         super("APPLE");
+
+        flower = new Flower();
         sellValue = 100;
         buyValue = 50;
     }
@@ -47,5 +49,19 @@ public class Apple extends Fruit implements Cloneable{
 //    public  List<Flower>getMaleFlowerList(){
 //        return maleFlowerList;
 //    }
+
+    /**
+     * harvest the plant
+     */
+    public void harvested(){
+        if(this.isHarvestable()) {
+            this.plantState.moveToNext(this);
+            System.out.println("By harvesting this apple, you got 5 apple seeds and 1 apple product.");
+        }else if(this.isDead()) {
+            //do nothing
+        }else{
+            System.out.println("This " + this.getPlantType() + " hasn't been harvestable yet.");
+        }
+    }
 }
 

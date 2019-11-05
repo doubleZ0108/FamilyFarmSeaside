@@ -2,7 +2,6 @@ package test.DesignPatternTest;
 
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Apple;
 import main.java.com.familyFarmSeaside.Plant.Fruit.DetailFruit.Cherry;
-import main.java.com.familyFarmSeaside.Plant.Mediator.PollinationMediator;
 import main.java.com.familyFarmSeaside.Plant.State.MatureState;
 import main.java.com.familyFarmSeaside.Plant.Strategy.ArtificialPollination;
 import main.java.com.familyFarmSeaside.Plant.Strategy.PollinationStrategy;
@@ -10,19 +9,17 @@ import main.java.com.familyFarmSeaside.Plant.Strategy.SpontaneousPollination;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Tomato;
 
-import javax.print.attribute.standard.Media;
 import java.util.ArrayList;
-
 
 /**
  * @program: FamilyFarmSeaside
- * @description: Test for mediator pattern.
- * @author: Di Bu
+ * @description: Test for state pattern
+ * @author: Di
  * @create: 2019/11/02
  **/
-public class MediatorTest {
+public class StateTest2 {
     /**
-     * test for mediator
+     * test for state
      * pollinate
      */
 
@@ -37,10 +34,10 @@ public class MediatorTest {
      */
 
     public static void main(String[] args) {
-        MediatorTest();
+        StateTest2();
     }
 
-    public static void MediatorTest() {
+    public static void StateTest2() {
         Apple apple1 = new Apple();
         apple1.setPlantState(new MatureState());
         appleList.add(apple1);
@@ -56,7 +53,7 @@ public class MediatorTest {
 
 
 
-        System.out.println("\n\n-----------------Mediator Test------------------");
+        System.out.println("\n\n-----------------State Test------------------");
         System.out.println("Oops, those apples and potatoes need to be pollinated.");
 
 

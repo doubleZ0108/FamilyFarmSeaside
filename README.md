@@ -19,14 +19,14 @@ Tongji Univ. --- Design Pattern Course Design(Use only for course projects)
 - [x] Flyweight
 - [x] Interpreter
 - [x] Iterator
-- [x] Mediator    （缺bd）
+- [x] Mediator
 - [x] Memento
 - [x] Observer
 - [x] Prototype
 - [x] Proxy
 - [x] Singleton     （缺Test 缺文档）
-- [x] State           （有lym的Test 没有bd的Test）
-- [x] Strategy      （缺bd）
+- [x] State
+- [x] Strategy
 - [x] Template Method    （缺Test 缺文档）
 - [x] Vistor
 

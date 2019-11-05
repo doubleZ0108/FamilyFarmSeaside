@@ -1,5 +1,6 @@
 package main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable;
 
+import main.java.com.familyFarmSeaside.Plant.ReproductiveOrgan.Flower;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
 
 /**
@@ -10,8 +11,12 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  **/
 public class Tomato extends Vegetable {
 
+    public Flower flower;
+
     public Tomato(){
         super("TOMATO");
+
+        flower = new Flower();
         sellValue = 60;
         buyValue = 30;
     }
@@ -19,5 +24,19 @@ public class Tomato extends Vegetable {
     @Override
     public String toString() {
         return "Vegetable->Tomato";
+    }
+
+    /**
+     * harvest the plant
+     */
+    public void harvested(){
+        if(this.isHarvestable()) {
+            this.plantState.moveToNext(this);
+            System.out.println("By harvesting this tomato, you got 5 tomato seeds and 1 tomato product.");
+        }else if(this.isDead()) {
+            //do nothing
+        }else{
+            System.out.println("This " + this.getPlantType() + " hasn't been harvestable yet.");
+        }
     }
 }

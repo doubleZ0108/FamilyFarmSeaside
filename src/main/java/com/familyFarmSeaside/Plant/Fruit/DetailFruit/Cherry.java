@@ -16,11 +16,12 @@ import java.util.Random;
  * @create: 2019/10/25
  **/
 public class Cherry extends Fruit {
-    protected List<Flower> femaleFlowerList = new ArrayList<>();
-    protected List<Flower> maleFlowerList = new ArrayList<>();
+    public Flower flower;
 
     public Cherry(){
         super("CHERRY");
+
+        flower = new Flower();
         sellValue = 150;
         buyValue = 75;
     }
@@ -47,4 +48,17 @@ public class Cherry extends Fruit {
 //    public  List<Flower>getMaleFlowerList(){
 //        return maleFlowerList;
 //    }
+    /**
+     * harvest the plant
+     */
+    public void harvested(){
+        if(this.isHarvestable()) {
+            this.plantState.moveToNext(this);
+            System.out.println("By harvesting this cherry, you got 5 cherry seeds and 1 cherry product.");
+        }else if(this.isDead()) {
+            //do nothing
+        }else{
+            System.out.println("This " + this.getPlantType() + " hasn't been harvestable yet.");
+        }
+    }
 }
