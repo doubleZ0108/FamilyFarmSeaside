@@ -9,7 +9,6 @@ import main.java.com.familyFarmSeaside.Plant.Strategy.PollinationStrategy;
 import main.java.com.familyFarmSeaside.Plant.Strategy.SpontaneousPollination;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Potato;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable.Tomato;
-//import sun.jvm.hotspot.oops.CheckedExceptionElement;
 
 import java.util.ArrayList;
 

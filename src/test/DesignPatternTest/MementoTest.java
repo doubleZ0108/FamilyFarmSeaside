@@ -51,7 +51,13 @@ public class MementoTest {
         while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.print("Please enter command：");
-            int command = sc.nextInt();
+            int command = 0;
+            try {
+                command = Integer.parseInt(sc.nextLine().trim());
+            } catch (NumberFormatException nfe) {
+                System.out.println("The command does 233 not exist. Please retype it！\n");
+                continue;
+            }
             switch (command){
                 case 1:{
                     Scanner sc1 = new Scanner(System.in);
