@@ -27,14 +27,13 @@ public class CommandTest {
    **/
     // farm owner is using singleton pattern
     System.out.println("—————————————-------------------------------------———— Test[Command]Pattern —————————————-------------------------------------————");
-
-    FarmOwner farmOwner = FarmOwner.getInstance();
-    CommandWrapper residenceLogCommandWrapper = ()->{
     System.out.println("FarmOwner : getInstance() : Farmowner is singelton, so we need a getInstance method to get it.");
     System.out.println("FarmOwner : executeCommand() : Execute the command, then add it to the command history.");
     System.out.println("ResidenceAdministrator : doSomeLog() : Do the command, if have a command, execute.");
     System.out.println("FarmOwner : getLogFile() : Get the log files.");
     System.out.println("");
+    FarmOwner farmOwner = FarmOwner.getInstance();
+    CommandWrapper residenceLogCommandWrapper = ()->{
     // this is not important in terms of design pattern
     // but is crucial because of the design of java language
     // the object of command passed into the administrators are essentially some lambda expression
@@ -85,8 +84,12 @@ public class CommandTest {
         case "undo":{
           farmOwner.undoCommand();
         }break;
+        default:{
+          System.out.println("不支持您输入的指令");
+        }
       }
       System.out.print(farmOwner.getLogFile());
+      System.out.println("请您选择要执行的指令：(residence, resource, undo, quit)");
       command = scanner.nextLine();
     }
 
