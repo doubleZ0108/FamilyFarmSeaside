@@ -29,13 +29,13 @@ public class BuilderTest {
     System.out.println("HouseBuilder : HouseBuilder() : Use the same set of construct interfaces to create many different objects. Worker's quarters for accommodation and farmer's villa.");
     System.out.println("WarehouseBuilder : WarehouseBuilder() : Use the same set of construct interfaces to create many different objects. Warehouse for storing materials.");
 
-    ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
+    /*ShortTermWorker shortTermWorker_1 = new BreedSceneBuilder();
     ShortTermWorker shortTermWorker_2 = new HouseBuilder();
     ShortTermWorker shortTermWorker_3 = new WarehouseBuilder();
 
     shortTermWorker_1.buildSomeThingNormal();
     shortTermWorker_2.buildSomeThingNormal();
-    shortTermWorker_3.buildSomeThingNormal();
+    shortTermWorker_3.buildSomeThingNormal();*/
     System.out.println("假设此时准备建造一个养殖场，请你进行一下选择：");
     BreedSceneBuilderImpl breedSceneBuilderImpl = new BreedSceneBuilderImpl();
     Scanner scanner = new Scanner(System.in);
