@@ -40,7 +40,7 @@ public class FacadeTest {
         dormitoryList.add(dormitory2);
 
         /**
-         * Create 10 long-term workers. To make the test expilicit, all the workers are buyer.
+         * Create 10 long-term workers. To make the test explicit, all the workers are buyer.
          * By default, 4 buyers are added to No.1 dormitory, and the 6 buyers left are added to No.2 dormitory.
          */
         BuyerFactory buyerFactory = new BuyerFactory();
@@ -89,24 +89,27 @@ public class FacadeTest {
 
         System.out.println("\n***************以下是住宅管理员工作的内容*****************");
         System.out.println("系统已经为您创建好一个住宅管理员，他将负责两个宿舍，两个接待中心，两个豪宅的工作。");
-        System.out.println("请选择住宅管理员要执行的工作[1 叫床 | 2 打扫内务 | 3 运走垃圾 | 4 关灯 | 5 退出]");
-        Scanner scanner = new Scanner(System.in);
         int i;
         while(true){
-            i = scanner.nextInt();
-            if(i == 1)
-                residenceAdministrator.wakeUp();
-            else if(i == 2)
-                residenceAdministrator.sweep();
-            else if(i == 3)
-                residenceAdministrator.takeTrash();
-            else if(i == 4)
-                residenceAdministrator.lightOff();
-            else if(i == 5)
-                break;
-            else
+            try {
+                System.out.print("请选择住宅管理员要执行的工作[1 叫床 | 2 打扫内务 | 3 运走垃圾 | 4 关灯 | 5 退出]");
+                Scanner scanner = new Scanner(System.in);
+                i = scanner.nextInt();
+                if(i == 1)
+                    residenceAdministrator.wakeUp();
+                else if(i == 2)
+                    residenceAdministrator.sweep();
+                else if(i == 3)
+                    residenceAdministrator.takeTrash();
+                else if(i == 4)
+                    residenceAdministrator.lightOff();
+                else if(i == 5)
+                    break;
+                else
+                    System.out.print("输入的数字无效，");
+            } catch (Exception e) {
                 System.out.print("输入的数字无效，");
-            System.out.println("请选择住宅管理员要执行的工作[1 叫床 | 2 打扫内务 | 3 运走垃圾 | 4 关灯 | 5 退出]");
+            }
         }
         System.out.println("—————————————---------------------------------------------- End ————------—————————-------------------------------------————");
     }

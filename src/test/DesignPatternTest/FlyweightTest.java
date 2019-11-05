@@ -4,6 +4,7 @@ import main.java.com.familyFarmSeaside.scene.breedScene.Farmland;
 import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.BlackTract;
 import main.java.com.familyFarmSeaside.scene.breedScene.flyweight.Tract;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -40,37 +41,45 @@ public class FlyweightTest {
         /**
          * it's time for the tester to choose an option!
          */
-        Scanner scanner = new Scanner(System.in);
         int option;
         while(true){
-            System.out.println("请选择操作[1 设置一个土地块 | 2 查看farmland俯视图 | 3 退出]");
-            option = scanner.nextInt();
-            if(option == 1){
-                int loc_x, loc_y, TractType;
-                System.out.println("请输入两个整数，用来表示要设置的土地块的坐标，第一个整数取值范围为0~3，第二个整数取值范围为0~2：");
-                loc_x = scanner.nextInt();
-                loc_y = scanner.nextInt();
-                System.out.println("请选择要把这个土地块设置成什么类型[1 荒地 | 2 普通土地 | 3 黑土地]");
-                TractType = scanner.nextInt();
-                if(TractType == 1)
-                    farmland.setTract(loc_x, loc_y, "WasteTract");
-                else if(TractType == 2)
-                    farmland.setTract(loc_x, loc_y, "CommonTract");
-                else
-                    farmland.setTract(loc_x, loc_y, "BlackTract");
-            }
-            else if(option == 2){
-                canvas = farmland.getCanvas();
-                for(int i = 0; i < farmland.getWidth()* Tract.sideLength; i++){
-                    for(int j = 0; j < farmland.getLength()*Tract.sideLength; j++) {
-                        System.out.print(canvas[i][j]);
-                        System.out.print(' ');
-                    }
-                    System.out.print('\n');
+            try {
+                System.out.println("请选择操作[1 设置一个土地块 | 2 查看farmland俯视图 | 3 退出]");
+                Scanner scanner = new Scanner(System.in);
+                option = scanner.nextInt();
+                if(option == 1){
+                    int loc_x, loc_y, TractType;
+                    System.out.println("请输入两个整数，用来表示要设置的土地块的坐标，第一个整数取值范围为0~3，第二个整数取值范围为0~2：");
+                    loc_x = scanner.nextInt();
+                    loc_y = scanner.nextInt();
+                    System.out.println("请选择要把这个土地块设置成什么类型[1 荒地 | 2 普通土地 | 3 黑土地]");
+                    TractType = scanner.nextInt();
+                    if(TractType == 1)
+                        farmland.setTract(loc_x, loc_y, "WasteTract");
+                    else if(TractType == 2)
+                        farmland.setTract(loc_x, loc_y, "CommonTract");
+                    else
+                        farmland.setTract(loc_x, loc_y, "BlackTract");
                 }
+                else if(option == 2){
+                    canvas = farmland.getCanvas();
+                    for(int i = 0; i < farmland.getWidth()* Tract.sideLength; i++){
+                        for(int j = 0; j < farmland.getLength()*Tract.sideLength; j++) {
+                            System.out.print(canvas[i][j]);
+                            System.out.print(' ');
+                        }
+                        System.out.print('\n');
+                    }
+                }
+                else if(option == 3)
+                    break;
+                else
+                    System.out.print("输入的数字无效，");
+            } catch (InputMismatchException e) {
+                System.out.print("输入的数字无效，");
+            } catch (ArrayIndexOutOfBoundsException e){
+                System.out.print("输入的土地块坐标无效，");
             }
-            else if(option == 3)
-                break;
         }
     }
 }
