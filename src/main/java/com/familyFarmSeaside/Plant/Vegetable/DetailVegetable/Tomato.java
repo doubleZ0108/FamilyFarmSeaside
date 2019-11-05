@@ -1,5 +1,7 @@
 package main.java.com.familyFarmSeaside.Plant.Vegetable.DetailVegetable;
 
+import com.sun.tools.javac.comp.Flow;
+import main.java.com.familyFarmSeaside.Plant.ReproductiveOrgan.Flower;
 import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
 
 /**
@@ -10,8 +12,12 @@ import main.java.com.familyFarmSeaside.Plant.Vegetable.Vegetable;
  **/
 public class Tomato extends Vegetable {
 
+    public Flower flower;
+
     public Tomato(){
         super("TOMATO");
+
+        flower = new Flower();
         sellValue = 60;
         buyValue = 30;
     }
