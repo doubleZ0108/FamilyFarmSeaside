@@ -16,11 +16,12 @@ import java.util.Random;
  * @create: 2019/10/25
  **/
 public class Cherry extends Fruit {
-    protected List<Flower> femaleFlowerList = new ArrayList<>();
-    protected List<Flower> maleFlowerList = new ArrayList<>();
+    public Flower flower;
 
     public Cherry(){
         super("CHERRY");
+
+        flower = new Flower();
         sellValue = 150;
         buyValue = 75;
     }
