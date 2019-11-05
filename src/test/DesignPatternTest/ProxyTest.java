@@ -3,6 +3,7 @@ import main.java.com.familyFarmSeaside.Supply.Proxy.*;
 import main.java.com.familyFarmSeaside.Supply.Tool.*;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,7 +37,16 @@ public class ProxyTest {
             Scanner sc = new Scanner(System.in);
             System.out.println("");
             System.out.print("Input your order：");
-            int order = sc.nextInt();
+            int order = 0;
+            try{
+                order = sc.nextInt();
+            }catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("Invalid input!!!!!");
+                System.out.println("");
+            }catch (InputMismatchException e){
+                System.out.println("Invalid input!!!!!");
+                System.out.println("");
+            }
             switch (order) {
                 case 1: {
                     for (int i = 0; i < ProxyList.size(); i++) {
@@ -61,23 +71,41 @@ public class ProxyTest {
                 case 3: {
                     Scanner input = new Scanner(System.in);
                     System.out.print("Input the index of the Tool to take：");
-                    int tool_num = input.nextInt();
-                    if (tool_num > 0 && tool_num <= ProxyList.size() + 1) {
-                        ProxyList.get(tool_num - 1).take();
-                    } else {
+                    try{
+                        int tool_num = input.nextInt();
+                        if (tool_num > 0 && tool_num <= ProxyList.size() + 1) {
+                            ProxyList.get(tool_num - 1).take();
+                        } else {
+                            System.out.println("Invalid input!!!!!");
+                        }
+                    }catch (ArrayIndexOutOfBoundsException e){
                         System.out.println("Invalid input!!!!!");
+                        System.out.println("");
+                    }catch (InputMismatchException e){
+                        System.out.println("Invalid input!!!!!");
+                        System.out.println("");
                     }
+
                     break;
                 }
                 case 4: {
                     Scanner input = new Scanner(System.in);
                     System.out.print("Input the index of the Tool to return：");
-                    int tool_num = input.nextInt();
-                    if (tool_num > 0 && tool_num <= ProxyList.size() + 1) {
-                        ProxyList.get(tool_num - 1).returnTool();
-                    } else {
+                    try {
+                        int tool_num = input.nextInt();
+                        if (tool_num > 0 && tool_num <= ProxyList.size() + 1) {
+                            ProxyList.get(tool_num - 1).returnTool();
+                        } else {
+                            System.out.println("Invalid input!!!!!");
+                        }
+                    }catch (ArrayIndexOutOfBoundsException e){
                         System.out.println("Invalid input!!!!!");
+                        System.out.println("");
+                    }catch (InputMismatchException e){
+                        System.out.println("Invalid input!!!!!");
+                        System.out.println("");
                     }
+
                     break;
                 }
                 case 5: {

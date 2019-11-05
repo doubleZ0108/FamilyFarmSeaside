@@ -1,6 +1,7 @@
 package test.DesignPatternTest;
 import main.java.com.familyFarmSeaside.Supply.Tool.Tool;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -25,14 +26,33 @@ public class StateTest {
             Scanner sc = new Scanner(System.in);
             System.out.println("");
             System.out.print("Input your order：");
-            int order = sc.nextInt();
+            int order = 0;
+            try {
+                order = sc.nextInt();
+            }catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("Invalid input!!!!!");
+                System.out.println("");
+            }catch (InputMismatchException e){
+                System.out.println("Invalid input!!!!!");
+                System.out.println("");
+            }
+
             switch (order) {
                 case 1: {
                     Scanner input = new Scanner(System.in);
                     System.out.println("");
                     System.out.print("Input your value of altering：");
-                    int val = input.nextInt();
-                    TestTool.getContext().alter(val);
+                    try{
+                        int val = input.nextInt();
+                        TestTool.getContext().alter(val);
+                    }catch (ArrayIndexOutOfBoundsException e){
+                        System.out.println("Invalid input!!!!!");
+                        System.out.println("");
+                    }catch (InputMismatchException e){
+                        System.out.println("Invalid input!!!!!");
+                        System.out.println("");
+                    }
+
                     break;
                 }
                 case 2: {
