@@ -27,6 +27,7 @@ public class CommandTest {
    **/
     // farm owner is using singleton pattern
     System.out.println("—————————————-------------------------------------———— Test[Command]Pattern —————————————-------------------------------------————");
+
     System.out.println("FarmOwner : getInstance() : Farmowner is singelton, so we need a getInstance method to get it.");
     System.out.println("FarmOwner : executeCommand() : Execute the command, then add it to the command history.");
     System.out.println("ResidenceAdministrator : doSomeLog() : Do the command, if have a command, execute.");
