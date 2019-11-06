@@ -34,7 +34,7 @@ Tongji Univ. --- Design Pattern Course Design(Use only for course projects)
 
 - [x] Reference Counting
 - [x] Copy on Write
-- [ ] Shareable
+- [x] Shareable
 - [x] AOP
 - [x] IOC
 
